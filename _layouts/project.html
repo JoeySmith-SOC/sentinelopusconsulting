@@ -1,0 +1,11 @@
+{% layout default %}
+<article class="project">
+  <h1>{{ page.title }}</h1>
+  {% if page.subtitle %}<p class="lead">{{ page.subtitle }}</p>{% endif %}
+  <ul class="project-meta">
+    {% if page.stack %}<li><strong>Stack:</strong> {{ page.stack }}</li>{% endif %}
+    {% if page.links.repo %}<li><a href="{{ page.links.repo }}">Repo</a></li>{% endif %}
+    {% if page.links.demo %}<li><a href="{{ page.links.demo }}">Live Demo</a></li>{% endif %}
+  </ul>
+  {{ content }}
+</article>

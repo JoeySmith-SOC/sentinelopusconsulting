@@ -1,0 +1,51 @@
+title: Sentinel Opus Consulting
+tagline: Bridging Cybersecurity, Identity, and Operational Technology.
+email: joeysmith@sentinelopusconsulting.com
+description: >
+  IAM + OT security specialist delivering outcomes with extreme accountability. Freelance consulting, projects, and thought leadership.
+url: ""   # set after custom domain is live
+baseurl: ""
+
+lang: en
+timezone: America/Chicago
+
+author:
+  name: Joseph (Joey) Smith
+  email: joeysmith@sentinelopusconsulting.com
+  links:
+    - label: GitHub
+      url: https://github.com/JoeySmith-SOC
+    - label: LinkedIn
+      url: https://www.linkedin.com/in/joeysmith-cybertocircuit
+
+permalink: /:categories/:title/
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+defaults:
+  - scope: { path: "", type: posts }
+    values: { layout: post }
+  - scope: { path: "", type: projects }
+    values: { layout: project }
+  - scope: { path: "" }
+    values: { theme: auto }
+
+markdown: kramdown
+kramdown:
+  input: GFM
+sass:
+  style: compressed
+
+exclude:
+  - node_modules
+  - vendor
+  - README.md
+  - scripts
