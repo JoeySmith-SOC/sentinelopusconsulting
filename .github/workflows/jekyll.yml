@@ -12,7 +12,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: "pages"
   cancel-in-progress: true
 
 jobs:
@@ -22,16 +22,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # Configures the Pages deployment (adds CNAME at deploy time if you set a custom domain)
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
-      # Official Jekyll builder (handles Ruby, bundler, caching)
+      # Official Jekyll builder (no manual Ruby/Bundler needed)
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./
           destination: ./_site
 
+      # Upload the static site for deployment
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
