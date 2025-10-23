@@ -4,7 +4,7 @@ title: Contact
 permalink: /contact/
 ---
 
-<form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
   <label>Your name<input type="text" name="name" required></label>
   <label>Email<input type="email" name="_replyto" required></label>
   <label>Message<textarea name="message" rows="6" required></textarea></label>
