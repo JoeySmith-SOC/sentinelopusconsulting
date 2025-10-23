@@ -1,4 +1,4 @@
-name: Deploy Jekyll to GitHub Pages
+name: Build & Deploy Jekyll (Gemfile)
 
 on:
   push:
@@ -12,32 +12,41 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      JEKYLL_ENV: production
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Configures the Pages deployment (adds CNAME at deploy time if you set a custom domain)
       - name: Configure Pages
         uses: actions/configure-pages@v5
-
-      # Official Jekyll builder (no manual Ruby/Bundler needed)
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
         with:
-          source: ./
-          destination: ./_site
+          enablement: true
 
-      # Upload the static site for deployment
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - name: Install dependencies
+        run: |
+          bundle config set path 'vendor/bundle'
+          bundle install --jobs 4 --retry 3
+
+      - name: Build site
+        run: bundle exec jekyll build --trace
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./_site
+          path: _site
 
   deploy:
     needs: build
