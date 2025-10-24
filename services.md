@@ -6,7 +6,7 @@ permalink: /services/
 
 ## Freelance Services
 
-- **Identity & Access Management (IAM):** Okta, SSO/Federation (SAML/OIDC), lifecycle workflows, policy design.
-- **Small Business Cyber Readiness:** Cloudflare Zero Trust, MFA rollout, hardening, audit prep.
-- **Linux & Automation:** Ansible/Terraform, CI/CD, container security.
-- **OT/Electrical Integration:** Secure smart systems, IoT segmentation, monitoring & logging.
+- **IAM / Federation:** Okta, SAML/OIDC, lifecycle automation, fine-grained policies.
+- **Zero Trust for SMB:** Cloudflare Access, device posture, MFA rollout, logging.
+- **Linux & Automation:** Ansible/Terraform, hardened baselines, CI/CD for infra.
+- **Cyber × Electrical (OT):** Secure smart installs, segmentation, monitoring, incident playbooks.
