@@ -25,7 +25,7 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); f
 .hero { padding: 3rem 0 2rem; }
 .hero-inner h1 { font-family: Oswald, Impact, system-ui, sans-serif; font-weight: 700; margin: 0 0 .6rem; }
 .hero .sub { color: var(--muted); max-width: 700px; }
-.btn { display:inline-block; border:1px solid var(--muted); padding:.6rem 1rem; border-radius:10px; text-decoration:none; color:var(--text); margin-right:.6rem;}
+.btn { display:inline-block; border:1px solid var(--muted); padding:.6rem 1rem; border-radius: 15px; text-decoration:none; color:var(--text); margin-right:.6rem;}
 .btn.primary { border-color: var(--accent); }
 .split { display:grid; grid-template-columns: 1fr 1fr; gap:2rem; margin:2rem 0;}
 .list { list-style:none; padding:0; margin:.6rem 0;}
