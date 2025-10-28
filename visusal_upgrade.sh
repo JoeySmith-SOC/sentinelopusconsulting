@@ -90,11 +90,10 @@ fi
 
 echo "▶ Add default image fields to featured projects if missing…"
 for f in _projects/*.md; do
-  # add a placeholder image front matter if none exists
+  [[ -f "$f" ]] || continue
   if ! grep -q '^image:' "$f"; then
-    # insert after title line in front matter
     awk '
-      BEGIN{infm=0,done=0}
+      BEGIN{infm=0; done=0}
       /^---$/ {print; if(++count==1){infm=1}; next}
       infm==1 && /^title:/ && !done {print; print "image: /assets/img/project-placeholder.jpg"; done=1; next}
       {print}
@@ -107,10 +106,10 @@ printf "\x89PNG\r\n\x1a\n" > assets/img/project-placeholder.jpg
 printf "\x89PNG\r\n\x1a\n" > assets/img/post-placeholder.jpg
 
 echo "▶ Add placeholder image to latest post if none set…"
-latest=$(ls -1 _posts/*.md | sort | tail -n1 || true)
+latest=$(ls -1 _posts/*.md 2>/dev/null | sort | tail -n1 || true)
 if [[ -n "${latest}" ]] && ! grep -q '^image:' "${latest}"; then
   awk '
-    BEGIN{in=0,done=0}
+    BEGIN{in=0; done=0}
     /^---$/ {print; if(++c==1){in=1}; else in=0; next}
     in==1 && !done && /^date:/ {print; print "image: /assets/img/post-placeholder.jpg"; done=1; next}
     {print}
