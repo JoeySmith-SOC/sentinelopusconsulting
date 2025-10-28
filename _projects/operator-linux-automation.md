@@ -1,5 +1,6 @@
 ---
 title: Operator-Grade Linux Automation
+image: /assets/img/project-placeholder.jpg
 subtitle: Ansible and Terraform patterns for repeatable, hardened infrastructure.
 featured: false
 short: IaC + hardening for consistent environments.

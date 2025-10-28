@@ -1,5 +1,6 @@
 ---
 title: Cloudflare Zero Trust for SMB
+image: /assets/img/project-placeholder.jpg
 subtitle: Practical secure access for small teams—MFA, device posture, tunnels, and app policies.
 featured: false
 short: Affordable Zero Trust with Cloudflare Access and WARP.

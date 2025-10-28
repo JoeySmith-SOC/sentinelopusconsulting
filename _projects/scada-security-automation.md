@@ -1,5 +1,6 @@
 ---
 title: SCADA Security Automation Lab
+image: /assets/img/project-placeholder.jpg
 subtitle: Zero Trust segmentation, Snort IDS, and Python/Ansible automation in a simulated ICS network.
 featured: true
 short: ICS network with VLANs, RBAC, IDS, and automated playbooks.

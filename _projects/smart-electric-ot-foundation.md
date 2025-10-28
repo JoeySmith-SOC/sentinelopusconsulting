@@ -1,5 +1,6 @@
 ---
 title: Smart Electric — OT Foundation
+image: /assets/img/project-placeholder.jpg
 subtitle: Secure smart home/electrical integrations with segmentation, logging, and alerts.
 featured: false
 short: Where cyber meets the panel—documented patterns and safety-first design.

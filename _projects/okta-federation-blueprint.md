@@ -1,5 +1,6 @@
 ---
 title: Okta Federation Blueprint
+image: /assets/img/project-placeholder.jpg
 subtitle: Hands-on SAML/OIDC demos, lifecycle workflows, and fine-grained policies for SMB → Enterprise.
 featured: true
 short: Practical federation patterns with hardened policies and automation.
