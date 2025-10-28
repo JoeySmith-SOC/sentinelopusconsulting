@@ -39,6 +39,44 @@ layout: default
       <li>OT/Electrical · Segmentation · Safety</li>
     </ul>
   </div>
+</section><!-- HERO (video background) -->
+<section class="hero hero-video">
+  <div class="hero-media">
+    {% assign hero = site.data.media.hero %}
+    <video
+      class="hero-video-el"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      {% if hero.poster %}poster="{{ hero.poster | relative_url }}"{% endif %}
+      aria-hidden="true">
+      {% if hero.video_webm %}
+      <source src="{{ hero.video_webm | relative_url }}" type="video/webm">
+      {% endif %}
+      <source src="{{ hero.video | relative_url }}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    {% assign overlay_color = hero.overlay | default: 'rgba(0,0,0,0.55)' %}
+    <div class="hero-overlay" style="background: {{ overlay_color }};"></div>
+  </div>
+
+  <div class="container hero-inner">
+    <h1>Identity, automation, and IT/OT Security</h1>
+    <p class="sub">I help teams secure what matters—reliably, transparently, and without slowing you down.</p>
+    <div class="cta-row">
+      <a class="btn primary" href="{{ '/contact/' | relative_url }}">Book a consult</a>
+      <a class="btn" href="{{ '/projects/' | relative_url }}">See projects</a>
+    </div>
+
+    <ul class="cred cred-bar" aria-label="Key capabilities">
+      <li>Okta · SAML/OIDC · Lifecycle</li>
+      <li>Cloudflare Zero Trust</li>
+      <li>Linux · Ansible · Terraform</li>
+      <li>OT/Electrical · Segmentation · Safety</li>
+    </ul>
+  </div>
 </section>
 <section class="split">
   <div>
