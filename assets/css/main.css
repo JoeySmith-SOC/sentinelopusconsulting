@@ -311,3 +311,24 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); f
 
 /* Ensure text is readable on top of video */
 .hero .sub { max-width: 780px; }
+
+/* === Force hero text white on all themes === */
+.hero,
+.hero h1,
+.hero h2,
+.hero h3,
+.hero p,
+.hero a,
+.hero .sub,
+.hero .cred-bar li {
+  color: #fff !important;
+}
+
+/* Keep accent buttons visible on light background */
+.hero .btn {
+  border-color: rgba(255,255,255,0.6);
+  color: #fff;
+}
+.hero .btn.primary {
+  border-color: var(--accent);
+}
