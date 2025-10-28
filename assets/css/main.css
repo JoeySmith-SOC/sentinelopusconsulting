@@ -19,9 +19,9 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); f
 .site-header { border-bottom: 1px solid rgba(255,255,255,.06); background: var(--card); position: sticky; top:0; z-index: 50;}
 .nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
 .brand { display: flex; align-items: center; gap: .6rem; text-decoration: none; color: var(--text); font-weight: 700; letter-spacing: .5px; }
-.brand .logo { display:inline-grid; place-items:center; width: 36px; height:36px; background: var(--accent-2); border-radius: 10px; font-weight: 900; }
+.brand .logo { display:inline-grid; place-items:center; width: 36px; height:36px; background: var(--accent-2); border-radius: 15px; font-weight: 900; }
 .menu a { color: var(--text); text-decoration: none; margin: 0 .6rem; }
-.menu .cta { padding:.5rem .9rem; border:1px solid var(--accent); border-radius:10px; }
+.menu .cta { padding:.5rem .9rem; border:1px solid var(--accent); border-radius:15px; }
 .hero { padding: 3rem 0 2rem; }
 .hero-inner h1 { font-family: Oswald, Impact, system-ui, sans-serif; font-weight: 700; margin: 0 0 .6rem; }
 .hero .sub { color: var(--muted); max-width: 700px; }
