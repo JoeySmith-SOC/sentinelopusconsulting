@@ -70,3 +70,87 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); f
   .cards-4, .cards-3 { grid-template-columns: 1fr; }
   .contact-strip .contact-flex { flex-direction: column; align-items:flex-start; }
 }
+
+/* === Visual upgrade === */
+.hero {
+  position: relative;
+  padding: 4.5rem 0 3rem;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    url('/assets/img/hero.jpg') center/cover no-repeat;
+}
+.hero .sub { max-width: 780px; }
+
+.card .icon {
+  display:inline-flex; align-items:center; justify-content:center;
+  width:56px; height:56px; border-radius:12px;
+  background: rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.06);
+  margin-bottom:.6rem;
+}
+.card .icon img, .card .icon svg { width:28px; height:28px; color: var(--accent); }
+
+.cover, .project-cover {
+  width:100%; height: 260px; object-fit: cover;
+  border-radius: 12px; margin: .6rem 0 1rem;
+  border:1px solid rgba(255,255,255,.06); background: var(--card);
+}
+
+/* Subtle hover polish */
+.card { transition: transform .15s ease, box-shadow .15s ease; }
+.card:hover { transform: translateY(-2px); box-shadow: 0 6px 22px rgba(0,0,0,.25); }
+
+/* === Visual upgrade === */
+.hero {
+  position: relative;
+  padding: 4.5rem 0 3rem;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    url('/assets/img/hero.jpg') center/cover no-repeat;
+}
+.hero .sub { max-width: 780px; }
+
+.card .icon {
+  display:inline-flex; align-items:center; justify-content:center;
+  width:56px; height:56px; border-radius:12px;
+  background: rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.06);
+  margin-bottom:.6rem;
+}
+.card .icon img, .card .icon svg { width:28px; height:28px; color: var(--accent); }
+
+.cover, .project-cover {
+  width:100%; height: 260px; object-fit: cover;
+  border-radius: 12px; margin: .6rem 0 1rem;
+  border:1px solid rgba(255,255,255,.06); background: var(--card);
+}
+
+/* Subtle hover polish */
+.card { transition: transform .15s ease, box-shadow .15s ease; }
+.card:hover { transform: translateY(-2px); box-shadow: 0 6px 22px rgba(0,0,0,.25); }
+
+/* === Visual upgrade === */
+.hero {
+  position: relative;
+  padding: 4.5rem 0 3rem;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    url('/assets/img/hero.jpg') center/cover no-repeat;
+}
+.hero .sub { max-width: 780px; }
+
+.card .icon {
+  display:inline-flex; align-items:center; justify-content:center;
+  width:56px; height:56px; border-radius:12px;
+  background: rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.06);
+  margin-bottom:.6rem;
+}
+.card .icon img, .card .icon svg { width:28px; height:28px; color: var(--accent); }
+
+.cover, .project-cover {
+  width:100%; height: 260px; object-fit: cover;
+  border-radius: 12px; margin: .6rem 0 1rem;
+  border:1px solid rgba(255,255,255,.06); background: var(--card);
+}
+
+/* Subtle hover polish */
+.card { transition: transform .15s ease, box-shadow .15s ease; }
+.card:hover { transform: translateY(-2px); box-shadow: 0 6px 22px rgba(0,0,0,.25); }

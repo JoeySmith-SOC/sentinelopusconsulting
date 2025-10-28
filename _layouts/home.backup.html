@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<section class="hero">
+  <div class="container hero-inner">
+    <h1>Identity, automation, and OT security—delivered with extreme accountability.</h1>
+    <p class="sub">Hard-working freelancer who owns outcomes. No bad teams—only leaders who refuse to lead.</p>
+    <div class="cta-row">
+      <a class="btn primary" href="{{ '/projects/' | relative_url }}">View My Work</a>
+      <a class="btn" href="{{ '/contact/' | relative_url }}">Hire Me</a>
+    </div>
+    <ul class="cred">
+      <li>IAM · Okta · Federation</li>
+      <li>Linux · Automation · Cloud</li>
+      <li>OT/Electrical · Zero Trust</li>
+    </ul>
+  </div>
+</section>
+<section class="split">
+  <div>
+    <h2>Recent Posts</h2>
+    <ul class="list">
+      {% for post in site.posts limit:5 %}
+      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> <span class="meta">— {{ post.date | date: "%b %d, %Y" }}</span></li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div>
+    <h2>Flagship Projects</h2>
+    <ul class="list">
+      {% assign featured = site.projects | where_exp: 'p','p.featured == true' | slice: 3 %}
+      {% for p in featured %}
+      <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a> <span class="meta">— {{ p.short | default: p.description }}</span></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
