@@ -36,3 +36,37 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); f
 .contact-form button { margin-top: .6rem; }
 .tldr { background: var(--card); padding: .8rem; border-left: 4px solid var(--accent); border-radius: 8px; }
 @media (max-width: 800px){ .split { grid-template-columns:1fr; } .menu a { margin: 0 .4rem; } }
+
+/* Home layout additions */
+.cred-bar { display:flex; gap:.8rem; flex-wrap:wrap; margin-top:1rem; }
+.proof { background: var(--card); border-top: 1px solid rgba(255,255,255,.06); border-bottom: 1px solid rgba(255,255,255,.06); }
+.proof-inner { display:flex; gap:.6rem; flex-wrap:wrap; justify-content:center; padding: .8rem 0; }
+.tag { border:1px solid var(--muted); padding:.2rem .5rem; border-radius:.5rem; font-size:.85rem; color:var(--muted); }
+
+.cards h2 { margin-bottom: .6rem; }
+.grid { display:grid; gap:1rem; }
+.cards-4 { grid-template-columns: repeat(4, 1fr); }
+.cards-3 { grid-template-columns: repeat(3, 1fr); }
+
+.card { background: var(--card); border: 1px solid rgba(255,255,255,.06); border-radius: 12px; padding: 1rem; }
+.card h3 { margin-top: 0; }
+.bullets { margin:.6rem 0 1rem; padding-left:1.1rem; }
+.bullets li { margin:.2rem 0; }
+
+.edge .edge-grid { grid-template-columns: 1.2fr .8fr; gap:2rem; }
+.signal blockquote { margin:0; padding:1.2rem; background: var(--card); border-left:4px solid var(--accent); border-radius:10px; }
+.signal cite { display:block; margin-top:.6rem; color: var(--muted); font-style: normal; }
+
+.contact-strip .contact-flex { display:flex; align-items:center; justify-content:space-between; gap:1rem; background: var(--card); border:1px solid rgba(255,255,255,.06); border-radius:12px; padding:1rem; }
+.contact-strip .buttons { display:flex; gap:.6rem; }
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .cards-4 { grid-template-columns: repeat(2, 1fr); }
+  .cards-3 { grid-template-columns: repeat(2, 1fr); }
+  .edge .edge-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 700px) {
+  .cards-4, .cards-3 { grid-template-columns: 1fr; }
+  .contact-strip .contact-flex { flex-direction: column; align-items:flex-start; }
+}
