@@ -68,28 +68,24 @@ CSS
 echo "▶ Wiring service icons into home layout cards…"
 HOME="_layouts/home.html"
 # Insert icon spans at the top of each service card if not present
-if grep -q "<h3>IAM / Federation</h3>" "$HOME" && ! grep -q 'iam.svg' "$HOME"; then
-  sed -i 's#<h3>IAM / Federation</h3>|<span class="icon"><img src="{{ '\''/assets/icons/iam.svg'\'' | relative_url }}" alt=""></span>\n        <h3>IAM / Federation</h3>#' "$HOME"
+# IAM / Federation
+if ! grep -q "assets/icons/iam.svg" "$HOME"; then
+  perl -0777 -i -pe 's#<h3>IAM / Federation</h3>#<span class="icon"><img src="{{ '\''/assets/icons/iam.svg'\'' | relative_url }}" alt=""></span>\n        <h3>IAM / Federation</h3>#s' "$HOME"
 fi
-if grep -q "<h3>Zero Trust for SMB</h3>" "$HOME" && ! grep -q 'zerotrust.svg' "$HOME"; then
-  sed -i 's#<h3>Zero Trust for SMB</h3>|<span class="icon"><img src="{{ '\''/assets/icons/zerotrust.svg'\'' | relative_url }}" alt=""></span>\n        <h3>Zero Trust for SMB</h3>#' "$HOME"
+
+# Zero Trust for SMB
+if ! grep -q "assets/icons/zerotrust.svg" "$HOME"; then
+  perl -0777 -i -pe 's#<h3>Zero Trust for SMB</h3>#<span class="icon"><img src="{{ '\''/assets/icons/zerotrust.svg'\'' | relative_url }}" alt=""></span>\n        <h3>Zero Trust for SMB</h3>#s' "$HOME"
 fi
-if grep -q "<h3>Linux Automation</h3>" "$HOME" && ! grep -q 'automation.svg' "$HOME"; then
-  sed -i 's#<h3>Linux Automation</h3>|<span class="icon"><img src="{{ '\''/assets/icons/automation.svg'\'' | relative_url }}" alt=""></span>\n        <h3>Linux Automation</h3>#' "$HOME"
+
+# Linux Automation
+if ! grep -q "assets/icons/automation.svg" "$HOME"; then
+  perl -0777 -i -pe 's#<h3>Linux Automation</h3>#<span class="icon"><img src="{{ '\''/assets/icons/automation.svg'\'' | relative_url }}" alt=""></span>\n        <h3>Linux Automation</h3>#s' "$HOME"
 fi
-if grep -q "<h3>Cyber × Electrical</h3>" "$HOME" && ! grep -q 'ot.svg' "$HOME"; then
-  sed -i 's#<h3>Cyber × Electrical</h3>|<span class="icon"><img src="{{ '\''/assets/icons/ot.svg'\'' | relative_url }}" alt=""></span>\n        <h3>Cyber × Electrical</h3>#' "$HOME"
-fiif grep -q "<h3>IAM / Federation</h3>" "$HOME" && ! grep -q 'iam.svg' "$HOME"; then
-  sed -i 's#<h3>IAM / Federation</h3>#<span class="icon"><img src="{{ '\''/assets/icons/iam.svg'\'' | relative_url }}" alt=""></span>\n        <h3>IAM / Federation</h3>#' "$HOME"
-fi
-if grep -q "<h3>Zero Trust for SMB</h3>" "$HOME" && ! grep -q 'zerotrust.svg' "$HOME"; then
-  sed -i 's#<h3>Zero Trust for SMB</h3>#<span class="icon"><img src="{{ '\''/assets/icons/zerotrust.svg'\'' | relative_url }}" alt=""></span>\n        <h3>Zero Trust for SMB</h3>#' "$HOME"
-fi
-if grep -q "<h3>Linux Automation</h3>" "$HOME" && ! grep -q 'automation.svg' "$HOME"; then
-  sed -i 's#<h3>Linux Automation</h3>#<span class="icon"><img src="{{ '\''/assets/icons/automation.svg'\'' | relative_url }}" alt=""></span>\n        <h3>Linux Automation</h3>#' "$HOME"
-fi
-if grep -q "<h3>Cyber × Electrical</h3>" "$HOME" && ! grep -q 'ot.svg' "$HOME"; then
-  sed -i 's#<h3>Cyber × Electrical</h3>#<span class="icon"><img src="{{ '\''/assets/icons/ot.svg'\'' | relative_url }}" alt=""></span>\n        <h3>Cyber × Electrical</h3>#' "$HOME"
+
+# Cyber × Electrical
+if ! grep -q "assets/icons/ot.svg" "$HOME"; then
+  perl -0777 -i -pe 's#<h3>Cyber × Electrical</h3>#<span class="icon"><img src="{{ '\''/assets/icons/ot.svg'\'' | relative_url }}" alt=""></span>\n        <h3>Cyber × Electrical</h3>#s' "$HOME"
 fi
 
 echo "▶ Add default image fields to featured projects if missing…"
