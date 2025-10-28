@@ -1,0 +1,14 @@
+hero:
+  video: "/assets/video/hero.mp4"
+  # Optional: add WebM for wider browser coverage after you transcode one
+  # video_webm: "/assets/video/hero.webm"
+  poster: "/assets/img/posters/hero-poster.jpg"
+  overlay: "rgba(0,0,0,0.55)"   # controls darkness over the video
+
+images:
+  # put all reusable images here; add/rename as you go
+  projects:
+    okta_blueprint: "/assets/img/projects/okta-blueprint.jpg"
+    zero_trust_smb: "/assets/img/projects/zero-trust-smb.jpg"
+  blog:
+    sentinel_manifesto: "/assets/img/blog/sentinel-manifesto.jpg"
