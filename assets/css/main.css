@@ -287,7 +287,7 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); f
   min-width: 100%;
   min-height: 100%;
   width: auto;
-  height: 10px;
+  height: auto;
   transform: translate(-50%, -50%);
   object-fit: cover;
   filter: saturate(1.05) contrast(1.05);
@@ -459,4 +459,16 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); f
 }
 .accent-highlight {
   white-space: nowrap;   /* keep highlight word on one line */
+}
+.hero .container.hero-inner {
+  height: 80vh;          /* container takes up 80% of the screen height */
+  display: flex;
+  align-items: center;   /* vertically center text inside */
+}
+.hero .container.hero-inner {
+  max-width: 1500px;   /* keep your chosen width */
+  min-height: 80vh;    /* height adjustment */
+  display: flex;
+  align-items: center; /* vertical centering */
+  padding: 0 3rem;
 }
