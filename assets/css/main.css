@@ -426,3 +426,37 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); f
   font-weight: 800;
   margin-bottom: 1rem;
 }
+/* === Hero width tuning for longer headlines === */
+
+/* Widen the entire hero container */
+.hero .container.hero-inner {
+  max-width: 1400px;    /* was 1200px */
+  padding: 0 3rem;      /* adds side spacing on huge screens */
+}
+
+/* Give more room to the left column (headline side) */
+.hero-grid {
+  grid-template-columns: 1.3fr 0.7fr;   /* left wider, right narrower */
+  gap: 2.5rem;
+}
+
+/* Allow long headline to use full width gracefully */
+.hero-left h1 {
+  max-width: 1000px;    /* let it stretch wider */
+  word-break: normal;
+  white-space: normal;
+}
+
+/* On tablets and smaller screens, return to single column */
+@media (max-width: 980px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .hero .container.hero-inner {
+    padding: 0 1.25rem;
+  }
+}
+.accent-highlight {
+  white-space: nowrap;   /* keep highlight word on one line */
+}
