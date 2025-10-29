@@ -15,7 +15,7 @@
   --accent-2: #2f5d3f;
 }
 html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: 'Open Sans', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
-.container { max-width: none; height: 100px; margin: 0 auto; padding: 1.2rem; }
+.container { max-width: none; height: 10px; margin: 0 auto; padding: 1.2rem; }
 .site-header { border-bottom: 1px solid rgba(255,255,255,.06); background: var(--card); position: sticky; top:0; z-index: 50;}
 .nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
 .brand { display: flex; align-items: center; gap: .6rem; text-decoration: none; color: var(--text); font-weight: 700; letter-spacing: .5px; }
