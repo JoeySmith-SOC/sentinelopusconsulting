@@ -3,6 +3,7 @@ layout: default
 ---
 <!-- HERO (video background) -->
 <section class="hero hero-video">
+  <!-- BACKGROUND LAYER: video + overlay -->
   <div class="hero-media">
     {% assign hero = site.data.media.hero %}
     <video
@@ -18,27 +19,37 @@ layout: default
       <source src="{{ hero.video_webm | relative_url }}" type="video/webm">
       {% endif %}
       <source src="{{ hero.video | relative_url }}" type="video/mp4">
-      <!-- Fallback text for very old browsers -->
       Your browser does not support the video tag.
     </video>
-    <div class="hero-overlay" style="background: {{ hero.overlay | default: 'rgba(0,0,0,0.55)' }}"></div>
+    {% assign overlay_color = hero.overlay | default: 'rgba(0,0,0,0.55)' %}
+    <div class="hero-overlay" style="background: {{ overlay_color }};"></div>
   </div>
 
+  <!-- FOREGROUND LAYER: your content in a 2-column grid -->
   <div class="container hero-inner">
-    <h1>Identity, automation, and IT/OT Security</h1>
-    <p class="sub">I help teams secure what matters—reliably, transparently, and without slowing you down.</p>
-    <div class="cta-row">
-      <a class="btn primary" href="{{ '/contact/' | relative_url }}">Book a consult</a>
-      <a class="btn" href="{{ '/projects/' | relative_url }}">See projects</a>
-    </div>
+    <div class="hero-grid">
+      <!-- LEFT column: your headline, sub, CTAs -->
+      <div class="hero-left">
+        <h1>Identity, automation, and IT/OT <span class="accent-highlight">Security</span></h1>
+        <p class="sub">I help teams secure what matters—reliably, transparently, and without slowing you down.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="{{ '/contact/' | relative_url }}">Book a consult</a>
+          <a class="btn" href="{{ '/projects/' | relative_url }}">See projects</a>
+        </div>
+      </div>
 
-    <ul class="cred cred-bar" aria-label="Key capabilities">
-      <li>| Okta | SAML/OIDC | Lifecycle</li>
-      <li>| Cloudflare Zero Trust</li>
-      <li>| Linux | Ansible | Terraform</li>
-      <li>| OT/Electrical | Segmentation | Safety</li>
-    </ul>
+      <!-- RIGHT column: your capability list -->
+      <div class="hero-right">
+        <ul class="cred cred-bar feature-list" aria-label="Key capabilities">
+          <li>Okta | SAML/OIDC | Lifecycle</li>
+          <li>Cloudflare | Zero Trust</li>
+          <li>Linux | Ansible | Terraform</li>
+          <li>OT/Electrical | Segmentation | Safety</li>
+        </ul>
+      </div>
+    </div>
   </div>
+</section>
 
 <section class="split">
   <div>
