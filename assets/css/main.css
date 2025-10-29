@@ -484,11 +484,11 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); f
 
 .feature-list li {
   position: relative;
-  font-size: 1.25rem;           /* larger text */
-  font-weight: 600;
-  letter-spacing: 0.02em;
+  font-size: clamp(1.35rem, 1.6vw, 1.75rem); /* scales with screen size */
+  font-weight: 700;                          /* make bolder */
+  letter-spacing: 0.03em;
   color: #fff;
-  padding-left: 2.5rem;
+  padding-left: 2.8rem;
   transition: transform 0.2s ease, color 0.2s ease;
 }
 
@@ -539,4 +539,8 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); f
   border-radius: 50%;
   background: var(--accent);
   box-shadow: 0 0 10px rgba(240,180,0,0.5);
+}
+.feature-list li strong {
+  color: var(--accent, #f0b400);
+  font-weight: 800;
 }
