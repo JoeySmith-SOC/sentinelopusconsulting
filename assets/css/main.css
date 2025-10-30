@@ -787,3 +787,69 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); f
 .card-link:hover {
   text-decoration: underline;
 }
+/* === What I Do: 2x2 grid with centered icons === */
+.expertise-grid.two-col {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media (max-width: 860px) {
+  .expertise-grid.two-col {
+    grid-template-columns: 1fr; /* stack on mobile */
+    max-width: 680px;
+  }
+}
+
+.expertise-grid.two-col .card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  box-shadow: 0 0 12px rgba(0,0,0,.18);
+}
+
+.expertise-grid.two-col .card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent, #f0b400);
+  box-shadow: 0 12px 28px rgba(240,180,0,.14);
+}
+
+/* centered icon “chip” */
+.icon-top {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1rem;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+.icon-top img { width: 30px; height: 30px; filter: brightness(1.1); }
+
+.expertise-grid.two-col h3 {
+  margin: .5rem 0 .75rem;
+  color: var(--accent, #f0b400);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.expertise-grid.two-col p {
+  color: #d8d8d8;
+  line-height: 1.6;
+  font-size: 1.04rem;
+}
+
+.expertise-grid.two-col .card-link {
+  display: inline-block;
+  margin-top: .75rem;
+  color: var(--accent, #f0b400);
+  font-weight: 600;
+  text-decoration: none;
+}
+.expertise-grid.two-col .card-link:hover { text-decoration: underline; }
