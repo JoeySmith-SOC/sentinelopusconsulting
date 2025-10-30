@@ -544,3 +544,177 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); f
   color: var(--accent, #f0b400);
   font-weight: 800;
 }
+
+
+/* === "What I Do" Section === */
+.what-i-do {
+  background: var(--surface, #0d0e11);
+  padding: 6rem 0;
+}
+
+.what-i-do .section-title {
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--accent, #f0b400);
+  margin-bottom: 1rem;
+}
+
+.what-i-do .section-sub {
+  text-align: center;
+  color: #ccc;
+  font-size: 1.05rem;
+  max-width: 720px;
+  margin: 0 auto 3.5rem;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.expertise-grid .card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 2rem;
+  border-radius: 1rem;
+  transition: all 0.25s ease;
+}
+
+.expertise-grid .card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+  box-shadow: 0 6px 20px rgba(240,180,0,0.1);
+}
+
+.expertise-grid h3 {
+  color: var(--accent, #f0b400);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.expertise-grid p {
+  color: #eee;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+/* === Technical Expertise Section Refinement === */
+.what-i-do {
+  background: #0e0f12;
+  padding: 7rem 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--accent, #f0b400);
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.section-sub {
+  text-align: center;
+  color: #bbb;
+  font-size: 1.1rem;
+  max-width: 720px;
+  margin: 0 auto 4rem;
+  line-height: 1.5;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+}
+
+.expertise-grid .card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.05) 100%);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 2.5rem;
+  border-radius: 1rem;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.expertise-grid .card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--accent, #f0b400);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.expertise-grid .card:hover::before { opacity: 1; }
+.expertise-grid .card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+  box-shadow: 0 6px 25px rgba(240,180,0,0.12);
+}
+
+.expertise-grid h3 {
+  color: var(--accent, #f0b400);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.expertise-grid p {
+  color: #ddd;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+/* === "What I Do" Section (Contrast Version) === */
+.what-i-do {
+  background: linear-gradient(180deg, #101216 0%, #181b20 100%);
+  padding: 7rem 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* Optional top gradient fade that overlaps slightly into the hero video */
+.what-i-do::before {
+  content: "";
+  position: absolute;
+  top: -4rem;
+  left: 0;
+  width: 100%;
+  height: 4rem;
+  background: linear-gradient(to bottom, rgba(14,15,18,0), #101216);
+  z-index: 1;
+}
+.expertise-grid .card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 2.5rem;
+  border-radius: 1rem;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.expertise-grid .card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+  box-shadow: 0 10px 28px rgba(240,180,0,0.15);
+}
+.what-i-do::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 2px;
+  background: var(--accent, #f0b400);
+  opacity: 0.7;
+  border-radius: 1px;
+}
