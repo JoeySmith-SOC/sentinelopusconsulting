@@ -718,3 +718,72 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); f
   opacity: 0.7;
   border-radius: 1px;
 }
+/* === Column layout for "What I Do" === */
+.expertise-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.expertise-list .card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.expertise-list .card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent, #f0b400);
+  box-shadow: 0 8px 25px rgba(240, 180, 0, 0.15);
+}
+
+.icon-area {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.icon-area img {
+  width: 28px;
+  height: 28px;
+  filter: brightness(1.1);
+}
+
+.content h3 {
+  color: var(--accent, #f0b400);
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.content p {
+  color: #ccc;
+  line-height: 1.6;
+  font-size: 1.05rem;
+  margin-bottom: 0.75rem;
+}
+
+.card-link {
+  color: var(--accent, #f0b400);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
