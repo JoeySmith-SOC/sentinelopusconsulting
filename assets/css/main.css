@@ -550,6 +550,7 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); f
 .what-i-do {
   background: var(--surface, #0d0e11);
   padding: 6rem 0;
+  text-align: center;
 }
 
 .what-i-do .section-title {
@@ -557,15 +558,17 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); f
   font-size: 2.25rem;
   font-weight: 800;
   color: var(--accent, #f0b400);
-  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .what-i-do .section-sub {
   text-align: center;
   color: #ccc;
-  font-size: 1.05rem;
-  max-width: 720px;
+  font-size: 1.1rem;
+  max-width: 800px;
   margin: 0 auto 3.5rem;
+  line-height: 1.6;
 }
 
 .expertise-grid {
