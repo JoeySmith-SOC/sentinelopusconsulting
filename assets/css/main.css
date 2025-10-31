@@ -892,3 +892,10 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); f
   max-width: 1200px;          /* keeps your text from going edge-to-edge */
   margin: 0 auto;
 }
+@media (max-width: 768px) {
+  .hero-video {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+}
