@@ -899,3 +899,59 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); f
     width: 100%;
   }
 }
+/* === Flagship Projects === */
+.projects {
+  background: linear-gradient(180deg, #0f1013 0%, #121419 100%);
+  padding: 7rem 0;
+  position: relative;
+  z-index: 2;
+}
+.projects .section-title { text-align:center; font-size:2.3rem; font-weight:800; color:var(--accent); margin-bottom:.75rem; }
+.projects .section-sub {
+  text-align:center; color:#cfcfcf; max-width:780px; margin:0 auto 3rem; line-height:1.6;
+}
+
+.project-grid {
+  display:grid;
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
+  gap: 2rem;
+}
+@media (max-width: 1024px) {
+  .project-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 700px) {
+  .project-grid { grid-template-columns: 1fr; }
+}
+
+.project-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  display:flex; flex-direction: column;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  box-shadow: 0 0 14px rgba(0,0,0,.18);
+}
+.project-card:hover { transform: translateY(-6px); border-color: var(--accent); box-shadow: 0 12px 28px rgba(240,180,0,.14); }
+
+.project-media img { width:100%; height:220px; object-fit:cover; display:block; }
+.project-placeholder {
+  height:220px; display:grid; place-items:center;
+  background: linear-gradient(135deg, rgba(240,180,0,.15), rgba(240,180,0,.05));
+  color:#ffe7a8; font-weight:700; letter-spacing:.05em;
+}
+
+.project-body { padding: 1.25rem 1.25rem 1.5rem; display:flex; flex-direction:column; gap:.6rem; }
+.project-body h3 { margin:.2rem 0; font-size:1.25rem; font-weight:800; }
+.project-body h3 a { color:#fff; text-decoration:none; }
+.project-body h3 a:hover { color: var(--accent); }
+
+.project-desc { color:#d6d6d6; line-height:1.6; }
+
+.project-tags { list-style:none; padding:0; margin:.25rem 0 .5rem; display:flex; flex-wrap:wrap; gap:.4rem; }
+.project-tags li {
+  font-size:.85rem; color:#f9e6a8; background: rgba(240,180,0,.1);
+  border:1px solid rgba(240,180,0,.25); padding:.2rem .5rem; border-radius:999px;
+}
+
+.btn.project-link { align-self:flex-start; margin-top:.25rem; }
