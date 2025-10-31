@@ -856,3 +856,13 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); f
   text-decoration: none;
 }
 .expertise-grid.two-col .card-link:hover { text-decoration: underline; }
+/* Icons and hover effect */
+.icon-top img {
+  width: 40px;
+  height: 40px;
+  filter: brightness(1.2);
+  opacity: 0.9;
+}
+.card:hover .icon-top img {
+  filter: brightness(1.2) sepia(1) saturate(6) hue-rotate(15deg);
+}
