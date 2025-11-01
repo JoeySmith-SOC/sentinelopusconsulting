@@ -955,3 +955,9 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); f
 }
 
 .btn.project-link { align-self:flex-start; margin-top:.25rem; }
+.project-media img {
+  filter: brightness(0.85) contrast(1.1) saturate(1.2);
+}
+.project-card:hover img {
+  filter: brightness(1) contrast(1.25) saturate(1.3);
+}
