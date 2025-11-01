@@ -104,6 +104,14 @@ html,body{margin:0;padding:0;background:var(--bg);color:var(--text);
 .expertise-grid.two-col p{color:#d8d8d8;line-height:1.6;font-size:1.04rem;}
 .expertise-grid.two-col .card-link{display:inline-block;margin-top:.75rem;color:var(--accent);font-weight:600;text-decoration:none;}
 .expertise-grid.two-col .card-link:hover{text-decoration:underline;}
+/* Light-mode variant for What I Do */
+:root.light .what-i-do {background: linear-gradient(180deg, #f9f9fb 0%, #eceef1 100%);}
+:root.light .what-i-do::before {background: linear-gradient(to bottom, rgba(255,255,255,0), #f9f9fb);}
+:root.light .what-i-do::after {background: var(--accent);opacity: 0.2;}
+:root.light .expertise-grid.two-col .card {background: rgba(255,255,255,0.9);border: 1px solid rgba(0,0,0,0.08);box-shadow: 0 2px 12px rgba(0,0,0,0.08);}
+:root.light .expertise-grid.two-col h3 {color: var(--accent);}
+:root.light .expertise-grid.two-col p {color: #333;}
+
 
 /* -------------------------------
    PROJECTS GRID
