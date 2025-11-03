@@ -153,3 +153,17 @@ html,body{margin:0;padding:0;background:var(--bg);color:var(--text);
 .projects .btn.project-link:hover {background: var(--accent, #f0b400);border-color: var(--accent, #f0b400);color: #000;box-shadow: 0 0 15px rgba(240,180,0,.4);}
 /* 5. Optional polish: slight lift on hover for interactivity */
 .project-card:hover .btn.project-link {transform: translateY(-1px);}
+/* === Flagship Projects — 2x3 Grid Fix === */
+.project-grid {display: grid;grid-template-columns: repeat(3, 1fr);grid-template-rows: repeat(2, auto);gap: 2rem;justify-items: stretch;align-items: stretch;margin-top: 2rem;}
+@media (max-width: 1024px) {.project-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: auto; }}
+@media (max-width: 700px) {.project-grid { grid-template-columns: 1fr; grid-template-rows: auto; }}
+/* Optional: subtle stagger animation */
+.project-card {opacity: 0;transform: translateY(20px);animation: cardFadeUp 0.8s ease forwards;}
+.project-card:nth-child(1) { animation-delay: 0.05s; }
+.project-card:nth-child(2) { animation-delay: 0.1s; }
+.project-card:nth-child(3) { animation-delay: 0.15s; }
+.project-card:nth-child(4) { animation-delay: 0.2s; }
+.project-card:nth-child(5) { animation-delay: 0.25s; }
+.project-card:nth-child(6) { animation-delay: 0.3s; }
+
+@keyframes cardFadeUp {to { opacity: 1; transform: translateY(0); }}

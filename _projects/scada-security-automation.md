@@ -1,14 +1,20 @@
 ---
-title: SCADA Security Automation Lab
-image: /assets/img/project-placeholder.jpg
-subtitle: Zero Trust segmentation, Snort IDS, and Python/Ansible automation in a simulated ICS network.
+title: "SCADA Security Automation Lab"
+image: /assets/img/projects/zero_trust_hub.jpg
 featured: true
-short: ICS network with VLANs, RBAC, IDS, and automated playbooks.
+short: "Zero Trust segmentation, IDS, and automated response in an ICS environment."
+tags:
+  - SCADA
+  - ICS Security
+  - Ansible
+  - Snort IDS
+  - OT Networks
 stack: Parrot OS, VirtualBox, VLANs, iptables, Snort, Wireshark, Python, Ansible, Grafana
 links:
   repo: https://github.com/JoeySmith-SOC/scada-lab
 ---
 
-**Problem:** OT networks often lack segmentation, monitoring, and automated response.  
-**Solution:** Built a lab with VLANs, firewall rules, RBAC, Snort alerts, and Python/Ansible workflows to enforce policy.  
-**Outcome:** Demonstrated alert-to-action automation; dashboards visualizing traffic baselines and anomalies.
+**Problem:** Industrial networks often lack segmentation, visibility, and automation.  
+**Solution:** Built a lab simulating OT/ICS infrastructure with VLAN segmentation, RBAC, Snort IDS, and Ansible automation.  
+**Outcome:** Demonstrated “alert-to-action” response workflows and dashboards showing live traffic baselines.
+

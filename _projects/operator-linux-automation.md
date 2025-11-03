@@ -1,14 +1,19 @@
 ---
-title: Operator-Grade Linux Automation
-image: /assets/img/project-placeholder.jpg
-subtitle: Ansible and Terraform patterns for repeatable, hardened infrastructure.
-featured: false
-short: IaC + hardening for consistent environments.
-stack: Linux, Ansible, Terraform, Docker, Kubernetes
+title: "Operator-Grade Linux Automation"
+image: /assets/img/projects/linux-automation.jpg
+featured: true
+short: "IaC + hardening pipelines for consistent, auditable infrastructure."
+tags:
+  - Linux
+  - Ansible
+  - Terraform
+  - DevSecOps
+  - Automation
+stack: Ubuntu, Ansible, Terraform, Docker, Kubernetes, GitHub Actions
 links:
   repo: https://github.com/JoeySmith-SOC/operator-linux-automation
 ---
 
-**Problem:** Drift and manual builds slow delivery and increase risk.  
-**Solution:** Codified golden images, CIS benchmarks, and idempotent provisioning.  
-**Outcome:** Faster, safer infra changes with versioned, reviewable code.
+**Problem:** Infrastructure drift and manual provisioning lead to inconsistent security posture.  
+**Solution:** Codified golden images, CIS benchmarks, and idempotent builds with Ansible and Terraform.  
+**Outcome:** Version-controlled automation for faster, compliant, repeatable infrastructure deployments.

@@ -121,37 +121,42 @@ layout: default
 </section>
 
 <!-- =========================
-     FLAGSHIP PROJECTS (single, consolidated)
+     FLAGSHIP PROJECTS (single, consolidated) 2x3 Grid
 ========================= -->
 <section class="projects" aria-labelledby="projects-title">
   <div class="container">
-    <h2 id="projects-title" class="section-title">Flagship Projects</h2>
-    <p class="section-sub">Selected builds and lab work that show how I design, automate, and secure systems.</p>
+    <h2 id="projects-title" class="section-title">
+      IT/OT Engineering
+    </h2>
+    <p class="section-sub">
+      From identity architecture to OT security, each build reflects disciplined execution — 
+      combining automation, Zero Trust, and hands-on infrastructure design.  
+      These projects show how digital and physical systems converge under one mission: reliability through security.
+    </p>
 
     <div class="project-grid">
       {%- assign picks = site.projects | where_exp: 'p','p.featured == true' -%}
-      {%- if picks.size == 0 -%}
-        {%- assign picks = site.projects | sort: 'date' | reverse | slice: 0, 3 -%}
-      {%- else -%}
-        {%- assign picks = picks | sort: 'date' | reverse | slice: 0, 3 -%}
-      {%- endif -%}
+      {%- assign ordered = picks | sort: 'date' | reverse -%}
+      {%- assign displayed = ordered | slice: 0, 6 -%}
 
-      {%- for p in picks -%}
+      {%- for p in displayed -%}
       <article class="project-card">
         <a href="{{ p.url | relative_url }}" class="project-media" aria-label="{{ p.title }}">
           {%- if p.image -%}
-            <img src="{{ p.image | relative_url }}" alt="" loading="lazy" decoding="async">
+            <img src="{{ p.image | relative_url }}" alt="{{ p.title }}" loading="lazy" decoding="async">
           {%- else -%}
             <div class="project-placeholder" aria-hidden="true">Project</div>
           {%- endif -%}
         </a>
         <div class="project-body">
           <h3><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
+
           {%- if p.short -%}
             <p class="project-desc">{{ p.short }}</p>
           {%- elsif p.description -%}
             <p class="project-desc">{{ p.description }}</p>
           {%- endif -%}
+
           {%- if p.tags -%}
           <ul class="project-tags" aria-label="Project tags">
             {%- for t in p.tags -%}
@@ -159,6 +164,7 @@ layout: default
             {%- endfor -%}
           </ul>
           {%- endif -%}
+
           <a class="btn project-link" href="{{ p.url | relative_url }}">View project</a>
         </div>
       </article>
@@ -166,4 +172,3 @@ layout: default
     </div>
   </div>
 </section>
-
