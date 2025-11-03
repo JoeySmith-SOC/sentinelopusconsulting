@@ -1,7 +1,7 @@
 ---
 title: "Smart Electric — OT Foundation"
 image: /assets/img/projects/smart-electric-ot-foundation.jpg
-featured: false
+featured: true
 short: "Secure smart home/electrical integrations with segmentation, logging, and safety-first design."
 tags:
   - OT
