@@ -1,6 +1,6 @@
 ---
 title: "SCADA Security Automation Lab"
-image: /assets/img/projects/zero_trust_hub.jpg
+image: /assets/img/projects/all_projects.jpg
 featured: true
 short: "Zero Trust segmentation, IDS, and automated response in an ICS environment."
 tags:

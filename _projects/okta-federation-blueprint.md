@@ -1,6 +1,6 @@
 ---
 title: "Okta Federation Blueprint"
-image: /assets/img/projects/ot-security-sim.jpg
+image: /assets/img/projects/ot_security_sim.jpg
 featured: true
 short: "Reference design for SAML/OIDC, hardened policies, and lifecycle integrations."
 tags:

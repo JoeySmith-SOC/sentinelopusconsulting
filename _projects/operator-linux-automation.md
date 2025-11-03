@@ -1,5 +1,5 @@
 ---
-title: "Operator-Grade Linux Automation"
+title: "Linux Automation"
 image: /assets/img/projects/linux-automation.jpg
 featured: true
 short: "IaC + hardening pipelines for consistent, auditable infrastructure."
