@@ -1,35 +1,21 @@
 ---
 layout: default
 ---
-
-<!-- =========================
-     HERO (video background)
-========================= -->
-<section class="hero hero-video" aria-label="Intro">
-  <!-- BACKGROUND LAYER: video + overlay -->
-  <div class="hero-media" aria-hidden="true">
+<!-- HERO (video background) -->
+<section class="hero hero-video">
+  <div class="hero-media">
     {% assign hero = site.data.media.hero %}
-    <video
-      class="hero-video-el"
-      autoplay
-      muted
-      loop
-      playsinline
-      preload="metadata"
-      {% if hero.poster %}poster="{{ hero.poster | relative_url }}"{% endif %}>
-      {% if hero.video_webm %}
-      <source src="{{ hero.video_webm | relative_url }}" type="video/webm">
-      {% endif %}
+    <video class="hero-video-el" autoplay muted loop playsinline preload="metadata"
+      {% if hero.poster %}poster="{{ hero.poster | relative_url }}"{% endif %} aria-hidden="true">
+      {% if hero.video_webm %}<source src="{{ hero.video_webm | relative_url }}" type="video/webm">{% endif %}
       <source src="{{ hero.video | relative_url }}" type="video/mp4">
+      Your browser does not support the video tag.
     </video>
-    {% assign overlay_color = hero.overlay | default: 'rgba(0,0,0,0.55)' %}
-    <div class="hero-overlay" style="background: {{ overlay_color }};"></div>
+    <div class="hero-overlay" style="background: {{ hero.overlay | default: 'rgba(0,0,0,0.55)' }}"></div>
   </div>
 
-  <!-- FOREGROUND LAYER: 2-column grid (text + capability list) -->
   <div class="container hero-inner">
     <div class="hero-grid">
-      <!-- LEFT column: headline, sub, CTAs -->
       <div class="hero-left">
         <h1>Identity, Automation, and IT/OT <span class="accent-highlight">Security</span></h1>
         <p class="sub">I help teams secure what matters—reliably, transparently, and without slowing you down.</p>
@@ -37,108 +23,63 @@ layout: default
           <a class="btn primary" href="{{ '/contact/' | relative_url }}">Book a consult</a>
           <a class="btn" href="{{ '/projects/' | relative_url }}">See projects</a>
         </div>
-      </div>
-
-      <!-- RIGHT column: capability list -->
-      <div class="hero-right">
-        <h2 class="visually-hidden">Core capabilities</h2>
         <ul class="cred cred-bar feature-list" aria-label="Key capabilities">
-          <li><strong>Okta</strong> · SAML/OIDC · Lifecycle</li>
-          <li><strong>Cloudflare</strong> · Zero Trust</li>
-          <li><strong>Linux</strong> · Ansible · Terraform</li>
-          <li><strong>OT/Electrical</strong> · Segmentation · Safety</li>
+          <li><strong>Okta</strong> | SAML/OIDC | Lifecycle</li>
+          <li><strong>Cloudflare</strong> | Zero Trust</li>
+          <li><strong>Linux</strong> | Ansible | Terraform</li>
+          <li><strong>OT/Electrical</strong> | Segmentation | Safety</li>
         </ul>
       </div>
+      <div class="hero-right"></div>
     </div>
   </div>
-
-  <noscript>
-    <!-- Fallback if JS/video is blocked -->
-    <div class="hero-fallback" style="background-image:url('{{ hero.poster | default: "/assets/img/hero.jpg" | relative_url }}');"></div>
-  </noscript>
 </section>
 
-<!-- =========================
-     WHAT I DO (intro + 2×2 expertise)
-========================= -->
-<section class="what-i-do" aria-labelledby="what-i-do-title">
+<!-- WHAT I DO -->
+<section class="what-i-do">
   <div class="container">
-    <h2 id="what-i-do-title" class="section-title">What I Do</h2>
-    <p class="section-sub">
-      I engineer, automate, and secure digital and physical infrastructure — bridging cybersecurity, identity, and operational technology.
-    </p>
+    <h2 class="section-title">What I Do</h2>
+    <p class="section-sub">I engineer, automate, and secure digital and physical infrastructure — bridging cybersecurity, identity, and operational technology.</p>
 
     <div class="expertise-grid two-col">
       <article class="card">
-        <div class="icon-top">
-          <img src="{{ '/assets/icons/user-shield.svg' | relative_url }}" alt="" aria-hidden="true">
-        </div>
-        <h3>Identity &amp; Access Management (IAM)</h3>
-        <p>
-          I architect and maintain enterprise-grade identity solutions with Okta, Active Directory, and SAML/OIDC. My focus:
-          lifecycle automation, access governance, and strong authentication workflows that integrate cleanly with infrastructure.
-        </p>
-        <a href="{{ '/projects/' | relative_url }}" class="card-link">Learn more →</a>
+        <div class="icon-top"><img src="/assets/icons/user-shield.svg" alt=""></div>
+        <h3>Identity &amp; Access Management</h3>
+        <p>Okta/AD federation, lifecycle automation, access governance, and auth workflows that integrate cleanly with infrastructure.</p>
+        <a href="/projects/" class="card-link">Learn more →</a>
       </article>
-
       <article class="card">
-        <div class="icon-top">
-          <img src="{{ '/assets/icons/cloud-lock.svg' | relative_url }}" alt="" aria-hidden="true">
-        </div>
+        <div class="icon-top"><img src="/assets/icons/cloud-lock.svg" alt=""></div>
         <h3>Zero Trust Architecture</h3>
-        <p>
-          I design and implement Zero Trust networks using Cloudflare Access, role-based policy, and certificate-based authentication.
-          Every connection is verified, logged, and encrypted — without adding friction to users or operations.
-        </p>
-        <a href="{{ '/projects/' | relative_url }}" class="card-link">Learn more →</a>
+        <p>Cloudflare Access, device posture, certificate-based auth, and least-privilege policy — without user friction.</p>
+        <a href="/projects/" class="card-link">Learn more →</a>
       </article>
-
       <article class="card">
-        <div class="icon-top">
-          <img src="{{ '/assets/icons/automation.svg' | relative_url }}" alt="" aria-hidden="true">
-        </div>
+        <div class="icon-top"><img src="/assets/icons/automation.svg" alt=""></div>
         <h3>Infrastructure &amp; Automation</h3>
-        <p>
-          I automate infrastructure provisioning and security baselines with Ansible, Terraform, and PowerShell — delivering repeatable,
-          version-controlled environments that align with DevSecOps principles.
-        </p>
-        <a href="{{ '/projects/' | relative_url }}" class="card-link">Learn more →</a>
+        <p>Ansible/Terraform pipelines, hardened baselines, and versioned environments aligned to DevSecOps.</p>
+        <a href="/projects/" class="card-link">Learn more →</a>
       </article>
-
       <article class="card">
-        <div class="icon-top">
-          <img src="{{ '/assets/icons/lock-bolt.svg' | relative_url }}" alt="" aria-hidden="true">
-        </div>
-        <h3>Operational Technology &amp; Electrical Security</h3>
-        <p>
-          I bridge IT and field engineering — hardening SCADA/ICS networks, segmenting PLC systems, and integrating cybersecurity into
-          electrical infrastructure. My goal: protect systems where code meets current.
-        </p>
-        <a href="{{ '/projects/' | relative_url }}" class="card-link">Learn more →</a>
+        <div class="icon-top"><img src="/assets/icons/lock-bolt.svg" alt=""></div>
+        <h3>Operational Technology &amp; Electrical</h3>
+        <p>ICS segmentation, PLC/HMI security, monitoring, and safety-first designs bridging code and current.</p>
+        <a href="/projects/" class="card-link">Learn more →</a>
       </article>
     </div>
   </div>
 </section>
 
-<!-- =========================
-     FLAGSHIP PROJECTS (single, consolidated) 2x3 Grid
-========================= -->
+<!-- FLAGSHIP PROJECTS (2x3) -->
 <section class="projects" aria-labelledby="projects-title">
   <div class="container">
-    <h2 id="projects-title" class="section-title">
-      IT/OT Engineering
-    </h2>
-    <p class="section-sub">
-      From identity architecture to OT security, each build reflects disciplined execution — 
-      combining automation, Zero Trust, and hands-on infrastructure design.  
-      These projects show how digital and physical systems converge under one mission: reliability through security.
-    </p>
+    <h2 id="projects-title" class="section-title">Operator-Grade Engineering</h2>
+    <p class="section-sub">From identity architecture to OT security, each build reflects disciplined execution — combining automation, Zero Trust, and hands-on infrastructure design.</p>
 
     <div class="project-grid">
       {%- assign picks = site.projects | where_exp: 'p','p.featured == true' -%}
       {%- assign ordered = picks | sort: 'date' | reverse -%}
       {%- assign displayed = ordered | slice: 0, 6 -%}
-
       {%- for p in displayed -%}
       <article class="project-card">
         <a href="{{ p.url | relative_url }}" class="project-media" aria-label="{{ p.title }}">
@@ -150,21 +91,12 @@ layout: default
         </a>
         <div class="project-body">
           <h3><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
-
-          {%- if p.short -%}
-            <p class="project-desc">{{ p.short }}</p>
-          {%- elsif p.description -%}
-            <p class="project-desc">{{ p.description }}</p>
-          {%- endif -%}
-
+          {%- if p.short -%}<p class="project-desc">{{ p.short }}</p>{%- elsif p.description -%}<p class="project-desc">{{ p.description }}</p>{%- endif -%}
           {%- if p.tags -%}
           <ul class="project-tags" aria-label="Project tags">
-            {%- for t in p.tags -%}
-              <li>{{ t }}</li>
-            {%- endfor -%}
+            {%- for t in p.tags -%}<li>{{ t }}</li>{%- endfor -%}
           </ul>
           {%- endif -%}
-
           <a class="btn project-link" href="{{ p.url | relative_url }}">View project</a>
         </div>
       </article>
