@@ -141,3 +141,15 @@ html,body{margin:0;padding:0;background:var(--bg);color:var(--text);
 .project-tags li{font-size:.85rem;color:#f9e6a8;background:rgba(240,180,0,.1);border:1px solid rgba(240,180,0,.25);
   padding:.2rem .5rem;border-radius:999px;}
 .btn.project-link{align-self:flex-start;margin-top:.25rem;}
+/* === Flagship Projects – Color System Fix === */
+/* 1. Make all text in the projects section white by default */
+.projects,.projects .section-title,.projects .section-sub,.projects .project-card,.projects .project-card h3 a,.projects .project-card p,.projects .project-card li,.projects .btn.project-link {color: #fff;}
+/* 2. Ensure description and tags are legible on dark backgrounds */
+.projects .project-desc {color: #eaeaea;}
+.projects .project-tags li {color: #fff;border-color: rgba(240,180,0,.25);background: rgba(240,180,0,.12);}
+/* 3. Style the "View Project" button */
+.projects .btn.project-link {border: 1px solid #fff;background: transparent;color: #fff;transition: all 0.25s ease;font-weight: 600;letter-spacing: .02em;}
+/* 4. On hover: switch to gold background and black text for contrast */
+.projects .btn.project-link:hover {background: var(--accent, #f0b400);border-color: var(--accent, #f0b400);color: #000;box-shadow: 0 0 15px rgba(240,180,0,.4);}
+/* 5. Optional polish: slight lift on hover for interactivity */
+.project-card:hover .btn.project-link {transform: translateY(-1px);}
