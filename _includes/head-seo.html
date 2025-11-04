@@ -1,0 +1,103 @@
+{%- comment -%}
+  Sentinel Opus Consulting – SEO & Metadata Head Include
+  Safe for GitHub Pages (no unsupported Liquid filters).
+  Includes:
+  • Meta tags (charset, viewport, description)
+  • Open Graph + Twitter preview
+  • JSON-LD structured data (BlogPosting or WebSite)
+  • Optional analytics script
+{%- endcomment -%}
+
+<!-- Basic Meta -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>
+  {%- if page.title -%}
+    {{ page.title }} | {{ site.title }}
+  {%- else -%}
+    {{ site.title }}
+  {%- endif -%}
+</title>
+
+{%- assign meta_description = page.description | default: site.description | default: "Operator-grade identity, automation, and OT security." -%}
+<meta name="description" content="{{ meta_description }}">
+
+<!-- Canonical -->
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+
+<!-- Favicon -->
+<link rel="icon" href="{{ '/assets/img/favicon.ico' | relative_url }}" type="image/x-icon">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="{% if page.collection == 'posts' or page.layout == 'post' %}article{% else %}website{% endif %}">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:title" content="{{ page.title | default: site.title }}">
+<meta property="og:description" content="{{ meta_description }}">
+<meta property="og:image" content="{{ page.image | default: site.og_image | default: '/assets/img/og-default.jpg' | absolute_url }}">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.title | default: site.title }}">
+<meta name="twitter:description" content="{{ meta_description }}">
+<meta name="twitter:image" content="{{ page.image | default: site.og_image | default: '/assets/img/og-default.jpg' | absolute_url }}">
+<meta name="twitter:creator" content="@{{ site.twitter_username | default: 'sentinelopus' }}">
+
+<!-- JSON-LD Structured Data -->
+{%- assign is_post = false -%}
+{%- if page.collection == 'posts' or page.layout == 'post' -%}
+  {%- assign is_post = true -%}
+{%- endif -%}
+
+{%- capture jsonld -%}
+{
+  "@context": "https://schema.org",
+  {%- if is_post -%}
+  "@type": "BlogPosting",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ page.url | absolute_url }}" },
+  "headline": {{ page.title | jsonify }},
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  {%- if page.last_modified_at -%}
+  "dateModified": "{{ page.last_modified_at | date_to_xmlschema }}",
+  {%- endif -%}
+  "image": {%- if page.image -%}[ "{{ page.image | absolute_url }}" ]{%- else -%}[]{%- endif -%},
+  "author": {
+    "@type": "Person",
+    "name": {{ site.author.name | default: "Joseph Smith" | jsonify }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Sentinel Opus Consulting",
+    "logo": { "@type": "ImageObject", "url": "{{ '/assets/img/og-default.jpg' | absolute_url }}" }
+  },
+  "description": {{ meta_description | jsonify }}
+  {%- else -%}
+  "@type": "WebSite",
+  "url": "{{ site.url }}",
+  "name": {{ site.title | jsonify }},
+  "description": {{ meta_description | jsonify }}
+  {%- endif -%}
+}
+{%- endcapture -%}
+<script type="application/ld+json">{{ jsonld | strip_newlines }}</script>
+
+<!-- Analytics (Optional) -->
+{%- if site.analytics_id and site.analytics_id != "" -%}
+  <script defer data-domain="sentinelopusconsulting.com" src="https://plausible.io/js/script.js"></script>
+{%- endif -%}
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+{%- if page.extra_css -%}
+  {%- for css_file in page.extra_css -%}
+  <link rel="stylesheet" href="{{ css_file | relative_url }}">
+  {%- endfor -%}
+{%- endif -%}
+
+<!-- Fonts (Oswald + Open Sans) -->
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- Primary Color Theme -->
+<meta name="theme-color" content="#c9a227">
