@@ -1,3 +1,25 @@
+/* ===== NAVBAR ===== */
+.site-header {position: sticky; top: 0; z-index: 1000;backdrop-filter: saturate(120%) blur(8px);background: color-mix(in oklab, var(--bg) 80%, transparent);border-bottom: 1px solid color-mix(in oklab, var(--fg) 12%, transparent);}
+.nav-wrap {display: flex; align-items: center; justify-content: space-between;gap: 1rem; padding: .75rem 0;}
+.brand { display: inline-flex; flex-direction: column; text-decoration: none; }
+.brand-top { font-size: .7rem; letter-spacing: .12em; opacity: .7; line-height: 1; }
+.brand-name { font-weight: 700; }
+.nav { display: flex; gap: 1rem; align-items: center; }
+.nav a {text-decoration: none; padding: .45rem .6rem; border-radius: .5rem;color: var(--fg-muted);}
+.nav a:hover { background: color-mix(in oklab, var(--fg) 8%, transparent); color: var(--fg); }
+.nav .cta {background: var(--accent); color: var(--bg);font-weight: 600; padding: .5rem .8rem; border-radius: .6rem;}
+.nav .cta:hover { filter: brightness(1.05); }
+.theme-toggle {border: 1px solid color-mix(in oklab, var(--fg) 15%, transparent);background: color-mix(in oklab, var(--fg) 6%, transparent);color: var(--fg); border-radius: .6rem; padding: .4rem .55rem;display: inline-flex; align-items: center; gap: .35rem; cursor: pointer;}
+.theme-toggle .sun { display: var(--sun, inline); }
+.theme-toggle .moon { display: var(--moon, none); }
+/* Switch icon visibility based on theme attr */
+:root[data-theme="dark"] .theme-toggle { --sun:none; --moon:inline; }
+:root[data-theme="light"] .theme-toggle { --sun:inline; --moon:none; }
+/* Container sanity (ensure full-bleed hero video isn’t narrowed by header spacing) */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+
+
+
 /* Core tokens */
 :root{--bg:#0b0e10;--text:#e6e6e6;--muted:#9aa3ab;--card:#12161a;--accent:#f0b400;--accent-2:#394c3f;}
 :root.light{--bg:#fff;--text:#222;--muted:#5b6b73;--card:#f7f7f9;--accent:#bf8a00;--accent-2:#2f5d3f;}
