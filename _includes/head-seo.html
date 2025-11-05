@@ -1,41 +1,105 @@
-{%- assign meta_description = page.description | default: site.description | default: "Operator-grade identity, automation, and OT security." -%}
+{%- comment -%}
+  Sentinel Opus Consulting — Head / SEO include
+  • GitHub Pages–safe (no unsupported Liquid filters)
+  • Clean meta, OG/Twitter, BlogPosting/WebSite JSON-LD
+  • Honors page.noindex, supports alt text for social images
+{%- endcomment -%}
+
+{%- assign meta_description = page.description | default: site.description | default: "Identity Access Management, Automation, and OT security." -%}
+
+<!-- Basic -->
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 <meta name="description" content="{{ meta_description }}">
+
+{%- if page.noindex == true -%}
+<meta name="robots" content="noindex, nofollow">
+{%- else -%}
+<meta name="robots" content="index, follow">
+{%- endif -%}
+
 <link rel="canonical" href="{{ page.url | absolute_url }}">
 <link rel="icon" href="{{ '/assets/img/favicon.ico' | relative_url }}" type="image/x-icon">
+
+{%- comment -%} Locale for OG (map en → en_US) {%- endcomment -%}
+{%- assign og_locale = site.lang | default: 'en' -%}
+{%- if og_locale == 'en' -%}{%- assign og_locale = 'en_US' -%}{%- endif -%}
+<meta property="og:locale" content="{{ og_locale }}">
+
+<!-- Open Graph -->
 <meta property="og:type" content="{% if page.collection == 'posts' or page.layout == 'post' %}article{% else %}website{% endif %}">
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:url" content="{{ page.url | absolute_url }}">
 <meta property="og:title" content="{{ page.title | default: site.title }}">
 <meta property="og:description" content="{{ meta_description }}">
-<meta property="og:image" content="{{ page.image | default: site.og_image | default: '/assets/img/og-default.jpg' | absolute_url }}">
+{%- assign social_image = page.image | default: site.og_image | default: '/assets/img/og-default.jpg' -%}
+<meta property="og:image" content="{{ social_image | absolute_url }}">
+{%- if page.last_modified_at -%}
+<meta property="og:updated_time" content="{{ page.last_modified_at | date_to_xmlschema }}">
+{%- endif -%}
+
+<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ page.title | default: site.title }}">
 <meta name="twitter:description" content="{{ meta_description }}">
-<meta name="twitter:image" content="{{ page.image | default: site.og_image | default: '/assets/img/og-default.jpg' | absolute_url }}">
-<meta name="twitter:creator" content="@{{ site.twitter_username | default: 'sentinelopus' }}">
+<meta name="twitter:image" content="{{ social_image | absolute_url }}">
+{%- if site.twitter_username -%}
+<meta name="twitter:site" content="@{{ site.twitter_username }}">
+<meta name="twitter:creator" content="@{{ site.twitter_username }}">
+{%- endif -%}
+{%- assign img_alt = page.image_alt | default: page.title | default: site.title -%}
+<meta name="twitter:image:alt" content="{{ img_alt }}">
+
+{%- comment -%}
+  JSON-LD: BlogPosting on posts, WebSite elsewhere
+{%- endcomment -%}
 {%- assign is_post = false -%}
 {%- if page.collection == 'posts' or page.layout == 'post' -%}{%- assign is_post = true -%}{%- endif -%}
-{%- capture jsonld -%}{
-"@context":"https://schema.org",
-{% if is_post %}
-"@type":"BlogPosting",
-"mainEntityOfPage":{"@type":"WebPage","@id":"{{ page.url | absolute_url }}"},
-"headline":{{ page.title | jsonify }},
-"datePublished":"{{ page.date | date_to_xmlschema }}",
-{% if page.last_modified_at %}"dateModified":"{{ page.last_modified_at | date_to_xmlschema }}",{% endif %}
-"image":{% if page.image %}["{{ page.image | absolute_url }}"]{% else %}[]{% endif %},
-"author":{"@type":"Person","name":{{ site.author.name | default: "Joseph Smith" | jsonify }}},
-"publisher":{"@type":"Organization","name":"Sentinel Opus Consulting","logo":{"@type":"ImageObject","url":"{{ '/assets/img/og-default.jpg' | absolute_url }}"}},
-"description":{{ meta_description | jsonify }}
-{% else %}
-"@type":"WebSite","url":"{{ site.url }}","name":{{ site.title | jsonify }},"description":{{ meta_description | jsonify }}
-{% endif %}
-}{%- endcapture -%}
+{%- capture jsonld -%}
+{
+  "@context": "https://schema.org",
+  {% if is_post %}
+  "@type": "BlogPosting",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ page.url | absolute_url }}" },
+  "headline": {{ page.title | jsonify }},
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  {% if page.last_modified_at %}"dateModified": "{{ page.last_modified_at | date_to_xmlschema }}",{% endif %}
+  "image": {% if page.image %}["{{ page.image | absolute_url }}"]{% else %}[]{% endif %},
+  "author": { "@type": "Person", "name": {{ site.author.name | default: "Joseph Smith" | jsonify }} },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Sentinel Opus Consulting",
+    "logo": { "@type": "ImageObject", "url": "{{ '/assets/img/og-default.jpg' | absolute_url }}" }
+  },
+  "description": {{ meta_description | jsonify }}
+  {% else %}
+  "@type": "WebSite",
+  "url": "{{ site.url }}",
+  "name": {{ site.title | jsonify }},
+  "description": {{ meta_description | jsonify }}
+  {% endif %}
+}
+{%- endcapture -%}
 <script type="application/ld+json">{{ jsonld | strip_newlines }}</script>
+
+<!-- Styles -->
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+
+<!-- Fonts (preconnect + load) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- Theme color for browser UI -->
 <meta name="theme-color" content="#c9a227">
+<meta name="color-scheme" content="light dark">
+
+{%- comment -%}
+  Optional: Plausible Analytics
+  Add in _config.yml: plausible_domain: sentinelopusconsulting.com
+{%- endcomment -%}
+{%- if site.plausible_domain -%}
+<script defer data-domain="{{ site.plausible_domain }}" src="https://plausible.io/js/script.js"></script>
+{%- endif -%}
