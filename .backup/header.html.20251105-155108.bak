@@ -4,6 +4,7 @@
       <span class="brand-top">SOC</span>
       <span class="brand-name">Sentinel Opus Consulting</span>
     </a>
+
     <nav class="nav" aria-label="Primary">
       <a href="{{ '/' | relative_url }}">Home</a>
       <a href="{{ '/projects/' | relative_url }}">Projects</a>
@@ -12,8 +13,11 @@
       <a href="{{ '/about/' | relative_url }}">About</a>
       <a class="cta" href="{{ '/contact/' | relative_url }}">Hire Me</a>
     </nav>
+
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-      <span class="sun" aria-hidden="true">☀</span><span class="moon" aria-hidden="true">🌙</span>
+      <span class="sun" aria-hidden="true">☀</span>
+      <span class="moon" aria-hidden="true">🌙</span>
     </button>
   </div>
 </header>
+
