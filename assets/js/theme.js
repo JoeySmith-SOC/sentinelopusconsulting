@@ -24,3 +24,22 @@
     setTheme(current === 'dark' ? 'light' : 'dark');
   });
 })();
+// Mobile menu toggle
+(function(){
+  const btn = document.getElementById('navToggle');
+  const nav = document.getElementById('primaryNav');
+  if (!btn || !nav) return;
+
+  function setOpen(open){
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('nav-open', open);
+  }
+
+  let open = false;
+  btn.addEventListener('click', () => { open = !open; setOpen(open); });
+
+  // Close on Escape and when clicking a nav link (good UX)
+  document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && open){ open=false; setOpen(false);} });
+  nav.addEventListener('click', (e)=>{ if(e.target.closest('a')) { open=false; setOpen(false);} });
+})();

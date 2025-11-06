@@ -1,19 +1,79 @@
-<header class="site-header">
+{%- comment -%}
+  Sentinel Opus Consulting — Header
+  • Accessible skip link
+  • Mobile hamburger menu (no checkbox hack)
+  • Current-page highlighting via aria-current
+  • Dark/Light theme toggle button (wired by theme.js)
+{%- endcomment -%}
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header" role="banner">
   <div class="container nav-wrap">
-    <a class="brand" href="{{ '/' | relative_url }}">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="Sentinel Opus Consulting — Home">
       <span class="brand-top">SOC</span>
       <span class="brand-name">Sentinel Opus Consulting</span>
     </a>
-    <nav class="nav" aria-label="Primary">
-      <a href="{{ '/' | relative_url }}">Home</a>
-      <a href="{{ '/projects/' | relative_url }}">Projects</a>
-      <a href="{{ '/blog/' | relative_url }}">Blog</a>
-      <a href="{{ '/services/' | relative_url }}">Services</a>
-      <a href="{{ '/about/' | relative_url }}">About</a>
-      <a class="cta" href="{{ '/contact/' | relative_url }}">Hire Me</a>
+
+    <!-- Mobile menu toggle -->
+    <button class="nav-toggle" id="navToggle"
+            aria-label="Toggle navigation"
+            aria-controls="primaryNav"
+            aria-expanded="false">
+      <!-- Hamburger icon -->
+      <svg class="hamburger" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+        <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <!-- Close icon -->
+      <svg class="close" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+        <path d="M6 6l12 12M6 18L18 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+
+    {%- comment -%}
+      Build the nav from a list to keep things DRY.
+      We mark the active link with aria-current="page" when URLs match.
+    {%- endcomment -%}
+    {%- assign nav_items = 
+      site.data.nav | default: 
+      site.nav | default: 
+      '
+      Home:/,
+      Projects:/projects/,
+      Blog:/blog/,
+      Services:/services/,
+      About:/about/
+      ' 
+    -%}
+    {%- assign items = nav_items | split: ',' -%}
+
+    <nav id="primaryNav" class="nav" aria-label="Primary">
+      <ul class="nav-list">
+        {%- for item in items -%}
+          {%- assign pair = item | strip | split: ':' -%}
+          {%- assign label = pair[0] | strip -%}
+          {%- assign href  = pair[1] | strip -%}
+          {%- assign url_rel = href | relative_url -%}
+          {%- comment -%} Normalize to compare paths {%- endcomment -%}
+          {%- assign here = page.url | default: '/' -%}
+          {%- assign active = (here == url_rel) -%}
+          <li>
+            <a href="{{ url_rel }}"
+               {%- if active -%} aria-current="page"{%- endif -%}>
+              {{ label }}
+            </a>
+          </li>
+        {%- endfor -%}
+        <li>
+          <a class="cta" href="{{ '/contact/' | relative_url }}">Hire Me</a>
+        </li>
+      </ul>
     </nav>
+
+    <!-- Theme toggle -->
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-      <span class="sun" aria-hidden="true">☀</span><span class="moon" aria-hidden="true">🌙</span>
+      <span class="sun" aria-hidden="true">☀</span>
+      <span class="moon" aria-hidden="true">🌙</span>
     </button>
   </div>
 </header>
