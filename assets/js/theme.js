@@ -1,45 +1,38 @@
-(function () {
-  const key = 'soc-theme';
-  const btn = document.getElementById('themeToggle');
-  if (!btn) return;
+// Sentinel Opus — Theme + Mobile Nav (single file)
 
+(function theme() {
+  const KEY = 'soc-theme';
   function setTheme(mode) {
     document.documentElement.setAttribute('data-theme', mode);
-    try { localStorage.setItem(key, mode); } catch (e) {}
+    try { localStorage.setItem(KEY, mode); } catch (e) {}
   }
-
-  // Initialize from localStorage or OS
   try {
-    const saved = localStorage.getItem(key);
+    const saved = localStorage.getItem(KEY);
     if (saved) setTheme(saved);
-    else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      setTheme('dark');
-    } else {
-      setTheme('light');
-    }
+    else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) setTheme('dark');
+    else setTheme('light');
   } catch (e) {}
-
-  btn.addEventListener('click', () => {
-    const current = document.documentElement.getAttribute('data-theme') || 'light';
-    setTheme(current === 'dark' ? 'light' : 'dark');
+  const btn = document.getElementById('themeToggle');
+  if (btn) btn.addEventListener('click', () => {
+    const cur = document.documentElement.getAttribute('data-theme') || 'light';
+    setTheme(cur === 'dark' ? 'light' : 'dark');
   });
 })();
-// Mobile menu toggle
-(function(){
+
+(function mobileNav() {
   const btn = document.getElementById('navToggle');
   const nav = document.getElementById('primaryNav');
   if (!btn || !nav) return;
 
-  function setOpen(open){
-    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    nav.classList.toggle('is-open', open);
-    document.documentElement.classList.toggle('nav-open', open);
+  let open = false;
+  function setOpen(v) {
+    open = v;
+    btn.setAttribute('aria-expanded', v ? 'true' : 'false');
+    nav.classList.toggle('is-open', v);
+    document.documentElement.classList.toggle('nav-open', v);
   }
 
-  let open = false;
-  btn.addEventListener('click', () => { open = !open; setOpen(open); });
-
-  // Close on Escape and when clicking a nav link (good UX)
-  document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && open){ open=false; setOpen(false);} });
-  nav.addEventListener('click', (e)=>{ if(e.target.closest('a')) { open=false; setOpen(false);} });
+  btn.addEventListener('click', () => setOpen(!open));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && open) setOpen(false); });
+  nav.addEventListener('click', e => { if (e.target.closest('a')) setOpen(false); });
 })();
