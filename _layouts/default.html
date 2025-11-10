@@ -1,18 +1,24 @@
 <!doctype html>
-<html lang="{{ site.lang }}">
+<html lang="{{ site.lang | default: 'en' }}">
   <head>
-    {%- include head-seo.html -%}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    {%- seo -%}
+
+    {%- include head-seo.html -%}
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-    <script src="{{ '/assets/js/theme.js' | relative_url }}" defer></script>
+    <link rel="icon" href="{{ '/assets/img/favicon.png' | relative_url }}">
   </head>
   <body class="site">
     {% include header.html %}
-    <main class="container">
+
+    <main id="content">
       {{ content }}
     </main>
+
     {% include footer.html %}
+
+    <!-- Load scripts once, at the end -->
+    <script src="{{ '/assets/js/theme.js' | relative_url }}" defer></script>
   </body>
 </html>

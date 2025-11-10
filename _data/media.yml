@@ -1,8 +1,8 @@
 hero:
   video: "/assets/video/hero_video_background.mp4"
   # Optional: add WebM for wider browser coverage after you transcode one
-  # video_webm: "/assets/video/hero.webm"
-  poster: "/assets/img/posters/hero-poster.jpg"
+  video_webm: "" #"/assets/video/hero.webm"
+  poster: "" #"/assets/img/posters/hero-poster.jpg"
   overlay: "rgba(0,0,0,0.55)"   # controls darkness over the video
 
 images:
