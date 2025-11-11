@@ -1,0 +1,28 @@
+# Jekyll build artifacts
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# OS/editor cruft
+.DS_Store
+Thumbs.db
+.vscode/
+*.log
+
+# Ruby / Bundler
+.bundle/
+vendor/
+# keep Gemfile.lock; comment next line if you want to track it
+# Gemfile.lock
+
+# Node (if you experiment with tooling later)
+node_modules/
+
+# Local env/secrets
+.env
+.env.*
+
+# Images/videos you never want in git (optional; adjust to taste)
+assets/img/raw/
+assets/video/*.original
