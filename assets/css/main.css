@@ -84,28 +84,55 @@ img{max-width:100%;height:auto;display:block}
 }
 
 /* ==========================================================================
-   HERO — full-bleed video with overlay (white text always)
+   HERO — full-bleed video background with overlay (content on top)
    ========================================================================== */
-.hero {position: relative;width: 100%;min-height: 60vh;overflow: hidden;}
-.hero-video-el {width: 100%;height: 100%;object-fit: cover;object-position: center;}
-.hero-inner {position: absolute;top: 0;left: 0;width: 100%;height: 100%;display: flex;align-items: center;justify-content: center;flex-direction: column;z-index: 2;text-align: center;}
+.hero{
+  position: relative;
+  width: 100%;
+  min-height: clamp(420px, 60vh, 760px); /* controls section height */
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw); /* true edge-to-edge */
+  overflow: hidden;
+}
 
-.hero{position:relative;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);width:100vw;overflow:hidden}
-.hero-media{position:relative;width:100%;height:clamp(420px,60vh,760px)}
-.hero-media video,.hero-media .hero-overlay{position:absolute;inset:0}
-.hero-media video{width:100%;height:100%;object-fit:cover;object-position:center}
-.hero-media .hero-overlay{background:rgba(0,0,0,.45)}
+/* Background layer */
+.hero-media{
+  position: absolute;
+  inset: 0;               /* top:0 right:0 bottom:0 left:0 */
+  z-index: 1;
+}
+.hero-video-el{
+  position: absolute;inset: 0;width: 100%;height: 100%;object-fit: cover;object-position: center;}
+.hero-overlay{position: absolute;inset: 0;background: rgba(0,0,0,.45);  /* tweaked by data.media.yml if you want */}
 
-.hero-inner{position:relative;margin-top:-clamp(360px,52vh,680px);padding-top:clamp(380px,54vh,700px);padding-bottom:2.25rem}
-.hero-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:2rem;align-items:end}
-@media(max-width:920px){.hero-grid{grid-template-columns:1fr}.hero-right{order:2}}
+/* Foreground layer (your text/buttons) */
+.hero-inner{
+  position: relative;
+  z-index: 2;             /* sits above video/overlay */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 1rem;     /* breathing room on mobile */
+}
 
-.hero h1,.hero .sub,.hero .cred li,.hero .btn{color:#fff}
-.hero .btn{border-color:rgba(255,255,255,.22)}
-.hero .btn:hover{box-shadow:0 10px 30px rgba(0,0,0,.35)}
-.hero-left .sub{opacity:.92;max-width:780px;margin-bottom:1rem}
-.cred{list-style:none;margin:1rem 0 0;padding:0;display:flex;gap:.5rem;flex-wrap:wrap}
-.cred li{font-weight:600;color:#fff;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);padding:.4rem .6rem;border-radius:.6rem;backdrop-filter:blur(3px)}
+.hero-grid{display: grid;grid-template-columns: 1fr; /* single column; easy to read over video */gap: 1.25rem;width: min(1200px, 100%);}
+
+.hero h1, .hero .sub, .hero .cred li, .hero .btn{ color:#fff; }
+.hero .btn{ border-color: rgba(255,255,255,.22); }
+.hero .btn:hover{ box-shadow: 0 10px 30px rgba(0,0,0,.35); }
+.hero-left .sub{ opacity:.92; max-width: 780px; margin: 0 auto 1rem; }
+
+/* skill chips */
+.cred{list-style:none; margin:1rem 0 0; padding:0;display:flex; gap:.5rem; flex-wrap:wrap; justify-content:center;}
+.cred li{font-weight:600; color:#fff;background: rgba(255,255,255,.08);border: 1px solid rgba(255,255,255,.18);padding:.4rem .6rem; border-radius:.6rem; backdrop-filter: blur(3px);}
+
+/* optional: if you keep a right column later, you can re-enable a 2-col grid
+@media(min-width: 980px){
+  .hero-grid{ grid-template-columns: 1.25fr .75fr; text-align:left; }
+  .cred{ justify-content:flex-start; }
+} */
 
 /* ==========================================================================
    “What I Do” — 2x2 cards

@@ -3,7 +3,7 @@ hero:
   # Optional: add WebM for wider browser coverage after you transcode one
   #video_webm: "" #"/assets/video/hero.webm"
   #poster: "" #"/assets/img/posters/hero-poster.jpg"
-  overlay: "rgba(0,0,0,0.55)"   # controls darkness over the video
+  overlay: 'rgba(0,0,0,0.45)'  # controls darkness over the video
 
 images:
   # put all reusable images here; add/rename as you go
