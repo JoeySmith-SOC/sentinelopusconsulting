@@ -639,6 +639,15 @@ img {
     width: 80%;
   }
 }
+.about-preview .btn {
+  display: inline-block;
+  margin: 1.5rem auto 0;
+  text-align: center;
+}
+.about-preview {
+  text-align: center;
+}
+
 
 .contact-cta {
   padding: 4rem 0;
@@ -649,6 +658,7 @@ img {
 
 .contact-cta .btn.primary {
   margin: 0 .5rem;
+
 }
 
 .contact-cta p {
