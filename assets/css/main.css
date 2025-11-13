@@ -562,6 +562,72 @@ img {
   border-color: var(--accent);
   text-decoration: none;
 }
+/* ===========================================
+   PROJECT CARDS — LIGHT MODE (DEFAULT)
+=========================================== */
+
+.project-card {
+  background: #ffffff;
+  color: #111;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+.project-card h3,
+.project-card p,
+.project-card .project-desc,
+.project-card .project-tags li {
+  color: #111 !important;
+}
+
+.project-tags li {
+  background: rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.12);
+}
+
+/* Light mode: buttons inside project cards */
+.project-card .btn.project-link {
+  background: #f9f9f9;
+  color: #111;
+  border: 1px solid rgba(0,0,0,0.2);
+}
+
+.project-card .btn.project-link:hover {
+  background: #d4a017;  /* gold accent */
+  color: #000;
+}
+/* ===========================================
+   PROJECT CARDS — DARK MODE
+=========================================== */
+
+:root[data-theme="dark"] .project-card {
+  background: #161616;
+  color: #eee;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+:root[data-theme="dark"] .project-card h3,
+:root[data-theme="dark"] .project-card p,
+:root[data-theme="dark"] .project-card .project-desc,
+:root[data-theme="dark"] .project-card .project-tags li {
+  color: #fff !important;
+}
+
+:root[data-theme="dark"] .project-tags li {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+}
+
+/* Dark mode button */
+:root[data-theme="dark"] .project-card .btn.project-link {
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+:root[data-theme="dark"] .project-card .btn.project-link:hover {
+  background: #d4a017;
+  color: #000;
+}
 
 /* ==========================================================================
    Utilities & homepage sections
