@@ -1,4 +1,62 @@
 <footer class="site-footer">
+  <div class="container footer-inner">
+
+    <!-- Brand / Positioning -->
+    <div class="footer-brand">
+      <div class="footer-logo-text">
+        <span class="footer-mark">SOC</span>
+        <span class="footer-name">Sentinel Opus Consulting</span>
+      </div>
+      <p class="footer-tagline">
+        Identity, automation, and OT security — from cloud identity to field devices.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <h3 class="footer-heading">Navigate</h3>
+      <ul>
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        <li><a href="{{ '/projects/' | relative_url }}">Projects</a></li>
+        <li><a href="{{ '/services/' | relative_url }}">Services</a></li>
+        <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+        <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+        <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Contact / Social -->
+    <div class="footer-contact">
+      <h3 class="footer-heading">Let’s work together</h3>
+      <p class="footer-copy">
+        Need help with Okta, Zero Trust, or securing OT environments?  
+        I work with a limited number of clients to keep quality high.
+      </p>
+      <div class="footer-actions">
+        <a class="btn primary btn-sm" href="{{ '/contact/' | relative_url }}">Book a consult</a>
+        <a class="btn ghost btn-sm" href="mailto:joeysmith@sentinelopusconsulting.com">Email me</a>
+      </div>
+
+      <div class="footer-meta">
+        <span>Based in San Antonio, TX · Remote-friendly</span>
+        <span class="footer-separator">•</span>
+        <a href="https://github.com/JoeySmith-SOC" target="_blank" rel="noreferrer">GitHub</a>
+        <span class="footer-separator">•</span>
+        <a href="https://www.linkedin.com/in/joeysmith-cybertocircuit" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom line -->
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <span>© {{ site.time | date: '%Y' }} Sentinel Opus Consulting</span>
+      <span class="footer-separator">•</span>
+      <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+    </div>
+  </div>
+</footer>
+<footer class="site-footer">
   <div class="container">
     <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }} · <a href="{{ '/feed.xml' | relative_url }}">RSS</a></p>
   </div>
