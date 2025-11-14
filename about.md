@@ -18,7 +18,7 @@ permalink: /about/
 
 I’m **Joseph “Joey” Smith** — an Identity & Access Management Engineer, Zero Trust practitioner, and automation-focused builder who prefers creating opportunities instead of waiting for them.
 
-I’m not the “fluff” kind of engineer. I’m the type who digs in, learns the hard things, and builds systems that actually work at scale. I take ownership seriously — if I touch something, it gets better, cleaner, faster, and more secure. No excuses. No shortcuts.
+I’m not the “fluff” kind of engineer. I’m the type who digs in, learns the hard things, and builds systems that actually work at scale. I take what I do very seriously — if I touch something, it gets better, cleaner, faster, and more secure. No excuses. No shortcuts.
 
 This site is where I publish my work, document my engineering process, and build my path forward — one project at a time.
 
@@ -96,11 +96,7 @@ I’m still moving. I’m still learning. And I’m not stopping.
 
 ### **Core Certifications**
 - CompTIA Security+  
-- CompTIA Linux+  
-- CompTIA CySA+  
-- CompTIA Cloud+  
-- CompTIA PenTest+  
-- CompTIA CASP+ (if applicable)  
+- CompTIA CySA+     
 - More in progress (Okta, Red Hat, Linux Foundation)
 
 ### **Tools & Platforms**
@@ -117,12 +113,6 @@ I’m still moving. I’m still learning. And I’m not stopping.
 ---
 
 # How I Work With Clients
-
-- **Extreme accountability**  
-  If I commit to something, I deliver. No excuses.
-
-- **Operator mindset**  
-  Simple, efficient, clean, and built to withstand failure.
 
 - **Transparency**  
   You will always know what I’m doing, why I’m doing it, and how it impacts your environment.
