@@ -318,6 +318,13 @@ img {
   inset: 0;         /* top:0 right:0 bottom:0 left:0 */
   z-index: 1;
 }
+.hero-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.25));
+  z-index: 1;
+}
 
 .hero-video-el {
   position: absolute;
@@ -401,6 +408,7 @@ img {
 .what-i-do {
   padding: 5rem 0;
   background: color-mix(in oklab, var(--bg) 92%, transparent);
+  border-top: 1px solid rgba(255,255,255,0.08);
 }
 
 .expertise-grid {
@@ -604,7 +612,9 @@ img {
   color: #eee;
   border: 1px solid rgba(255,255,255,0.08);
 }
-
+:root[data-theme="light"] .what-i-do {
+  border-color: rgba(0,0,0,0.06);
+}
 :root[data-theme="dark"] .project-card h3,
 :root[data-theme="dark"] .project-card p,
 :root[data-theme="dark"] .project-card .project-desc,
@@ -616,7 +626,12 @@ img {
   background: rgba(255,255,255,0.08);
   border: 1px solid rgba(255,255,255,0.18);
 }
-
+.projects {
+  margin-top: 4rem;
+}
+:root[data-theme="light"] .project-card {
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
 /* Dark mode button */
 :root[data-theme="dark"] .project-card .btn.project-link {
   background: rgba(255,255,255,0.05);
@@ -627,6 +642,173 @@ img {
 :root[data-theme="dark"] .project-card .btn.project-link:hover {
   background: #d4a017;
   color: #000;
+}
+/* =========================================================
+   RECENT ARTICLES
+========================================================= */
+
+.articles {
+  margin-top: 4rem;
+}
+
+.section-header {
+  max-width: 720px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.75rem;
+}
+
+/* Base article card (dark theme default) */
+.article-card {
+  background: #0b0d11;
+  border-radius: 1rem;
+  padding: 1.5rem 1.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.article-title-link {
+  text-decoration: none;
+}
+
+.article-title {
+  margin: 0 0 0.25rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #f9fafb;
+}
+
+.article-title-link:hover .article-title {
+  text-decoration: underline;
+}
+
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  color: #9fa6b8;
+}
+
+.article-meta time {
+  font-variant-numeric: tabular-nums;
+}
+
+.meta-separator {
+  opacity: 0.7;
+}
+
+.article-tags {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.article-tags li {
+  font-size: 0.8rem;
+  padding: 0.18rem 0.45rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #e5e7f0;
+}
+
+.article-excerpt {
+  margin: 0.15rem 0 0.35rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #c5cad8;
+}
+
+.article-read-link {
+  margin-top: auto;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #d4a017;
+  text-decoration: none;
+}
+
+.article-read-link:hover {
+  text-decoration: underline;
+}
+
+/* CTA under grid */
+.articles-cta {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #f9fafb;
+}
+
+.btn.secondary:hover {
+  background: #d4a017;
+  color: #000;
+}
+
+/* ---------- Light theme overrides ---------- */
+
+:root[data-theme="light"] .article-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+}
+
+:root[data-theme="light"] .article-title {
+  color: #111827;
+}
+
+:root[data-theme="light"] .article-meta {
+  color: #4b5563;
+}
+
+:root[data-theme="light"] .article-tags li {
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: #111827;
+}
+
+:root[data-theme="light"] .article-excerpt {
+  color: #374151;
+}
+
+:root[data-theme="light"] .btn.secondary {
+  border-color: rgba(0, 0, 0, 0.35);
+  color: #111;
+}
+
+:root[data-theme="light"] .btn.secondary:hover {
+  background: #d4a017;
+  color: #000;
+}
+
+/* Responsive layout */
+@media (max-width: 1024px) {
+  .article-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .article-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ==========================================================================
