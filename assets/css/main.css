@@ -1142,3 +1142,239 @@ img {
     text-align: left;
   }
 }
+/* =========================================================
+   ABOUT PAGE
+========================================================= */
+
+.about-hero {
+  margin: 2.5rem 0 2.5rem;
+  padding: 2.4rem 2.2rem;
+  border-radius: 1.5rem;
+  background: #05060a;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
+}
+
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1.1fr);
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.about-hero-text .eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 0.4rem;
+}
+
+.about-hero-text h1 {
+  margin: 0 0 0.4rem;
+  font-size: 2.2rem;
+  line-height: 1.15;
+  color: #f9fafb;
+}
+
+.about-hero-text .lead {
+  margin: 0 0 1.2rem;
+  font-size: 1.02rem;
+  color: #d1d5e5;
+}
+
+.about-hero-text p {
+  color: #e5e7f5;
+}
+
+.about-hero-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-photo-frame {
+  width: 260px;
+  height: 260px;
+  border-radius: 999px;
+  border: 2px solid rgba(212, 160, 23, 0.7);
+  padding: 0.4rem;
+  background: radial-gradient(circle at 20% 0%, #1f2937, #020617);
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.65);
+}
+
+.about-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 999px;
+}
+
+/* Light theme overrides for About hero */
+:root[data-theme="light"] .about-hero {
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.08);
+}
+
+:root[data-theme="light"] .about-hero-text h1 {
+  color: #111827;
+}
+
+:root[data-theme="light"] .about-hero-text .lead {
+  color: #4b5563;
+}
+
+:root[data-theme="light"] .about-hero-text p {
+  color: #374151;
+}
+
+/* About body sections */
+
+.about-body {
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.about-section {
+  padding: 1.4rem 1.2rem 1.6rem;
+  border-radius: 1rem;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+.about-section p {
+  margin-bottom: 0.75rem;
+}
+
+.about-section:last-child {
+  margin-bottom: 0;
+}
+
+/* Light theme for about sections */
+:root[data-theme="light"] .about-section {
+  background: #f9fafb;
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+:root[data-theme="light"] .about-section p {
+  color: #1f2933;
+}
+
+/* Reuse section-title styling but tighten */
+.about-section .section-title {
+  margin-top: 0;
+  margin-bottom: 0.9rem;
+}
+
+/* About grid blocks (skills / tools) */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem 2.5rem;
+}
+
+.about-grid h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.about-grid ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+/* Timeline */
+
+.about-timeline {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.timeline-item {
+  padding: 0.9rem 1rem;
+  border-radius: 0.9rem;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.timeline-item h3 {
+  margin: 0 0 0.3rem;
+  font-size: 0.98rem;
+}
+
+.timeline-item p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+:root[data-theme="light"] .timeline-item {
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Values list */
+
+.about-values {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.about-values li {
+  font-size: 0.95rem;
+}
+
+/* CTA */
+
+.about-cta {
+  text-align: center;
+}
+
+.about-cta-row {
+  margin-top: 1.1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+/* Responsive */
+
+@media (max-width: 960px) {
+  .about-hero-grid {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .about-hero-photo {
+    justify-content: flex-start;
+  }
+
+  .about-photo-frame {
+    width: 220px;
+    height: 220px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-hero {
+    padding: 1.9rem 1.6rem;
+  }
+
+  .about-hero-text h1 {
+    font-size: 1.75rem;
+  }
+}
