@@ -166,7 +166,7 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
 
       <div class="cert-card">
         <img
-          src="{{ '/assets/img/Security+svg.svg' | relative_url }}"
+          src="{{ '/assets/img/Security+-svg.svg' | relative_url }}"
           alt="CompTIA Security+ Certification"
           loading="lazy"
           decoding="async"
