@@ -1379,38 +1379,17 @@ img {
   }
 }
 /* ============================================================
-   CERTIFICATIONS SECTION — ROW LAYOUT
-   ============================================================ */
+   CERTIFICATIONS SECTION — CLEAN ROW LAYOUT
+============================================================ */
 
-.certs-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  max-width: 960px;      /* keeps the row from stretching edge-to-edge */
-  margin: 2.5rem auto;   /* centers it on the page */
-}
-
-.cert-card {
-  flex: 1 1 280px;       /* responsive: min 280px, grow if space allows */
-  max-width: 420px;      /* keeps each card from becoming a giant slab */
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 0.8rem;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  box-shadow: var(--card-shadow);
-}
 .certs-row {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 3rem;
-  margin: 2rem auto 3rem;
-  flex-wrap: wrap; /* wraps on small screens */
+  margin: 3rem auto;
+  flex-wrap: wrap; /* responsive wrapping */
+  max-width: 1000px;
 }
 
 .cert-item {
@@ -1418,29 +1397,43 @@ img {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  width: 160px;         /* fixed, clean row columns */
 }
 
-.cert-icon {
-  width: 96px;           /* good size on desktop */
+.cert-item img.cert-icon {
+  width: 90px;
   height: auto;
   display: block;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
+  filter: none;         /* color logos should NOT invert */
 }
 
-@media (max-width: 600px) {
-  .cert-icon {
-    width: 80px;  /* slightly smaller for mobile */
-  }
-  .cert-label {
-    font-size: 1rem;
-  }
+:root[data-theme="dark"] .cert-item img.cert-icon {
+  filter: brightness(1.08); /* slight boost for dark backgrounds */
 }
 
 .cert-name {
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: 1.05rem;
+  font-weight: 600;
   margin-top: 0.25rem;
-  color: var(--text-primary);
+  color: var(--text);
 }
 
+/* Responsive handling */
+@media (max-width: 860px) {
+  .cert-item {
+    width: 140px;
+  }
+  .cert-item img.cert-icon {
+    width: 80px;
+  }
+}
 
+@media (max-width: 600px) {
+  .cert-item {
+    width: 50%;
+  }
+  .cert-item img.cert-icon {
+    width: 70px;
+  }
+}
