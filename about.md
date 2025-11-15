@@ -158,31 +158,12 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
   </section>
 
   <!-- CERTS -->
-  <section class="about-section">
-    <h2 class="section-title">Certifications &amp; Tools</h2>
+  assets/icons/cert-securityplus.svg
+assets/icons/cert-linuxplus.svg
+assets/icons/cert-cysa.svg
+assets/icons/cert-cloudplus.svg
+assets/icons/cert-pentestplus.svg
 
-    <div class="about-grid">
-      <div>
-        <h3>Core Certifications</h3>
-        <ul>
-          <li>CompTIA Security+</li>
-          <li>CompTIA CySA+</li>
-          <li>More IAM / Cloud / OT certs in progress</li>
-        </ul>
-      </div>
-
-      <div>
-        <h3>Tools & Platforms</h3>
-        <ul>
-          <li>Okta • Active Directory</li>
-          <li>Cloudflare Zero Trust</li>
-          <li>Ansible • Terraform • Bash</li>
-          <li>Linux • Git • GitHub • Proxmox</li>
-          <li>Wireshark • Snort • ICS/SCADA lab tooling</li>
-        </ul>
-      </div>
-    </div>
-  </section>
 
   <!-- WORKING STYLE -->
   <section class="about-section">
