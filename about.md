@@ -161,29 +161,17 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
     <h2 class="section-title">Certifications &amp; Tools</h2>
 
     <!-- CERTIFICATION ICON ROW -->
-    <div class="cert-row">
+    <div class="certs-row">
+  <div class="cert-item">
+    <img src="/assets/img/Security+-svg.svg" alt="CompTIA Security+ Certification" class="cert-icon">
+    <div class="cert-name">Security+</div>
+  </div>
 
-      <div class="cert-card">
-        <img
-          src="{{ '/assets/img/Security+-svg.svg' | relative_url }}"
-          alt="CompTIA Security+"
-          loading="lazy"
-          decoding="async"
-        >
-        <p>Security+</p>
-      </div>
-
-      <div class="cert-card">
-        <img
-          src="{{ '/assets/img/CySA+-svg.svg' | relative_url }}"
-          alt="CompTIA CySA+"
-          loading="lazy"
-          decoding="async"
-        >
-        <p>CySA+</p>
-      </div>
-
-    </div>
+  <div class="cert-item">
+    <img src="/assets/img/CySA+-svg.svg" alt="CompTIA CySA+ Certification" class="cert-icon">
+    <div class="cert-name">CySA+</div>
+  </div>
+</div>
 
     <!-- TOOLS GRID -->
     <div class="about-grid">
