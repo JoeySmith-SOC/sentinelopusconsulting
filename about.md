@@ -2,91 +2,96 @@
 layout: page
 title: About
 permalink: /about/
-description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT.
+description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT security.
 ---
 
+<!-- ABOUT HERO -->
 <div class="about-hero">
   <div class="about-hero-grid">
+
     <div class="about-hero-text">
-      <p class="eyebrow">About</p>
-      <h1>Identity Engineer. Automator. Builder.</h1>
+      <p class="eyebrow">About Me</p>
+      <h1>Identity Engineer. Automator. Problem Solver.</h1>
+
       <p class="lead">
-        A self-made operator bridging cybersecurity, identity, and infrastructure.
+        I build secure, resilient, and automated systems that help organizations move faster without sacrificing security.
       </p>
+
       <p>
         I’m <strong>Joseph “Joey” Smith</strong> — an Identity &amp; Access Management Engineer,
-        Zero Trust practitioner, and automation-focused builder who would rather create
-        opportunities than wait for someone to hand them over.
+        Zero Trust practitioner, and infrastructure builder who believes in creating opportunities,
+        not waiting for them. My path hasn’t been traditional, but that’s exactly what makes my work
+        sharp, practical, and grounded in the real world.
       </p>
+
       <p>
-        I’m not the “fluff” kind of engineer. I’m the type who digs in, learns the hard things,
-        and builds systems that actually work at scale. If I touch something, it gets better,
-        cleaner, faster, and more secure. No excuses. No shortcuts.
+        My approach is simple: <strong>Clean architecture, and security that doesn’t slow anyone down.</strong>
       </p>
     </div>
 
     <div class="about-hero-photo">
       <div class="about-photo-frame">
-        <!-- Swap this placeholder with a real photo when you're ready -->
         <img
-          src="{{ '/assets/img/projects/about-placeholder.png' | relative_url }}"
-          alt="Portrait placeholder of Joseph 'Joey' Smith"
+          src="{{ '/assets/img/projects/profile_headshot.jpg' | relative_url }}"
+          alt="Portrait placeholder of Joseph Smith"
           loading="lazy"
           decoding="async"
         >
       </div>
     </div>
+
   </div>
 </div>
 
+<!-- ABOUT BODY -->
 <div class="about-body">
 
+  <!-- MISSION -->
   <section class="about-section">
     <h2 class="section-title">My Mission</h2>
     <p>
-      My mission is to engineer secure, reliable, and automated identity infrastructure that removes
-      friction, eliminates chaos, and strengthens the systems people depend on — whether it’s cloud,
-      Zero Trust, or the bridge into operational technology.
+      To engineer identity systems, automation pipelines, and secure infrastructure that eliminate chaos,
+      reduce risk, and empower teams. Whether it’s Okta, Cloudflare Zero Trust, Linux automation,
+      or OT security — my mission is to build environments that are secure, scalable, and predictable.
     </p>
     <p>
-      Security doesn’t need to be complicated. It needs to be <strong>engineered</strong>.
+      Security shouldn’t be complicated — it should be <strong>engineered, automated, and repeatable</strong>.
     </p>
   </section>
 
+  <!-- WHAT I DO -->
   <section class="about-section">
     <h2 class="section-title">What I Do</h2>
 
     <div class="about-grid">
       <div>
-        <h3>Identity &amp; Access Management (Primary)</h3>
+        <h3>Identity &amp; Access Management</h3>
         <ul>
-          <li>Okta Workforce Identity</li>
-          <li>SAML/OIDC federation</li>
+          <li>Okta Workforce Identity Engineering</li>
+          <li>SAML/OIDC federation architecture</li>
           <li>SCIM &amp; lifecycle automation</li>
-          <li>Access governance &amp; policy design</li>
-          <li>Strong authentication architectures</li>
+          <li>Access governance &amp; role design</li>
+          <li>Authentication pipelines &amp; policy tuning</li>
         </ul>
       </div>
 
       <div>
         <h3>Zero Trust &amp; Cloud Security</h3>
         <ul>
-          <li>Cloudflare Zero Trust</li>
-          <li>Device posture &amp; mTLS</li>
-          <li>Least-privilege network design</li>
-          <li>Certificate-based access</li>
-          <li>Identity-aware routing</li>
+          <li>Cloudflare Zero Trust access control</li>
+          <li>Device posture &amp; certificate-based security</li>
+          <li>Least-privilege network segmentation</li>
+          <li>Identity-aware routing &amp; access policies</li>
         </ul>
       </div>
 
       <div>
-        <h3>Infrastructure &amp; Automation</h3>
+        <h3>Infrastructure & Automation</h3>
         <ul>
-          <li>Linux engineering &amp; shell scripting</li>
-          <li>Ansible &amp; Terraform</li>
-          <li>Automated security baselines</li>
-          <li>Version-controlled environments</li>
-          <li>Operator-grade system hardening</li>
+          <li>Linux engineering &amp; hardening</li>
+          <li>Ansible, Terraform, Bash, Git</li>
+          <li>Automated provisioning &amp; baseline enforcement</li>
+          <li>Version-controlled, reproducible environments</li>
         </ul>
       </div>
 
@@ -94,60 +99,65 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT.
         <h3>IT → OT Security Integration</h3>
         <ul>
           <li>SCADA/ICS segmentation</li>
-          <li>PLC/HMI hardening</li>
-          <li>Secure remote access into OT</li>
-          <li>ICS/OT visibility &amp; safety alignment</li>
+          <li>PLC &amp; HMI hardening</li>
+          <li>Secure remote access for OT environments</li>
+          <li>Cyber–electrical convergence & safety alignment</li>
         </ul>
       </div>
     </div>
   </section>
 
+  <!-- TIMELINE -->
   <section class="about-section">
     <h2 class="section-title">My Path</h2>
     <p>
-      I didn’t come from a traditional “cybersecurity career launchpad.” I came from grinding,
-      self-teaching, troubleshooting, breaking things, fixing them, and learning again. I got tired
-      of waiting for someone else to open the door — so I started building my own.
+      I didn’t start in a polished cybersecurity pipeline. I built my career through self-study,
+      hands-on labs, and sheer determination. Every step sharpened how I solve problems today.
     </p>
 
     <div class="about-timeline">
+
       <div class="timeline-item">
-        <h3>Phase 1 — The Technician</h3>
+        <h3>Foundation & Discipline</h3>
         <p>
-          Learning the fundamentals: Linux, networking, security, and how real systems behave
-          outside the textbook.
+          Linux, networking, and security fundamentals — understanding how systems behave below the surface.
         </p>
       </div>
+
       <div class="timeline-item">
-        <h3>Phase 2 — The Identity Shift</h3>
+        <h3>Identity Engineering</h3>
         <p>
-          Discovering IAM and realizing it’s the backbone of every modern environment — the thing
-          everyone depends on yet very few truly understand.
+          Diving into IAM and realizing identity is the control plane for everything — cloud,
+          applications, security, and users.
         </p>
       </div>
+
       <div class="timeline-item">
-        <h3>Phase 3 — Automation &amp; Zero Trust</h3>
+        <h3>Automation & Architecture</h3>
         <p>
-          Taking everything I learned and making it cleaner, faster, automated, and more resilient.
+          Using automation to eliminate friction, enforce consistency, and scale secure environments.
         </p>
       </div>
+
       <div class="timeline-item">
-        <h3>Phase 4 — IT Meets OT</h3>
+        <h3>IT → OT Integration</h3>
         <p>
-          Studying electrical systems and operational technology to bridge the gap between cyber
-          and the field.
+          Expanding into SCADA, ICS, and electrical systems to bridge cyber with the operational world.
         </p>
       </div>
+
       <div class="timeline-item">
-        <h3>Phase 5 — The Freelancer</h3>
+        <h3>Independent Contractor</h3>
         <p>
-          When opportunities slowed down, I stopped waiting. Now I create them — through engineering,
-          projects, and extreme accountability.
+          When opportunities slowed down, I created my own. Now I engineer systems, build labs,
+          publish work publicly, and help clients achieve secure outcomes with extreme accountability.
         </p>
       </div>
+
     </div>
   </section>
 
+  <!-- CERTS -->
   <section class="about-section">
     <h2 class="section-title">Certifications &amp; Tools</h2>
 
@@ -159,58 +169,43 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT.
           <li>CompTIA CySA+</li>
           <li>CompTIA Linux+</li>
           <li>CompTIA Cloud+</li>
-          <li>Additional IAM / Linux / OT certs in progress</li>
+          <li>More IAM / Cloud / OT certs in progress</li>
         </ul>
       </div>
+
       <div>
-        <h3>Tools &amp; Platforms</h3>
+        <h3>Tools & Platforms</h3>
         <ul>
-          <li>Okta, Active Directory</li>
+          <li>Okta • Active Directory</li>
           <li>Cloudflare Zero Trust</li>
-          <li>Linux, Bash, Git &amp; GitHub</li>
-          <li>Ansible, Terraform</li>
-          <li>VirtualBox / Proxmox, Wireshark, Snort</li>
-          <li>SCADA/ICS simulation &amp; lab tooling</li>
+          <li>Ansible • Terraform • Bash</li>
+          <li>Linux • Git • GitHub • Proxmox</li>
+          <li>Wireshark • Snort • ICS/SCADA lab tooling</li>
         </ul>
       </div>
     </div>
   </section>
 
+  <!-- WORKING STYLE -->
   <section class="about-section">
     <h2 class="section-title">How I Work With Clients</h2>
     <ul class="about-values">
-      <li>
-        <strong>Extreme accountability.</strong>
-        If I commit, I deliver. No excuses.
-      </li>
-      <li>
-        <strong>Operator mindset.</strong>
-        Simple, efficient, and built to withstand failure.
-      </li>
-      <li>
-        <strong>Security without friction.</strong>
-        Systems should help users, not fight them.
-      </li>
-      <li>
-        <strong>Transparency.</strong>
-        You’ll always know what I’m doing and why.
-      </li>
-      <li>
-        <strong>Documentation that outlives engineers.</strong>
-        Clear, usable notes that future teams can trust.
-      </li>
+      <li><strong>Security without friction.</strong> Users should never feel the controls.</li>
+      <li><strong>Transparency.</strong> You always know what I’m doing and why.</li>
+      <li><strong>Documentation that outlives engineers.</strong> Clarity over complexity.</li>
     </ul>
   </section>
 
+  <!-- CTA -->
   <section class="about-section about-cta">
-    <h2 class="section-title">Want to Work Together?</h2>
+    <h2 class="section-title">Ready to Build Something?</h2>
     <p>
-      Whether you need identity architecture, automation, Zero Trust design, or security that blends
-      IT and OT — I’m ready to step in.
+      Whether you need identity architecture, automation, Zero Trust deployment, or OT security design —
+      I’m ready to jump in.
     </p>
     <div class="about-cta-row">
-      <a class="btn primary" href="{{ '/contact/' | relative_url }}">Book a consult</a>
-      <a class="btn" href="{{ '/assets/docs/Resume_Joseph_Smith_IAM.pdf' | relative_url }}">Download my resume</a>
+      <a class="btn primary" href="{{ '/contact/' | relative_url }}">Book a Consult</a>
+      <a class="btn" href="{{ '/assets/docs/Resume_Joseph_Smith_IAM.pdf' | relative_url }}">Download My Resume</a>
     </div>
   </section>
 
