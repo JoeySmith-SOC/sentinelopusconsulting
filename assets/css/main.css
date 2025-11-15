@@ -1379,17 +1379,21 @@ img {
   }
 }
 /* ============================================================
-   CERTIFICATIONS SECTION
+   CERTIFICATIONS SECTION — ROW LAYOUT
    ============================================================ */
 
 .certs-wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
-  margin: 2.5rem 0;
+  max-width: 960px;      /* keeps the row from stretching edge-to-edge */
+  margin: 2.5rem auto;   /* centers it on the page */
 }
 
 .cert-card {
+  flex: 1 1 280px;       /* responsive: min 280px, grow if space allows */
+  max-width: 420px;      /* keeps each card from becoming a giant slab */
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: 0.8rem;
@@ -1397,22 +1401,29 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
   box-shadow: var(--card-shadow);
 }
 
+
 .cert-icon {
-  width: clamp(80px, 12vw, 130px);   /* ⭐ makes it scale on all devices */
+  width: 96px;           /* good size on desktop */
   height: auto;
   display: block;
   margin-bottom: 1rem;
 }
 
+@media (max-width: 600px) {
+  .cert-icon {
+    width: 72px;         /* slightly smaller on small screens */
+  }
+}
+
 .cert-name {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  margin-top: 0.5rem;
+  margin-top: 0.25rem;
   color: var(--text-primary);
 }
+
 
