@@ -158,11 +158,48 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
   </section>
 
   <!-- CERTS -->
-  assets/icons/cert-securityplus.svg
-assets/icons/cert-linuxplus.svg
-assets/icons/cert-cysa.svg
-assets/icons/cert-cloudplus.svg
-assets/icons/cert-pentestplus.svg
+  <section class="about-section">
+  <h2 class="section-title">Certifications &amp; Tools</h2>
+
+  <!-- CERTIFICATION ICON GRID -->
+  <div class="cert-grid">
+
+    <div class="cert-card">
+      <img src="{{ '/assets/icons/Security+-svg.svg' | relative_url }}" alt="Security+ Certification">
+      <p>Security+</p>
+    </div>
+
+    <div class="cert-card">
+      <img src="{{ '/assets/icons/CySA+svg.svg' | relative_url }}" alt="CySA+ Certification">
+      <p>CySA+</p>
+    </div>
+  </div>
+
+  <!-- TOOLS GRID -->
+  <div class="about-grid">
+    <div>
+      <h3>Core Tools</h3>
+      <ul>
+        <li>Okta • Active Directory</li>
+        <li>Cloudflare Zero Trust</li>
+        <li>Ansible • Terraform • Bash</li>
+        <li>Linux • Git • GitHub • Proxmox</li>
+        <li>Wireshark • Snort • ICS/SCADA lab tooling</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Engineering Workflow</h3>
+      <ul>
+        <li>Identity lifecycle &amp; federation design</li>
+        <li>Infrastructure-as-Code &amp; automation</li>
+        <li>Zero Trust policy architecture</li>
+        <li>IT/OT integration &amp; segmentation</li>
+      </ul>
+    </div>
+  </div>
+
+</section>
 
 
   <!-- WORKING STYLE -->
