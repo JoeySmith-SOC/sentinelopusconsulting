@@ -25,7 +25,7 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
       </p>
 
       <p>
-        My approach is simple: <strong>Clean architecture, and security that doesn’t slow anyone down.</strong>
+        My approach is simple: <strong>extreme accountability, clean architecture, and security that doesn’t slow anyone down.</strong>
       </p>
     </div>
 
@@ -33,7 +33,7 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
       <div class="about-photo-frame">
         <img
           src="{{ '/assets/img/projects/profile_headshot.jpg' | relative_url }}"
-          alt="Portrait placeholder of Joseph Smith"
+          alt="Portrait of Joseph Smith"
           loading="lazy"
           decoding="async"
         >
@@ -67,7 +67,7 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
       <div>
         <h3>Identity &amp; Access Management</h3>
         <ul>
-          <li>Okta Workforce Identity Engineering</li>
+          <li>Okta Workforce Identity engineering</li>
           <li>SAML/OIDC federation architecture</li>
           <li>SCIM &amp; lifecycle automation</li>
           <li>Access governance &amp; role design</li>
@@ -86,7 +86,7 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
       </div>
 
       <div>
-        <h3>Infrastructure & Automation</h3>
+        <h3>Infrastructure &amp; Automation</h3>
         <ul>
           <li>Linux engineering &amp; hardening</li>
           <li>Ansible, Terraform, Bash, Git</li>
@@ -101,7 +101,7 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
           <li>SCADA/ICS segmentation</li>
           <li>PLC &amp; HMI hardening</li>
           <li>Secure remote access for OT environments</li>
-          <li>Cyber–electrical convergence & safety alignment</li>
+          <li>Cyber–electrical convergence &amp; safety alignment</li>
         </ul>
       </div>
     </div>
@@ -118,7 +118,7 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
     <div class="about-timeline">
 
       <div class="timeline-item">
-        <h3>Foundation & Discipline</h3>
+        <h3>Foundation &amp; Discipline</h3>
         <p>
           Linux, networking, and security fundamentals — understanding how systems behave below the surface.
         </p>
@@ -133,7 +133,7 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
       </div>
 
       <div class="timeline-item">
-        <h3>Automation & Architecture</h3>
+        <h3>Automation &amp; Architecture</h3>
         <p>
           Using automation to eliminate friction, enforce consistency, and scale secure environments.
         </p>
@@ -147,7 +147,7 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
       </div>
 
       <div class="timeline-item">
-        <h3>Independent Contractor</h3>
+        <h3>Independent Operator</h3>
         <p>
           When opportunities slowed down, I created my own. Now I engineer systems, build labs,
           publish work publicly, and help clients achieve secure outcomes with extreme accountability.
@@ -159,53 +159,63 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
 
   <!-- CERTS -->
   <section class="about-section">
-  <h2 class="section-title">Certifications &amp; Tools</h2>
+    <h2 class="section-title">Certifications &amp; Tools</h2>
 
-  <!-- CERTIFICATION ICON GRID -->
-  <div class="cert-grid">
+    <!-- CERTIFICATION ICON GRID -->
+    <div class="cert-grid">
 
-    <div class="cert-card">
-      <img src="{{ '/assets/icons/Security+-svg.svg' | relative_url }}" alt="Security+ Certification">
-      <p>Security+</p>
+      <div class="cert-card">
+        <img
+          src="{{ '/assets/img/Security+svg.svg' | relative_url }}"
+          alt="CompTIA Security+ Certification"
+          loading="lazy"
+          decoding="async"
+        >
+        <p>Security+</p>
+      </div>
+
+      <div class="cert-card">
+        <img
+          src="{{ '/assets/img/CySA+-svg.svg' | relative_url }}"
+          alt="CompTIA CySA+ Certification"
+          loading="lazy"
+          decoding="async"
+        >
+        <p>CySA+</p>
+      </div>
+
     </div>
 
-    <div class="cert-card">
-      <img src="{{ '/assets/icons/CySA+svg.svg' | relative_url }}" alt="CySA+ Certification">
-      <p>CySA+</p>
+    <!-- TOOLS GRID -->
+    <div class="about-grid">
+      <div>
+        <h3>Core Tools</h3>
+        <ul>
+          <li>Okta • Active Directory</li>
+          <li>Cloudflare Zero Trust</li>
+          <li>Ansible • Terraform • Bash</li>
+          <li>Linux • Git • GitHub • Proxmox</li>
+          <li>Wireshark • Snort • ICS/SCADA lab tooling</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Engineering Workflow</h3>
+        <ul>
+          <li>Identity lifecycle &amp; federation design</li>
+          <li>Infrastructure-as-Code &amp; automation</li>
+          <li>Zero Trust policy architecture</li>
+          <li>IT/OT integration &amp; segmentation</li>
+        </ul>
+      </div>
     </div>
-  </div>
-
-  <!-- TOOLS GRID -->
-  <div class="about-grid">
-    <div>
-      <h3>Core Tools</h3>
-      <ul>
-        <li>Okta • Active Directory</li>
-        <li>Cloudflare Zero Trust</li>
-        <li>Ansible • Terraform • Bash</li>
-        <li>Linux • Git • GitHub • Proxmox</li>
-        <li>Wireshark • Snort • ICS/SCADA lab tooling</li>
-      </ul>
-    </div>
-
-    <div>
-      <h3>Engineering Workflow</h3>
-      <ul>
-        <li>Identity lifecycle &amp; federation design</li>
-        <li>Infrastructure-as-Code &amp; automation</li>
-        <li>Zero Trust policy architecture</li>
-        <li>IT/OT integration &amp; segmentation</li>
-      </ul>
-    </div>
-  </div>
-
-</section>
-
+  </section>
 
   <!-- WORKING STYLE -->
   <section class="about-section">
     <h2 class="section-title">How I Work With Clients</h2>
     <ul class="about-values">
+      <li><strong>Extreme accountability.</strong> If I commit to something, I deliver it.</li>
       <li><strong>Security without friction.</strong> Users should never feel the controls.</li>
       <li><strong>Transparency.</strong> You always know what I’m doing and why.</li>
       <li><strong>Documentation that outlives engineers.</strong> Clarity over complexity.</li>
