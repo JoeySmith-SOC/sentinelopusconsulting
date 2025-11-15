@@ -167,8 +167,6 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
         <ul>
           <li>CompTIA Security+</li>
           <li>CompTIA CySA+</li>
-          <li>CompTIA Linux+</li>
-          <li>CompTIA Cloud+</li>
           <li>More IAM / Cloud / OT certs in progress</li>
         </ul>
       </div>
