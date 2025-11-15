@@ -1378,48 +1378,41 @@ img {
     font-size: 1.75rem;
   }
 }
-/* =========================================================
-   CERTIFICATION GRID
-========================================================= */
+/* ============================================================
+   CERTIFICATIONS SECTION
+   ============================================================ */
 
-.cert-grid {
+.certs-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-  gap: 1.2rem;
-  margin-bottom: 2rem;
-  margin-top: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 2.5rem 0;
 }
 
 .cert-card {
-  background: rgba(15, 23, 42, 0.8);
-  border: 1px solid rgba(148, 163, 184, 0.28);
-  border-radius: 0.9rem;
-  padding: 1rem 0.8rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 0.8rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  box-shadow: var(--card-shadow);
 }
 
-.cert-card img {
-  width: 300px;
-  height: 300px;
-  object-fit: contain;
-  margin-bottom: 0.6rem;
+.cert-icon {
+  width: clamp(80px, 12vw, 130px);   /* ⭐ makes it scale on all devices */
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
 }
 
-.cert-card p {
-  margin: 0;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #f8fafc;
+.cert-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+  color: var(--text-primary);
 }
 
-/* LIGHT THEME OVERRIDES */
-:root[data-theme="light"] .cert-card {
-  background: #ffffff;
-  border-color: rgba(0,0,0,0.08);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-}
-
-:root[data-theme="light"] .cert-card p {
-  color: #1f2937;
-}

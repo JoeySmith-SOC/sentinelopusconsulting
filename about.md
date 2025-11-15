@@ -171,7 +171,6 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
           loading="lazy"
           decoding="async"
         >
-        <p>Security+</p>
       </div>
 
       <div class="cert-card">
@@ -181,7 +180,6 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
           loading="lazy"
           decoding="async"
         >
-        <p>CySA+</p>
       </div>
 
     </div>
