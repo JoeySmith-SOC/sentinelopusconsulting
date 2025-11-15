@@ -18,14 +18,13 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
       </p>
 
       <p>
-        I’m <strong>Joseph “Joey” Smith</strong> — an Identity &amp; Access Management Engineer,
-        Zero Trust practitioner, and infrastructure builder who believes in creating opportunities,
-        not waiting for them. My path hasn’t been traditional, but that’s exactly what makes my work
-        sharp, practical, and grounded in the real world.
+        I’m <strong>Joseph “Joey” Smith</strong> — a freelance Identity &amp; Access Management Engineer,
+        Zero Trust architect, and infrastructure builder. My path hasn’t been traditional, and that’s exactly
+        why my work is sharp, practical, and grounded in the real world.
       </p>
 
       <p>
-        My approach is simple: <strong>extreme accountability, clean architecture, and security that doesn’t slow anyone down.</strong>
+        My approach is simple: <strong>extreme accountability, clean architecture, and security that never slows people down.</strong>
       </p>
     </div>
 
@@ -112,37 +111,37 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
     <h2 class="section-title">My Path</h2>
     <p>
       I didn’t start in a polished cybersecurity pipeline. I built my career through self-study,
-      hands-on labs, and sheer determination. Every step sharpened how I solve problems today.
+      hands-on labs, and relentless determination. Every step sharpened the way I solve problems today.
     </p>
 
     <div class="about-timeline">
 
       <div class="timeline-item">
-        <h3>Foundation &amp; Discipline</h3>
+        <h3>Technical Foundation</h3>
         <p>
-          Linux, networking, and security fundamentals — understanding how systems behave below the surface.
+          Linux, networking, and security fundamentals — learning how systems behave below the surface.
         </p>
       </div>
 
       <div class="timeline-item">
         <h3>Identity Engineering</h3>
         <p>
-          Diving into IAM and realizing identity is the control plane for everything — cloud,
-          applications, security, and users.
+          Specializing in IAM and recognizing identity as the control plane for everything —
+          cloud, applications, users, and security.
         </p>
       </div>
 
       <div class="timeline-item">
         <h3>Automation &amp; Architecture</h3>
         <p>
-          Using automation to eliminate friction, enforce consistency, and scale secure environments.
+          Building automation pipelines that remove friction, enforce consistency, and scale environments securely.
         </p>
       </div>
 
       <div class="timeline-item">
-        <h3>IT → OT Integration</h3>
+        <h3>Cyber → OT Expansion</h3>
         <p>
-          Expanding into SCADA, ICS, and electrical systems to bridge cyber with the operational world.
+          Integrating cybersecurity into SCADA, ICS, and electrical systems to unify cyber and operational technology.
         </p>
       </div>
 
@@ -150,36 +149,38 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
         <h3>Independent Operator</h3>
         <p>
           When opportunities slowed down, I created my own. Now I engineer systems, build labs,
-          publish work publicly, and help clients achieve secure outcomes with extreme accountability.
+          publish my work, and help clients achieve secure outcomes with extreme accountability.
         </p>
       </div>
 
     </div>
   </section>
 
-  <!-- CERTS -->
+  <!-- CERTIFICATIONS -->
   <section class="about-section">
     <h2 class="section-title">Certifications &amp; Tools</h2>
 
-    <!-- CERTIFICATION ICON GRID -->
-    <div class="cert-grid">
+    <!-- CERTIFICATION ICON ROW -->
+    <div class="cert-row">
 
       <div class="cert-card">
         <img
           src="{{ '/assets/img/Security+-svg.svg' | relative_url }}"
-          alt="CompTIA Security+ Certification"
+          alt="CompTIA Security+"
           loading="lazy"
           decoding="async"
         >
+        <p>Security+</p>
       </div>
 
       <div class="cert-card">
         <img
           src="{{ '/assets/img/CySA+-svg.svg' | relative_url }}"
-          alt="CompTIA CySA+ Certification"
+          alt="CompTIA CySA+"
           loading="lazy"
           decoding="async"
         >
+        <p>CySA+</p>
       </div>
 
     </div>
@@ -193,7 +194,7 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
           <li>Cloudflare Zero Trust</li>
           <li>Ansible • Terraform • Bash</li>
           <li>Linux • Git • GitHub • Proxmox</li>
-          <li>Wireshark • Snort • ICS/SCADA lab tooling</li>
+          <li>Wireshark • Snort • ICS/SCADA tooling</li>
         </ul>
       </div>
 
@@ -201,9 +202,9 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
         <h3>Engineering Workflow</h3>
         <ul>
           <li>Identity lifecycle &amp; federation design</li>
-          <li>Infrastructure-as-Code &amp; automation</li>
+          <li>Infrastructure-as-Code automation</li>
           <li>Zero Trust policy architecture</li>
-          <li>IT/OT integration &amp; segmentation</li>
+          <li>IT/OT segmentation &amp; secure design</li>
         </ul>
       </div>
     </div>
@@ -213,7 +214,7 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
   <section class="about-section">
     <h2 class="section-title">How I Work With Clients</h2>
     <ul class="about-values">
-      <li><strong>Extreme accountability.</strong> If I commit to something, I deliver it.</li>
+      <li><strong>Extreme accountability.</strong> If I say it’s getting done, it gets done.</li>
       <li><strong>Security without friction.</strong> Users should never feel the controls.</li>
       <li><strong>Transparency.</strong> You always know what I’m doing and why.</li>
       <li><strong>Documentation that outlives engineers.</strong> Clarity over complexity.</li>

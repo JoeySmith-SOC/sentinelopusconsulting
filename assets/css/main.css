@@ -1404,7 +1404,21 @@ img {
   text-align: center;
   box-shadow: var(--card-shadow);
 }
+.certs-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin: 2rem auto 3rem;
+  flex-wrap: wrap; /* wraps on small screens */
+}
 
+.cert-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
 .cert-icon {
   width: 96px;           /* good size on desktop */
@@ -1415,7 +1429,10 @@ img {
 
 @media (max-width: 600px) {
   .cert-icon {
-    width: 72px;         /* slightly smaller on small screens */
+    width: 80px;  /* slightly smaller for mobile */
+  }
+  .cert-label {
+    font-size: 1rem;
   }
 }
 
