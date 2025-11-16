@@ -106,7 +106,7 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
     </div>
   </section>
 
-  <!-- TIMELINE -->
+    <!-- TIMELINE -->
   <section class="about-section">
     <h2 class="section-title">My Path</h2>
     <p>
@@ -155,6 +155,7 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
 
     </div>
   </section>
+
 
   <!-- CERTIFICATIONS -->
   <section class="about-section">

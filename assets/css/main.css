@@ -1291,33 +1291,125 @@ img {
 }
 
 /* Timeline */
+/* ============================================================
+   ABOUT — MY PATH TIMELINE
+============================================================ */
 
 .about-timeline {
-  display: grid;
-  gap: 1.2rem;
+  position: relative;
+  margin-top: 2rem;
+  padding-left: 2.75rem;
 }
 
+/* Vertical line running through timeline */
+.about-timeline::before {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  top: 0.25rem;
+  bottom: 0.25rem;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    rgba(249, 180, 52, 0.9),
+    rgba(249, 180, 52, 0.2)
+  ); /* gold-ish gradient */
+  opacity: 0.9;
+}
+
+/* Each step */
 .timeline-item {
-  padding: 0.9rem 1rem;
-  border-radius: 0.9rem;
-  background: rgba(15, 23, 42, 0.7);
-  border: 1px solid rgba(148, 163, 184, 0.3);
+  position: relative;
+  margin-bottom: 1.75rem;
+  padding-left: 1.5rem;
+  padding-bottom: 0.75rem;
 }
 
+/* Node dot on the line */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -0.1rem;
+  top: 0.25rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: var(--accent, #f9b434);
+  box-shadow:
+    0 0 0 2px rgba(249, 180, 52, 0.3),
+    0 0 14px rgba(249, 180, 52, 0.65);
+  transform: scale(0.9);
+  transition:
+    transform 0.18s ease-out,
+    box-shadow 0.18s ease-out;
+}
+
+/* Card content styling */
 .timeline-item h3 {
-  margin: 0 0 0.3rem;
-  font-size: 0.98rem;
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
 }
 
 .timeline-item p {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 0.98rem;
+  line-height: 1.5;
+  color: var(--text-muted, rgba(255, 255, 255, 0.82));
 }
 
-:root[data-theme="light"] .timeline-item {
-  background: #ffffff;
-  border-color: rgba(0, 0, 0, 0.05);
+/* Hover effect: make the node "pulse" and lift text slightly */
+.timeline-item:hover::before {
+  transform: scale(1.1);
+  box-shadow:
+    0 0 0 4px rgba(249, 180, 52, 0.24),
+    0 0 18px rgba(249, 180, 52, 0.85);
 }
+
+.timeline-item:hover h3 {
+  color: var(--accent, #f9b434);
+}
+
+/* Subtle entrance animation for each step */
+@keyframes timeline-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.timeline-item {
+  opacity: 0;
+  animation: timeline-fade-up 0.55s ease-out forwards;
+}
+
+/* Staggered delays so they cascade in */
+.timeline-item:nth-child(1) { animation-delay: 0.05s; }
+.timeline-item:nth-child(2) { animation-delay: 0.12s; }
+.timeline-item:nth-child(3) { animation-delay: 0.19s; }
+.timeline-item:nth-child(4) { animation-delay: 0.26s; }
+.timeline-item:nth-child(5) { animation-delay: 0.33s; }
+
+/* Mobile tweaks */
+@media (max-width: 640px) {
+  .about-timeline {
+    padding-left: 2.25rem;
+  }
+
+  .about-timeline::before {
+    left: 0.85rem;
+  }
+
+  .timeline-item::before {
+    left: -0.2rem;
+  }
+}
+
 
 /* Values list */
 
