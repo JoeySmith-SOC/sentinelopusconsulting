@@ -31,7 +31,7 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
     <div class="about-hero-photo">
       <div class="about-photo-frame">
         <img
-          src="{{ '/assets/img/projects/profile_headshot.jpg' | relative_url }}"
+          src="{{ '/assets/img/profile_headshot.jpg' | relative_url }}"
           alt="Portrait of Joseph Smith"
           loading="lazy"
           decoding="async"
