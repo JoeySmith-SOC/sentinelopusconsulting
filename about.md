@@ -202,7 +202,6 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
   <section class="about-section">
     <h2 class="section-title">How I Work With Clients</h2>
     <ul class="about-values">
-      <li><strong>Extreme accountability.</strong> If I say it’s getting done, it gets done.</li>
       <li><strong>Security without friction.</strong> Users should never feel the controls.</li>
       <li><strong>Transparency.</strong> You always know what I’m doing and why.</li>
       <li><strong>Documentation that outlives engineers.</strong> Clarity over complexity.</li>
