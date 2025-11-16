@@ -24,7 +24,7 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
       </p>
 
       <p>
-        My approach is simple: <strong>extreme accountability, clean architecture, and security that never slows people down.</strong>
+        My approach is simple: <strong>Clean architecture, and Security that never slows people down.</strong>
       </p>
     </div>
 
