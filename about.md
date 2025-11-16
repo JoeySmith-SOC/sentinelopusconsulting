@@ -223,3 +223,4 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
   </section>
 
 </div>
+<script src="{{ '/assets/js/timeline.js' | relative_url }}" defer></script>
