@@ -110,7 +110,7 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
             loading="lazy"
             decoding="async"
           >
-          <h3>Operator Mindset</h3>
+          <h3>Engineering Mindset</h3>
         </div>
         <p>
           I think like the people who have to live with the system — engineers, operators, and techs on the ground.
