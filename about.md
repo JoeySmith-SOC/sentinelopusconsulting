@@ -216,47 +216,116 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
   </section>
 
 
-  <!-- CERTIFICATIONS -->
-  <section class="about-section">
-    <h2 class="section-title">Certifications &amp; Tools</h2>
+  <!-- CERTIFICATIONS & TOOLS -->
+<section class="about-section certs-tools" id="certs-tools">
+  <h2 class="section-title">Certifications &amp; Tools</h2>
+  <p class="section-sub">
+    I don’t treat certs or tools as checkboxes — they’re the foundation for how I design, automate,
+    and harden identity and infrastructure.
+  </p>
 
-    <!-- CERTIFICATION ICON ROW -->
-    <div class="certs-row">
-  <div class="cert-item">
-    <img src="/assets/img/Security+-svg.svg" alt="CompTIA Security+ Certification" class="cert-icon">
-    <div class="cert-name">Security+</div>
-  </div>
+  <div class="certs-layout">
 
-  <div class="cert-item">
-    <img src="/assets/img/CySA+-svg.svg" alt="CompTIA CySA+ Certification" class="cert-icon">
-    <div class="cert-name">CySA+</div>
-  </div>
-</div>
+    <!-- LEFT: Certifications / badges -->
+    <div class="certs-column">
 
-    <!-- TOOLS GRID -->
-    <div class="about-grid">
-      <div>
-        <h3>Core Tools</h3>
+      <div class="cert-badges cert-animate">
+        <p class="eyebrow">Current Certifications</p>
+        <div class="cert-badge-row">
+          <div class="cert-badge">
+            <img
+              src="{{ '/assets/img/Security+-png.png' | relative_url }}"
+              alt="CompTIA Security+"
+              loading="lazy"
+              decoding="async"
+            >
+            <span>CompTIA Security+</span>
+          </div>
+          <div class="cert-badge">
+            <img
+              src="{{ '/assets/img/CySA+-png.png' | relative_url }}"
+              alt="CompTIA CySA+"
+              loading="lazy"
+              decoding="async"
+            >
+            <span>CompTIA CySA+</span>
+          </div>
+        </div>
+        <p class="cert-note">
+          These validate the fundamentals — detection, response, and secure design — that I apply across IAM,
+          automation, and OT security.
+        </p>
+      </div>
+
+      <div class="cert-meta cert-animate">
+        <p><strong>Actively building toward:</strong></p>
         <ul>
-          <li>Okta • Active Directory</li>
-          <li>Cloudflare Zero Trust</li>
-          <li>Ansible • Terraform • Bash</li>
-          <li>Linux • Git • GitHub • Proxmox</li>
-          <li>Wireshark • Snort • ICS/SCADA tooling</li>
+          <li>Linux certifications (LFCS / LPIC / RHCSA path)</li>
+          <li>Advanced IAM and Zero Trust specialization</li>
+          <li>Formal alignment between cyber and electrical / OT domains</li>
         </ul>
       </div>
 
-      <div>
-        <h3>Engineering Workflow</h3>
-        <ul>
-          <li>Identity lifecycle &amp; federation design</li>
-          <li>Infrastructure-as-Code automation</li>
-          <li>Zero Trust policy architecture</li>
-          <li>IT/OT segmentation &amp; secure design</li>
-        </ul>
-      </div>
     </div>
-  </section>
+
+    <!-- RIGHT: Toolstack -->
+    <div class="toolstack-column">
+
+      <div class="toolstack-group cert-animate">
+        <p class="eyebrow">Identity &amp; Access</p>
+        <h3>IAM &amp; Federation</h3>
+        <p class="toolstack-desc">
+          Designing identity as the control plane for everything — users, apps, and infrastructure.
+        </p>
+        <ul class="toolstack-list">
+          <li>Okta · SSO · SAML · OIDC</li>
+          <li>AD / LDAP concepts</li>
+          <li>Lifecycle / group-based access</li>
+        </ul>
+      </div>
+
+      <div class="toolstack-group cert-animate">
+        <p class="eyebrow">Network &amp; Edge</p>
+        <h3>Zero Trust &amp; Access Control</h3>
+        <p class="toolstack-desc">
+          Replacing flat networks with identity-aware access and least privilege.
+        </p>
+        <ul class="toolstack-list">
+          <li>Cloudflare Zero Trust · Access · Tunnels</li>
+          <li>Policy-based access to apps, SSH, RDP, and services</li>
+        </ul>
+      </div>
+
+      <div class="toolstack-group cert-animate">
+        <p class="eyebrow">Automation &amp; Infra</p>
+        <h3>Infrastructure as Code</h3>
+        <p class="toolstack-desc">
+          Making environments repeatable, testable, and version-controlled.
+        </p>
+        <ul class="toolstack-list">
+          <li>Ansible · (future) Terraform</li>
+          <li>Linux / shell scripting</li>
+          <li>Git-driven workflows and lab automation</li>
+        </ul>
+      </div>
+
+      <div class="toolstack-group cert-animate">
+        <p class="eyebrow">OS &amp; Security</p>
+        <h3>Linux &amp; Defensive Focus</h3>
+        <p class="toolstack-desc">
+          Using Linux as the base layer for labs, monitoring, and secure workloads.
+        </p>
+        <ul class="toolstack-list">
+          <li>Linux (server &amp; desktop)</li>
+          <li>Security-first mindset from endpoint to OT</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
 
   <!-- WORKING STYLE -->
   <section class="about-section">
