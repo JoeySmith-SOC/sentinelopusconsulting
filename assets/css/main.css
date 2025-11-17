@@ -1759,8 +1759,8 @@ img {
 }
 
 .cert-badge img {
-  width: 32px;
-  height: 32px;
+  width: 120px;
+  height: 120px;
   object-fit: contain;
   flex-shrink: 0;
 }
