@@ -59,52 +59,45 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
   </section>
 
   <!-- WHAT I DO -->
-  <section class="about-section">
+  <section class="what-i-do">
+  <div class="container">
     <h2 class="section-title">What I Do</h2>
+    <p class="section-sub">
+      I engineer, automate, and secure digital and physical infrastructure — bridging cybersecurity, identity access management, and operational technology.
+    </p>
 
-    <div class="about-grid">
-      <div>
+    <div class="expertise-grid two-col">
+      <article class="card expertise-card">
+        <div class="icon-top"><img src="{{ '/assets/icons/user-shield.svg' | relative_url }}" alt=""></div>
         <h3>Identity &amp; Access Management</h3>
-        <ul>
-          <li>Okta Workforce Identity engineering</li>
-          <li>SAML/OIDC federation architecture</li>
-          <li>SCIM &amp; lifecycle automation</li>
-          <li>Access governance &amp; role design</li>
-          <li>Authentication pipelines &amp; policy tuning</li>
-        </ul>
-      </div>
+        <p>Okta/AD federation, lifecycle automation, access governance, and auth workflows that integrate cleanly with infrastructure.</p>
+        <a href="{{ '/projects/' | relative_url }}" class="card-link">Learn more →</a>
+      </article>
 
-      <div>
-        <h3>Zero Trust &amp; Cloud Security</h3>
-        <ul>
-          <li>Cloudflare Zero Trust access control</li>
-          <li>Device posture &amp; certificate-based security</li>
-          <li>Least-privilege network segmentation</li>
-          <li>Identity-aware routing &amp; access policies</li>
-        </ul>
-      </div>
+      <article class="card expertise-card">
+        <div class="icon-top"><img src="{{ '/assets/icons/cloud-lock.svg' | relative_url }}" alt=""></div>
+        <h3>Zero Trust Architecture</h3>
+        <p>Cloudflare Access, device posture, certificate-based auth, and least-privilege policy — without user friction.</p>
+        <a href="{{ '/projects/' | relative_url }}" class="card-link">Learn more →</a>
+      </article>
 
-      <div>
+      <article class="card expertise-card">
+        <div class="icon-top"><img src="{{ '/assets/icons/automation.svg' | relative_url }}" alt=""></div>
         <h3>Infrastructure &amp; Automation</h3>
-        <ul>
-          <li>Linux engineering &amp; hardening</li>
-          <li>Ansible, Terraform, Bash, Git</li>
-          <li>Automated provisioning &amp; baseline enforcement</li>
-          <li>Version-controlled, reproducible environments</li>
-        </ul>
-      </div>
+        <p>Ansible/Terraform pipelines, hardened baselines, and versioned environments aligned to DevSecOps.</p>
+        <a href="{{ '/projects/' | relative_url }}" class="card-link">Learn more →</a>
+      </article>
 
-      <div>
-        <h3>IT → OT Security Integration</h3>
-        <ul>
-          <li>SCADA/ICS segmentation</li>
-          <li>PLC &amp; HMI hardening</li>
-          <li>Secure remote access for OT environments</li>
-          <li>Cyber–electrical convergence &amp; safety alignment</li>
-        </ul>
-      </div>
+      <article class="card expertise-card">
+        <div class="icon-top"><img src="{{ '/assets/icons/lock-bolt.svg' | relative_url }}" alt=""></div>
+        <h3>Operational Technology &amp; Electrical</h3>
+        <p>ICS segmentation, PLC/HMI security, monitoring, and safety-first designs bridging code and current.</p>
+        <a href="{{ '/projects/' | relative_url }}" class="card-link">Learn more →</a>
+      </article>
     </div>
-  </section>
+  </div>
+</section>
+
 
     <!-- TIMELINE -->
   <section class="about-section">
