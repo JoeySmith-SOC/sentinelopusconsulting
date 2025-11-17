@@ -46,17 +46,83 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
 <div class="about-body">
 
   <!-- MISSION -->
-  <section class="about-section">
-    <h2 class="section-title">My Mission</h2>
-    <p>
-      To engineer identity systems, automation pipelines, and secure infrastructure that eliminate chaos,
-      reduce risk, and empower teams. Whether it’s Okta, Cloudflare Zero Trust, Linux automation,
-      or OT security — my mission is to build environments that are secure, scalable, and predictable.
-    </p>
-    <p>
-      Security shouldn’t be complicated — it should be <strong>engineered, automated, and repeatable</strong>.
-    </p>
-  </section>
+<section class="about-section mission-section">
+  <div class="mission-layout">
+
+    <!-- LEFT: Primary mission card -->
+    <div class="mission-card mission-primary mission-animate">
+      <p class="eyebrow">My Mission</p>
+      <h2>Engineer security that never gets in the way.</h2>
+      <p>
+        I design identity systems, automation pipelines, and secure infrastructure that remove chaos instead of adding to it.
+        Whether it’s Okta, Cloudflare Zero Trust, Linux automation, or OT security — the goal is the same:
+        <strong>reliable, predictable, and secure operations</strong> that teams can trust.
+      </p>
+      <p>
+        Security shouldn’t be an obstacle. It should be <strong>engineered, automated, and repeatable</strong> —
+        so your organization can move faster without wondering what is going to break next.
+      </p>
+    </div>
+
+    <!-- RIGHT: Pillars -->
+    <div class="mission-pillars">
+
+      <div class="mission-card mission-animate">
+        <div class="mission-pillars-header">
+          <img
+            src="{{ '/assets/icons/shield-lock.svg' | relative_url }}"
+            alt=""
+            class="mission-icon"
+            loading="lazy"
+            decoding="async"
+          >
+          <h3>Outcome-Driven Security</h3>
+        </div>
+        <p>
+          Every design starts with the outcome: less risk, fewer surprises, and fewer tickets.
+          Controls are mapped to real threats, not buzzwords.
+        </p>
+      </div>
+
+      <div class="mission-card mission-animate">
+        <div class="mission-pillars-header">
+          <img
+            src="{{ '/assets/icons/server-cog.svg' | relative_url }}"
+            alt=""
+            class="mission-icon"
+            loading="lazy"
+            decoding="async"
+          >
+          <h3>Integrated, Not Bolted On</h3>
+        </div>
+        <p>
+          Identity, network, and automation are built to work together.
+          IAM, Zero Trust, and OT protections are aligned instead of fighting each other.
+        </p>
+      </div>
+
+      <div class="mission-card mission-animate">
+        <div class="mission-pillars-header">
+          <img
+            src="{{ '/assets/icons/lock-bolt.svg' | relative_url }}"
+            alt=""
+            class="mission-icon"
+            loading="lazy"
+            decoding="async"
+          >
+          <h3>Operator Mindset</h3>
+        </div>
+        <p>
+          I think like the people who have to live with the system — engineers, operators, and techs on the ground.
+          The mission: build once, document clearly, and make it easy to operate under pressure.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
 
   <!-- WHAT I DO -->
   <section class="what-i-do">
