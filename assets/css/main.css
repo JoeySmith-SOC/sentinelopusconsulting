@@ -1949,3 +1949,16 @@ img {
 [data-theme="light"] .work-style-item:hover {
   box-shadow: 0 16px 40px rgba(15, 23, 42, 0.16);
 }
+/* Shared icon theming for dark/light mode */
+.themed-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: invert(1) brightness(1.2);  /* light-on-dark */
+  transition: filter 150ms ease-out, opacity 150ms ease-out;
+}
+
+/* In light mode, show original dark icon colors */
+[data-theme="light"] .themed-icon {
+  filter: none;
+}

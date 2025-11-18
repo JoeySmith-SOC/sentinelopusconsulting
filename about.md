@@ -344,7 +344,7 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
       <!-- Extreme Accountability -->
       <article class="work-style-item">
         <div class="work-style-icon">
-          <img src="/assets/icons/shield-lock.svg" alt="">
+          <img class="themed-icon" src="/assets/icons/improvement.png" alt="">
         </div>
         <h3>Result Orienated</h3>
         <p>
@@ -355,7 +355,7 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
       <!-- Security Without Friction -->
       <article class="work-style-item">
         <div class="work-style-icon">
-          <img src="/assets/icons/automation.svg" alt="">
+          <img class="themed-icon" src="/assets/icons/master-key.png" alt="">
         </div>
         <h3>Security without friction</h3>
         <p>
@@ -366,7 +366,7 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
       <!-- Transparency -->
       <article class="work-style-item">
         <div class="work-style-icon">
-          <img src="/assets/icons/user-shield.svg" alt="">
+          <img class="themed-icon" src="/assets/icons/communication.png" alt="">
         </div>
         <h3>Transparent communication</h3>
         <p>
@@ -377,7 +377,7 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
       <!-- Documentation -->
       <article class="work-style-item">
         <div class="work-style-icon">
-          <img src="/assets/icons/server-cog.svg" alt="">
+          <img class="themed-icon" src="/assets/icons/documents.png" alt="">
         </div>
         <h3>Documentation that outlives engineers</h3>
         <p>
