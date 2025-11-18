@@ -1022,6 +1022,15 @@ img {
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
   border-color: rgba(249, 180, 52, 0.8);
 }
+/* Light mode */
+.theme-light .mission-icon {
+  filter: none;
+}
+
+/* Dark mode */
+.theme-dark .mission-icon {
+  filter: brightness(0) invert(1);
+}
 
 /* Contact call-to-action */
 .contact-cta {
