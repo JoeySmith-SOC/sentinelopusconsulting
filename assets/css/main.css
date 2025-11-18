@@ -1788,7 +1788,21 @@ img {
   font-size: 0.92rem;
   color: var(--text-muted, rgba(255, 255, 255, 0.85));
 }
+.about-section .building-toward,
+.about-section .building-toward * {
+  color: var(--text-color);
+}
 
+/* Dark mode override (uses your existing token) */
+[data-theme="dark"] .about-section .building-toward,
+[data-theme="dark"] .about-section .building-toward * {
+  color: var(--text-color);
+}
+
+/* Light mode override — force proper dark text */
+[data-theme="light"] .about-section .building-toward,
+[data-theme="light"] .about-section .building-toward * {
+  color: var(--text-color)
 /* Right column: toolstack */
 
 .toolstack-column {

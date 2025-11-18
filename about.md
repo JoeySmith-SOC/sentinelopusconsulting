@@ -257,12 +257,16 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
         </p>
       </div>
 
-      <div class="cert-meta cert-animate">
+      <div class="building-toward">
         <p><strong>Actively building toward:</strong></p>
         <ul>
           <li>Linux certifications (LFCS / LPIC / RHCSA path)</li>
           <li>Advanced IAM and Zero Trust specialization</li>
           <li>Formal alignment between cyber and electrical / OT domains</li>
+          <li>AWS Certification Track</li>
+          <li>Docker & Kubernetes</li>
+          <li>Okta Certified Professional</li>
+          <li>Zero Trust & Cloud Security</li>
         </ul>
       </div>
 
