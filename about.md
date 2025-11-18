@@ -69,7 +69,7 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
 
       <div class="mission-card mission-animate">
         <div class="mission-pillars-header">
-          <img
+          <img class="themed-icon"
             src="{{ '/assets/icons/shield-lock.svg' | relative_url }}"
             alt=""
             class="mission-icon"
@@ -86,7 +86,7 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
 
       <div class="mission-card mission-animate">
         <div class="mission-pillars-header">
-          <img
+          <img class="themed-icon"
             src="{{ '/assets/icons/server-cog.svg' | relative_url }}"
             alt=""
             class="mission-icon"
@@ -103,7 +103,7 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
 
       <div class="mission-card mission-animate">
         <div class="mission-pillars-header">
-          <img
+          <img class="themed-icon"
             src="{{ '/assets/icons/lock-bolt.svg' | relative_url }}"
             alt=""
             class="mission-icon"
