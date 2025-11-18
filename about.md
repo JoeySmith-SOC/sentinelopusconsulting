@@ -100,7 +100,6 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
           IAM, Zero Trust, and OT protections are aligned instead of fighting each other.
         </p>
       </div>
-
       <div class="mission-card mission-animate">
         <div class="mission-pillars-header">
           <img class="themed-icon"
