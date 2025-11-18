@@ -1023,12 +1023,12 @@ img {
   border-color: rgba(249, 180, 52, 0.8);
 }
 /* Light mode */
-.theme-light .mission-icon {
+.theme-light .mission-icon .mission-card .mission-animate{
   filter: none;
 }
 
 /* Dark mode */
-.theme-dark .mission-icon {
+.theme-dark .mission-icon .mission-card .mission-animate {
   filter: brightness(0) invert(1);
 }
 
