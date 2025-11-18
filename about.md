@@ -332,14 +332,49 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
 
 
   <!-- WORKING STYLE -->
-  <section class="about-section">
+  <section class="about-section work-style">
+  <div class="container">
     <h2 class="section-title">How I Work With Clients</h2>
-    <ul class="about-values">
-      <li><strong>Security without friction.</strong> Users should never feel the controls.</li>
-      <li><strong>Transparency.</strong> You always know what I’m doing and why.</li>
-      <li><strong>Documentation that outlives engineers.</strong> Clarity over complexity.</li>
-    </ul>
-  </section>
+    <p class="section-sub">
+      Clear scope, honest comms, and systems that actually ship. I treat every engagement like an engineering mission, not a ticket queue.
+    </p>
+
+    <div class="work-style-grid">
+      <article class="work-style-item">
+        <span class="work-style-step">01</span>
+        <h3>Extreme accountability</h3>
+        <p>
+          If I commit to a result, I own it. You get clear expectations, written plans, and honest updates — even when something gets hard or blocked.
+        </p>
+      </article>
+
+      <article class="work-style-item">
+        <span class="work-style-step">02</span>
+        <h3>Security without friction</h3>
+        <p>
+          Controls should protect work, not suffocate it. I design identity, Zero Trust, and OT safeguards that feel invisible to end users but strict on the back end.
+        </p>
+      </article>
+
+      <article class="work-style-item">
+        <span class="work-style-step">03</span>
+        <h3>Transparent communication</h3>
+        <p>
+          No black boxes. You see the trade-offs, the decision points, and the impact. I document design choices so your team can support and extend the work later.
+        </p>
+      </article>
+
+      <article class="work-style-item">
+        <span class="work-style-step">04</span>
+        <h3>Documentation that outlives engineers</h3>
+        <p>
+          Runbooks, diagrams, and configs live in version control — not in someone's head. The goal is systems your team can operate long after the project ends.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
 
   <!-- CTA -->
   <section class="about-section about-cta">
