@@ -250,6 +250,15 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
             >
             <span>CompTIA CySA+</span>
           </div>
+          <div class="cert-badge">
+            <img
+              src="{{ '/assets/img/CySA+-png.png' | relative_url }}"
+              alt="CompTIA CySA+"
+              loading="lazy"
+              decoding="async"
+            >
+            <span>CompTIA CySA+</span>
+          </div>
         </div>
         <p class="cert-note">
           These validate the fundamentals — detection, response, and secure design — that I apply across IAM,
