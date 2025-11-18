@@ -1803,7 +1803,8 @@ img {
 [data-theme="light"] .about-section .building-toward,
 [data-theme="light"] .about-section .building-toward * {
   color: var(--text-color)
-/* Right column: toolstack */
+}
+  /* Right column: toolstack */
 
 .toolstack-column {
   display: flex;
