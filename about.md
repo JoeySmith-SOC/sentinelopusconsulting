@@ -301,7 +301,7 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
       </div>
 
       <div class="toolstack-group cert-animate">
-        <p class="eyebrow">Automation &amp; Infra</p>
+        <p class="eyebrow">Automation &amp; Infrastructure</p>
         <h3>Infrastructure as Code</h3>
         <p class="toolstack-desc">
           Making environments repeatable, testable, and version-controlled.
