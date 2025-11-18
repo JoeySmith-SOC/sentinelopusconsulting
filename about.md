@@ -336,44 +336,59 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
   <div class="container">
     <h2 class="section-title">How I Work With Clients</h2>
     <p class="section-sub">
-      Clear scope, honest comms, and systems that actually ship. I treat every engagement like an engineering mission, not a ticket queue.
+      Clear scope, honest communication, and systems that ship. I treat every engagement like an engineering mission.
     </p>
 
     <div class="work-style-grid">
+
+      <!-- Extreme Accountability -->
       <article class="work-style-item">
-        <span class="work-style-step">01</span>
-        <h3>Extreme accountability</h3>
+        <div class="work-style-icon">
+          <img src="/assets/icons/shield-lock.svg" alt="">
+        </div>
+        <h3>Result Orienated</h3>
         <p>
-          If I commit to a result, I own it. You get clear expectations, written plans, and honest updates — even when something gets hard or blocked.
+          If I commit to a result, I own it. You get clear expectations, written plans, and honest updates — even when something gets hard.
         </p>
       </article>
 
+      <!-- Security Without Friction -->
       <article class="work-style-item">
-        <span class="work-style-step">02</span>
+        <div class="work-style-icon">
+          <img src="/assets/icons/automation.svg" alt="">
+        </div>
         <h3>Security without friction</h3>
         <p>
-          Controls should protect work, not suffocate it. I design identity, Zero Trust, and OT safeguards that feel invisible to end users but strict on the back end.
+          Controls should protect work, not slow people down. I design IAM and Zero Trust systems that feel invisible to users but strong on the backend.
         </p>
       </article>
 
+      <!-- Transparency -->
       <article class="work-style-item">
-        <span class="work-style-step">03</span>
+        <div class="work-style-icon">
+          <img src="/assets/icons/user-shield.svg" alt="">
+        </div>
         <h3>Transparent communication</h3>
         <p>
-          No black boxes. You see the trade-offs, the decision points, and the impact. I document design choices so your team can support and extend the work later.
+          No black boxes. I communicate trade-offs, decisions, and impact — so your team always knows the why behind the work.
         </p>
       </article>
 
+      <!-- Documentation -->
       <article class="work-style-item">
-        <span class="work-style-step">04</span>
+        <div class="work-style-icon">
+          <img src="/assets/icons/server-cog.svg" alt="">
+        </div>
         <h3>Documentation that outlives engineers</h3>
         <p>
-          Runbooks, diagrams, and configs live in version control — not in someone's head. The goal is systems your team can operate long after the project ends.
+          Diagrams, runbooks, configs, and version-controlled artifacts. Your team can operate the system long after the engagement ends.
         </p>
       </article>
+
     </div>
   </div>
 </section>
+
 
 
   <!-- CTA -->
