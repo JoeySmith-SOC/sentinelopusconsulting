@@ -250,15 +250,6 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
             >
             <span>CompTIA CySA+</span>
           </div>
-          <div class="cert-badge">
-            <img
-              src="{{ '/assets/img/CSAP_Certified.pdf' | relative_url }}"
-              alt="CSAP Security Analytics Professional"
-              loading="lazy"
-              decoding="async"
-            >
-            <span>CSAP Security Analytics Professional</span>
-          </div>
         </div>
         <p class="cert-note">
           These validate the fundamentals — detection, response, and secure design — that I apply across IAM,
