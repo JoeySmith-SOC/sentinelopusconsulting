@@ -257,7 +257,7 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
               loading="lazy"
               decoding="async"
             >
-            <span>CompTIA CySA+</span>
+            <span>CSAP Security Analytics Professional</span>
           </div>
         </div>
         <p class="cert-note">
