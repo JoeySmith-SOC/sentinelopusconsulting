@@ -5,11 +5,14 @@
    - What I Do
    - Flagship / Current Engineering Projects
    ========================================================================== */
+
+/* --- HERO: full-bleed video hero --------------------------------------- */
+
 /* ============================================================
    HERO – full-bleed video background with overlayed content
    ============================================================ */
 
-
+/* Full-width section so the video stretches edge-to-edge */
 .hero.hero-video {
   position: relative;
   margin-left: calc(50% - 50vw);
@@ -22,6 +25,7 @@
   overflow: hidden;
 }
 
+/* Video + dark overlay sit behind the content */
 .hero-media {
   position: absolute;
   inset: 0;
@@ -45,6 +49,7 @@
   background: rgba(0, 0, 0, 0.55);
 }
 
+/* Content container sits on TOP of the video */
 .hero-inner {
   position: relative;
   z-index: 1;
@@ -52,6 +57,7 @@
   padding: clamp(4rem, 10vh, 6rem) 1.5rem 3rem;
 }
 
+/* Two-column hero layout: text left, empty/right column for balance */
 .hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
@@ -63,10 +69,15 @@
   max-width: 780px;
 }
 
-/* Typography always white on video */
+.hero-right {
+  /* Empty for now – kept for future visuals */
+}
+
+/* Hero typography + buttons (always light on dark video) */
 .hero h1,
 .hero .sub,
-.hero .cred li {
+.hero .cred li,
+.hero .btn {
   color: #fff;
 }
 
@@ -81,9 +92,9 @@
   margin-bottom: 1.25rem;
 }
 
-/* ============================================================
-   BUTTON FIX — proper contrast + hover visibility
-   ============================================================ */
+.hero .btn {
+  border-color: rgba(255, 255, 255, 0.22);
+}
 
 /* Primary button */
 .hero .btn.primary {
@@ -111,10 +122,7 @@
 
 
 
-/* ============================================================
-   CRED CHIPS
-   ============================================================ */
-
+/* Cred “chip” row */
 .cred {
   list-style: none;
   margin: 1rem 0 0;
@@ -133,27 +141,47 @@
   backdrop-filter: blur(3px);
 }
 
-/* Responsive */
+/* Responsive tweaks – stack columns on narrow screens */
 @media (max-width: 920px) {
   .hero.hero-video {
     min-height: clamp(420px, 70vh, 780px);
   }
+
   .hero-grid {
     grid-template-columns: minmax(0, 1fr);
     text-align: center;
   }
+
   .hero-left {
     margin: 0 auto;
   }
+
   .cred {
     justify-content: center;
   }
 }
 
 
-/* ============================================================
-   WHAT I DO
-   ============================================================ */
+.cred {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.cred li {
+  font-weight: 600;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.6rem;
+  backdrop-filter: blur(3px);
+}
+
+/* --- “What I Do” expertise cards --------------------------------------- */
 
 .what-i-do {
   background: radial-gradient(circle at top, rgba(255, 255, 255, 0.02), transparent);
@@ -196,14 +224,12 @@
   filter: var(--icon-filter);
 }
 
-
-/* ============================================================
-   CURRENT PROJECTS
-   ============================================================ */
+/* --- Current Engineering Projects -------------------------------------- */
 
 .projects {
   background: linear-gradient(to bottom, #05070c, #070b13);
 }
+
 [data-theme="light"] .projects {
   background: linear-gradient(to bottom, #f6f7fb, #f1f3ff);
 }
@@ -267,6 +293,8 @@
 }
 
 .project-tags {
+  @extend .tag-list;
+  /* fallback if @extend unsupported: redefining */
   display: flex;
   flex-wrap: wrap;
   gap: 0.35rem;
