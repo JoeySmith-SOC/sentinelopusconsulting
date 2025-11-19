@@ -109,6 +109,19 @@
 .hero .btn:not(.primary):hover {
   background: rgba(255, 255, 255, 0.1);
 }
+/* Fix: secondary (outline) button text should be black on light background */
+.hero .btn:not(.primary) {
+  color: #000 !important;
+  background: #fff;        /* ensures solid white pill */
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Hover state: slight darkening */
+.hero .btn:not(.primary):hover {
+  background: rgba(0, 0, 0, 0.08);
+  color: #000 !important;
+}
+
 
 /* Cred “chip” row */
 .cred {
