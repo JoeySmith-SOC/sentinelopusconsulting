@@ -2,24 +2,60 @@
 <html lang="{{ site.lang | default: 'en' }}">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {%- include head-seo.html -%}
-    <!-- Main stylesheet -->
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-    <!-- <link rel="icon" href="{{ '/assets/img/favicon.png' | relative_url }}">  disabling this line-->
+
+    <!-- ============================
+         Global base styles (always loaded)
+         ============================ -->
+    <link rel="stylesheet" href="{{ '/assets/css/base.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/layout.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/components.css' | relative_url }}">
+
+    <!-- ============================
+         Page-bundle styles (loaded by layout)
+         ============================ -->
+    {% case page.layout %}
+      {% when 'home' %}
+        <link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}">
+      {% when 'about' %}
+        <link rel="stylesheet" href="{{ '/assets/css/about.css' | relative_url }}">
+      {% when 'services' %}
+        <link rel="stylesheet" href="{{ '/assets/css/services.css' | relative_url }}">
+      {% when 'project' %}
+        <link rel="stylesheet" href="{{ '/assets/css/projects.css' | relative_url }}">
+      {% when 'post' %}
+        <link rel="stylesheet" href="{{ '/assets/css/blog.css' | relative_url }}">
+      {% else %}
+        <!-- No additional page-specific CSS bundle -->
+    {% endcase %}
+
+    <!-- ============================
+         Optional: per-page extra styles
+         Usage in front matter:
+         styles:
+           - /assets/css/custom-page.css
+         ============================ -->
+    {% if page.styles %}
+      {% for style in page.styles %}
+        <link rel="stylesheet" href="{{ style | relative_url }}">
+      {% endfor %}
+    {% endif %}
   </head>
-  <body class="site">
+
+  <body class="site{% if page.body_class %} {{ page.body_class }}{% endif %}">
     {% include header.html %}
 
-    <main id="content">
+    <main id="content" role="main">
       {{ content }}
     </main>
 
     {% include footer.html %}
 
-    <!-- Load scripts once, at the end -->
+    <!-- Global JS (theme toggle, etc.) -->
     <script src="{{ '/assets/js/theme.js' | relative_url }}" defer></script>
-    
   </body>
 </html>
+

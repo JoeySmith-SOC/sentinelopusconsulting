@@ -1,0 +1,154 @@
+/* ==========================================================================
+   LAYOUT.CSS
+   Header, nav, page shell, and footer.
+   ========================================================================== */
+
+/* --- Header / Top Nav --------------------------------------------------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  backdrop-filter: blur(18px);
+  background: linear-gradient(
+      to bottom,
+      rgba(5, 7, 12, 0.95),
+      rgba(5, 7, 12, 0.94)
+    );
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+[data-theme="light"] .site-header {
+  background: rgba(253, 253, 255, 0.94);
+  border-bottom-color: rgba(15, 23, 42, 0.05);
+}
+
+.site-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 0.6rem;
+}
+
+.brand-mark {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.brand-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.brand-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Nav items */
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.5rem;
+  margin-right: 0.6rem;
+}
+
+.nav-link {
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.86rem;
+  border: 1px solid transparent;
+  background: transparent;
+  transition:
+    background 140ms ease,
+    border-color 140ms ease,
+    color 140ms ease,
+    box-shadow 140ms ease;
+}
+
+.nav-link:hover {
+  background: var(--soc-gold-soft);
+  border-color: var(--soc-gold-border);
+  box-shadow: 0 0 0 1px rgba(216, 160, 34, 0.28);
+}
+
+.nav-link--primary {
+  background: var(--soc-gold);
+  color: #111;
+  border-color: transparent;
+  font-weight: 600;
+  box-shadow: 0 12px 25px rgba(216, 160, 34, 0.4);
+}
+
+.nav-link--primary:hover {
+  filter: brightness(1.02);
+}
+
+/* Theme toggle button */
+
+.theme-toggle {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-subtle);
+  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.22), transparent);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+/* --- Main layout -------------------------------------------------------- */
+
+#content {
+  min-height: 60vh;
+}
+
+/* --- Footer ------------------------------------------------------------- */
+
+.site-footer {
+  padding-block: 2rem 1.5rem;
+  border-top: 1px solid var(--border-subtle);
+  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.02), transparent);
+  font-size: 0.85rem;
+}
+
+.site-footer-inner {
+  max-width: var(--container-width);
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.site-footer-links {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+}
+
+.footer-social {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.footer-social img {
+  width: 1rem;
+  height: 1rem;
+  filter: var(--icon-filter);
+}

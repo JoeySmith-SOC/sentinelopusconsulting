@@ -1,0 +1,167 @@
+/* ==========================================================================
+   BASE.CSS
+   Global reset, typography, color tokens, and utilities.
+   Loaded on EVERY page.
+   ========================================================================== */
+
+/* --- CSS Reset / Normalization ----------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  line-height: 1.6;
+}
+
+/* --- Color system & theme tokens --------------------------------------- */
+
+:root {
+  color-scheme: light dark;
+
+  /* Core colors */
+  --soc-gold: #d8a022;
+  --soc-gold-soft: rgba(216, 160, 34, 0.18);
+  --soc-gold-border: rgba(216, 160, 34, 0.6);
+
+  --soc-dark-900: #05070c;
+  --soc-dark-800: #090c14;
+  --soc-dark-700: #101521;
+
+  --soc-light-100: #f5f5f7;
+  --soc-light-200: #e0e2ea;
+  --soc-light-300: #c5c9d7;
+
+  --soc-danger: #f25f5c;
+
+  /* Theme surface tokens (default = dark) */
+  --page-bg: var(--soc-dark-900);
+  --page-fg: #f9fafb;
+  --surface-soft: #0f131d;
+  --surface-strong: #111624;
+
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.16);
+
+  --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.6);
+
+  /* Icon filter – toggled in dark / light. */
+  --icon-filter: invert(1) brightness(1.4);
+
+  --radius-lg: 1.25rem;
+  --radius-md: 0.9rem;
+
+  --container-width: 1160px;
+  --section-spacing: 5rem;
+}
+
+/* Light theme overrides */
+[data-theme="light"] {
+  --page-bg: #f5f6fb;
+  --page-fg: #151724;
+  --surface-soft: #ffffff;
+  --surface-strong: #fdfefe;
+
+  --border-subtle: rgba(0, 0, 0, 0.04);
+  --border-strong: rgba(0, 0, 0, 0.08);
+
+  --shadow-soft: 0 12px 30px rgba(15, 23, 42, 0.1);
+
+  /* Icons should be dark on light background. */
+  --icon-filter: none;
+}
+
+/* --- Global body / html ------------------------------------------------- */
+
+body.site {
+  background: radial-gradient(circle at top, #161c2d 0, var(--page-bg) 52%);
+  color: var(--page-fg);
+  min-height: 100vh;
+}
+
+/* Remove default link underlines; color via components */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- Containers & section defaults ------------------------------------- */
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+section {
+  padding-block: var(--section-spacing);
+}
+
+/* Section headings shared across pages */
+.section-title {
+  text-align: center;
+  font-size: clamp(2rem, 2.4vw, 2.6rem);
+  letter-spacing: 0.03em;
+  margin: 0 0 0.4rem;
+}
+
+.section-sub {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 2.4rem;
+  font-size: 0.98rem;
+  opacity: 0.86;
+}
+
+/* --- Utilities ---------------------------------------------------------- */
+
+.text-center {
+  text-align: center;
+}
+
+.mt-0 { margin-top: 0 !important; }
+.mb-0 { margin-bottom: 0 !important; }
+.mb-1 { margin-bottom: 0.5rem !important; }
+.mb-2 { margin-bottom: 1rem !important; }
+.mb-3 { margin-bottom: 1.5rem !important; }
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.78rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-subtle);
+  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.09), transparent);
+  gap: 0.35rem;
+}
+
+/* Scroll-trigger helper; JS just toggles .is-visible -------------------- */
+
+.scroll-fade {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 420ms ease, transform 420ms ease;
+}
+
+.scroll-fade.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

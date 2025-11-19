@@ -1,0 +1,245 @@
+/* ==========================================================================
+   HOME.CSS
+   Homepage-specific sections:
+   - Hero video
+   - What I Do
+   - Flagship / Current Engineering Projects
+   ========================================================================== */
+
+/* --- HERO: full-bleed video hero --------------------------------------- */
+
+.hero {
+  position: relative;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  width: 100vw;
+  overflow: hidden;
+}
+
+.hero-media {
+  position: relative;
+  width: 100%;
+  height: clamp(420px, 60vh, 760px);
+}
+
+.hero-media video,
+.hero-media .hero-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-media .hero-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-inner {
+  position: relative;
+  margin-top: -clamp(360px, 52vh, 680px);
+  padding-top: clamp(380px, 54vh, 700px);
+  padding-bottom: 2.25rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 2rem;
+  align-items: flex-end;
+}
+
+@media (max-width: 920px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  margin-bottom: 0.5rem;
+}
+
+.hero .sub {
+  opacity: 0.92;
+  max-width: 780px;
+  margin-bottom: 1rem;
+}
+
+.hero h1,
+.hero .sub,
+.hero .cred li,
+.hero .btn {
+  color: #fff;
+}
+
+.hero .btn {
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.hero .btn:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.cred {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.cred li {
+  font-weight: 600;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.6rem;
+  backdrop-filter: blur(3px);
+}
+
+/* --- “What I Do” expertise cards --------------------------------------- */
+
+.what-i-do {
+  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.02), transparent);
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+@media (max-width: 1100px) {
+  .expertise-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .expertise-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.expertise-grid .card {
+  text-align: left;
+  padding-top: 1.8rem;
+  position: relative;
+}
+
+.icon-top {
+  width: 2.1rem;
+  height: 2.1rem;
+  margin-bottom: 1rem;
+}
+
+.icon-top img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: var(--icon-filter);
+}
+
+/* --- Current Engineering Projects -------------------------------------- */
+
+.projects {
+  background: linear-gradient(to bottom, #05070c, #070b13);
+}
+
+[data-theme="light"] .projects {
+  background: linear-gradient(to bottom, #f6f7fb, #f1f3ff);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.6rem;
+}
+
+@media (max-width: 1100px) {
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 800px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-card {
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-media {
+  display: block;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.project-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+  transition: transform 200ms ease;
+}
+
+.project-card:hover .project-media img {
+  transform: scale(1.06);
+}
+
+.project-body {
+  padding: 1.15rem 1.3rem 1.3rem;
+}
+
+.project-body h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1.02rem;
+}
+
+.project-desc {
+  margin: 0 0 0.9rem;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.project-tags {
+  @extend .tag-list;
+  /* fallback if @extend unsupported: redefining */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.9rem;
+}
+
+.project-tags li {
+  padding: 0.2rem 0.55rem;
+  font-size: 0.76rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-subtle);
+  background: rgba(15, 23, 42, 0.75);
+}
+
+[data-theme="light"] .project-tags li {
+  background: #f9fafb;
+}
+
+.project-link {
+  margin-top: auto;
+  width: fit-content;
+  padding-inline: 1rem;
+}

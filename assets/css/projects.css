@@ -1,0 +1,21 @@
+/* ==========================================================================
+   PROJECTS.CSS
+   Project listing / detail pages.
+   Right now your home-project styles live in home.css; this file
+   can be extended when you build a dedicated /projects listing grid.
+   ========================================================================== */
+
+.project-layout {
+  padding-block: var(--section-spacing);
+}
+
+.project-header {
+  max-width: 720px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.project-meta {
+  font-size: 0.86rem;
+  opacity: 0.8;
+}

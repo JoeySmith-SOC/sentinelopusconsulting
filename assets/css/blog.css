@@ -1,0 +1,25 @@
+/* ==========================================================================
+   BLOG.CSS
+   Blog index + single posts.
+   ========================================================================== */
+
+.blog-index {
+  padding-block: var(--section-spacing);
+}
+
+.blog-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.blog-card {
+  background: var(--surface-soft);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  padding: 1.4rem 1.6rem;
+  box-shadow: var(--shadow-soft);
+}
+
+[data-theme="light"] .blog-card {
+  background: #ffffff;
+}

@@ -1,0 +1,112 @@
+/* ==========================================================================
+   COMPONENTS.CSS
+   Buttons, cards, grids, hero helpers, shared “section shell” pieces.
+   ========================================================================== */
+
+/* --- Buttons ------------------------------------------------------------ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.55rem 1.3rem;
+  font-size: 0.92rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-subtle);
+  background: rgba(15, 23, 42, 0.7);
+  color: #f9fafb;
+  cursor: pointer;
+  transition:
+    background 140ms ease,
+    border-color 140ms ease,
+    box-shadow 140ms ease,
+    transform 80ms ease;
+}
+
+[data-theme="light"] .btn {
+  background: #ffffff;
+  color: #111827;
+}
+
+.btn.primary {
+  background: var(--soc-gold);
+  border-color: transparent;
+  color: #111;
+  box-shadow: 0 15px 35px rgba(216, 160, 34, 0.5);
+  font-weight: 600;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* --- Generic cards ------------------------------------------------------ */
+
+.card,
+.project-card,
+.mission-card,
+.client-card,
+.path-card {
+  background: var(--surface-soft);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-soft);
+  padding: 1.4rem 1.6rem;
+}
+
+[data-theme="light"] .card,
+[data-theme="light"] .project-card,
+[data-theme="light"] .mission-card,
+[data-theme="light"] .client-card,
+[data-theme="light"] .path-card {
+  background: #ffffff;
+}
+
+/* --- Grid helpers ------------------------------------------------------- */
+
+.two-col {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.6rem;
+}
+
+@media (max-width: 860px) {
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Hero shared helpers ------------------------------------------------ */
+
+.hero-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.45rem;
+  margin-top: 1.4rem;
+}
+
+/* --- Tag list (projects, skills, etc.) --------------------------------- */
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tag-list li {
+  padding: 0.2rem 0.55rem;
+  font-size: 0.76rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-subtle);
+  background: rgba(15, 23, 42, 0.75);
+}
+
+[data-theme="light"] .tag-list li {
+  background: #f8fafc;
+}

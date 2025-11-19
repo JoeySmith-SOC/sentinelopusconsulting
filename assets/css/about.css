@@ -1,0 +1,229 @@
+/* ==========================================================================
+   ABOUT.CSS
+   About page sections:
+   - My Path (timeline)
+   - My Mission
+   - Certifications & Tools
+   - How I Work With Clients
+   ========================================================================== */
+
+/* --- My Path ------------------------------------------------------------ */
+
+.path-section {
+  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.02), transparent);
+}
+
+.path-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.1fr);
+  gap: 2.2rem;
+  align-items: flex-start;
+}
+
+@media (max-width: 900px) {
+  .path-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.path-column h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.path-item {
+  border-left: 3px solid var(--soc-gold);
+  padding-left: 1.1rem;
+  margin-bottom: 1.2rem;
+}
+
+.path-item-title {
+  font-weight: 600;
+}
+
+.path-item-sub {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* --- My Mission --------------------------------------------------------- */
+
+.mission-section {
+  background: radial-gradient(circle at top, rgba(216, 160, 34, 0.15), transparent);
+  border-radius: var(--radius-lg);
+  max-width: var(--container-width);
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+.mission-inner {
+  background: var(--surface-soft);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.2fr);
+  gap: 2.2rem;
+  padding: 2.4rem 2.6rem;
+}
+
+[data-theme="light"] .mission-inner {
+  background: #ffffff;
+}
+
+@media (max-width: 960px) {
+  .mission-inner {
+    grid-template-columns: 1fr;
+    padding: 1.8rem 1.6rem;
+  }
+}
+
+.mission-left h2 {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+}
+
+.mission-left p:last-child {
+  margin-bottom: 0;
+}
+
+/* Pillars on the right */
+
+.mission-pillars {
+  display: grid;
+  gap: 1.4rem;
+}
+
+.mission-card {
+  padding: 1rem 1.1rem;
+  border-radius: var(--radius-md);
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.75rem 1rem;
+  align-items: start;
+}
+
+.mission-icon {
+  width: 1.6rem;
+  height: 1.6rem;
+  filter: var(--icon-filter);
+}
+
+/* --- Certifications & Tools -------------------------------------------- */
+
+.certs-section {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.04),
+    transparent
+  );
+}
+
+.certs-heading {
+  text-align: left;
+  margin-bottom: 1.4rem;
+}
+
+.cert-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+.cert-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.55rem 0.85rem;
+  border-radius: 999px;
+  background: var(--surface-soft);
+  border: 1px solid var(--border-subtle);
+}
+
+.cert-badge__logo {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+.cert-badge__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.cert-badge__label {
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+/* Tools columns */
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.3rem;
+  align-items: flex-start;
+}
+
+@media (max-width: 860px) {
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tools-column h4 {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+}
+
+.tools-column ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+/* --- How I Work With Clients ------------------------------------------- */
+
+.client-section {
+  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.04), transparent);
+}
+
+.client-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.6rem;
+}
+
+@media (max-width: 1100px) {
+  .client-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .client-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.client-card {
+  padding: 1.6rem 1.4rem;
+  text-align: left;
+}
+
+.client-icon {
+  width: 2.2rem;
+  height: 2.2rem;
+  margin-bottom: 0.9rem;
+  filter: var(--icon-filter);
+}
+
+.client-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+}
+
+.client-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.92;
+}
