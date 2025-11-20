@@ -333,3 +333,11 @@
 .cta-block {
   text-align: center;
 }
+/* Center CTA buttons on the homepage bottom section */
+.cta-center-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
