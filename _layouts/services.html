@@ -1,0 +1,194 @@
+---
+layout: default
+---
+
+<!-- ================================
+     SERVICES PAGE LAYOUT
+     ================================ -->
+
+<section class="section services-hero">
+  <div class="container services-hero-inner">
+    <div class="services-hero-copy">
+      <p class="eyebrow">Services</p>
+      <h1>Identity, automation, and OT security that actually ships.</h1>
+      <p class="sub">
+        I help teams design and implement secure systems — from Okta federation and
+        Zero Trust access to automation pipelines and OT segmentation. You get clear
+        scope, honest communication, and work that’s built to last.
+      </p>
+      <div class="cta-row">
+        <a href="{{ '/contact/' | relative_url }}" class="btn primary">Book a consult</a>
+        <a href="{{ '/projects/' | relative_url }}" class="btn ghost">See flagship projects</a>
+      </div>
+      <ul class="services-pill-row">
+        <li>Okta &amp; identity architecture</li>
+        <li>Cloudflare Zero Trust</li>
+        <li>Linux &amp; automation</li>
+        <li>OT / electrical integrations</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================================
+     CORE SERVICE BLOCKS
+     ================================ -->
+
+<section class="section services-grid-section">
+  <div class="container">
+    <h2 class="section-title">Where I Do My Best Work</h2>
+    <p class="section-sub">
+      I focus on a tight set of domains so I can go deep instead of broad — and connect
+      identity, network, automation, and OT into one cohesive stack.
+    </p>
+
+    <div class="services-grid">
+      <!-- Identity & Access -->
+      <article class="service-card">
+        <header class="service-card-header">
+          <div class="service-icon-circle">
+            <img src="{{ '/assets/icons/user-shield.svg' | relative_url }}" alt="" loading="lazy" decoding="async">
+          </div>
+          <div>
+            <h3>Identity &amp; Access Architecture</h3>
+            <p class="service-tagline">Okta, federation, and access that feels invisible to users.</p>
+          </div>
+        </header>
+        <ul class="service-list">
+          <li>Okta org design, lifecycle, and group strategy</li>
+          <li>SAML / OIDC app integrations and federation</li>
+          <li>Role &amp; group models that match how you actually work</li>
+          <li>MFA, device, and contextual policies tuned to real risk</li>
+        </ul>
+        <p class="ideal-for"><strong>Ideal for:</strong> Teams outgrowing ad-hoc Okta or needing a clean, documented identity foundation.</p>
+      </article>
+
+      <!-- Zero Trust & Edge -->
+      <article class="service-card">
+        <header class="service-card-header">
+          <div class="service-icon-circle">
+            <img src="{{ '/assets/icons/shield-lock.svg' | relative_url }}" alt="" loading="lazy" decoding="async">
+          </div>
+          <div>
+            <h3>Zero Trust &amp; Secure Access</h3>
+            <p class="service-tagline">Cloudflare Access and network controls without user drama.</p>
+          </div>
+        </header>
+        <ul class="service-list">
+          <li>Cloudflare Zero Trust rollout and policy design</li>
+          <li>App, SSH, and RDP access via identity instead of IPs</li>
+          <li>Device posture, certificate auth, and least privilege</li>
+          <li>Runbooks and diagrams that make operations sane</li>
+        </ul>
+        <p class="ideal-for"><strong>Ideal for:</strong> VPN replacements, remote access clean-ups, and modernizing perimeter-style networks.</p>
+      </article>
+
+      <!-- Automation & Infra -->
+      <article class="service-card">
+        <header class="service-card-header">
+          <div class="service-icon-circle">
+            <img src="{{ '/assets/icons/automation.svg' | relative_url }}" alt="" loading="lazy" decoding="async">
+          </div>
+          <div>
+            <h3>Automation &amp; Infrastructure as Code</h3>
+            <p class="service-tagline">Make environments repeatable, testable, and version-controlled.</p>
+          </div>
+        </header>
+        <ul class="service-list">
+          <li>Ansible playbooks for servers, apps, and security baselines</li>
+          <li>Git-driven workflows and environment promotion</li>
+          <li>Linux hardening and operations with an automation mindset</li>
+          <li>Glue code between identity, network, and monitoring</li>
+        </ul>
+        <p class="ideal-for"><strong>Ideal for:</strong> Teams tired of snowflake servers and copy-paste shell scripts.</p>
+      </article>
+
+      <!-- OT / Electrical & SCADA -->
+      <article class="service-card">
+        <header class="service-card-header">
+          <div class="service-icon-circle">
+            <img src="{{ '/assets/icons/server-cog.svg' | relative_url }}" alt="" loading="lazy" decoding="async">
+          </div>
+          <div>
+            <h3>OT / Electrical &amp; SCADA Integration</h3>
+            <p class="service-tagline">Where code meets current — safely.</p>
+          </div>
+        </header>
+        <ul class="service-list">
+          <li>Network zoning and segmentation for ICS / SCADA</li>
+          <li>Secure remote access patterns for operators and vendors</li>
+          <li>Logging / monitoring paths that don’t overload field teams</li>
+          <li>Bridging plant reality with security requirements</li>
+        </ul>
+        <p class="ideal-for"><strong>Ideal for:</strong> Organizations connecting IT and OT and wanting security that respects operations.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================================
+     WORKING MODES / ENGAGEMENT MODELS
+     ================================ -->
+
+<section class="section services-modes">
+  <div class="container">
+    <h2 class="section-title">How We Can Work Together</h2>
+    <p class="section-sub">
+      Different teams need different levels of help. I keep the models simple so we can
+      focus on outcomes instead of paperwork.
+    </p>
+
+    <div class="modes-grid">
+      <article class="mode-card">
+        <h3>Project Builds</h3>
+        <p class="mode-tagline">Fixed scope, clear deliverables, and a clean hand-off.</p>
+        <ul>
+          <li>Defined outcomes, timelines, and artifacts</li>
+          <li>Best for migrations, new rollouts, and “Phase 1” foundations</li>
+          <li>Playbooks, diagrams, and configs included</li>
+        </ul>
+      </article>
+
+      <article class="mode-card">
+        <h3>Embedded Partner</h3>
+        <p class="mode-tagline">Part-time engineering muscle inside your team.</p>
+        <ul>
+          <li>Weekly cadence with your engineers and stakeholders</li>
+          <li>Hands-on implementation, not just PowerPoint</li>
+          <li>Ideal when you need senior guidance but not a full-time hire</li>
+        </ul>
+      </article>
+
+      <article class="mode-card">
+        <h3>Advisory &amp; Reviews</h3>
+        <p class="mode-tagline">Second set of eyes before you ship or commit.</p>
+        <ul>
+          <li>Architecture and configuration reviews</li>
+          <li>Threat- and failure-mode thinking on your designs</li>
+          <li>Written recommendations you can execute with or without me</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================================
+     SERVICES CTA
+     ================================ -->
+
+<section class="section services-cta">
+  <div class="container services-cta-inner">
+    <div>
+      <h2>Ready to secure and simplify your stack?</h2>
+      <p>
+        If you have a concrete project in mind, or just know that your identity,
+        access, or OT environment needs to level up, let’s talk. I take on a limited
+        number of clients at a time to keep quality high.
+      </p>
+    </div>
+    <div class="services-cta-actions">
+      <a href="{{ '/contact/' | relative_url }}" class="btn primary">Book a consult</a>
+      <a href="mailto:{{ site.email }}" class="btn ghost">Email me directly</a>
+    </div>
+  </div>
+</section>

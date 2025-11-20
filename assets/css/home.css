@@ -320,3 +320,13 @@
   width: fit-content;
   padding-inline: 1rem;
 }
+/* ============================================
+   CTA Section — Center Buttons
+   ============================================ */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; /* space between buttons */
+  margin-top: 1.5rem;
+}

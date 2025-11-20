@@ -1,8 +1,279 @@
 /* ==========================================================================
-   SERVICES.CSS
-   Services page sections.
+   SERVICES PAGE STYLES
+   Page: /services/
+   Layout: services
+   --------------------------------------------------------------------------
+   This file assumes global typography, color variables, and utilities
+   are defined in:
+     - base.css      (colors, typography, body background)
+     - layout.css    (container, section spacing)
+     - components.css (buttons, cards, badges, etc.)
+   Here we only add page-specific styling.
+   ========================================================================== */
+
+/* HERO / INTRO
    ========================================================================== */
 
 .services-hero {
-  padding-block: var(--section-spacing);
+  padding-top: clamp(3rem, 6vh, 4rem);
+  padding-bottom: clamp(3.5rem, 7vh, 4.5rem);
+  background: radial-gradient(circle at top left, rgba(255, 215, 0, 0.12), transparent 55%);
+}
+
+.theme-light .services-hero {
+  background: radial-gradient(circle at top left, rgba(0, 0, 0, 0.03), #f5f5f7);
+}
+
+.services-hero-inner {
+  max-width: 960px;
+}
+
+.services-hero-copy h1 {
+  font-size: clamp(2.05rem, 2.6vw, 2.6rem);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.services-hero-copy .sub {
+  max-width: 46rem;
+  margin-bottom: 1.5rem;
+}
+
+.services-pill-row {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.services-pill-row li {
+  font-size: 0.85rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(3px);
+}
+
+.theme-light .services-pill-row li {
+  border-color: rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.85);
+}
+
+/* SERVICES GRID (core domains)
+   ========================================================================== */
+
+.services-grid-section {
+  padding-top: clamp(3rem, 6vh, 4rem);
+  padding-bottom: clamp(3.5rem, 7vh, 4.5rem);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.75rem;
+  margin-top: 2rem;
+}
+
+.service-card {
+  background: rgba(8, 11, 20, 0.9);
+  border-radius: 1rem;
+  padding: 1.5rem 1.6rem 1.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.55);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.12), transparent 60%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.theme-light .service-card {
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.06);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
+}
+
+.service-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.service-icon-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  flex-shrink: 0;
+}
+
+.theme-light .service-icon-circle {
+  background: #f7f7fa;
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+.service-icon-circle img {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+/* ensure we can invert icons when in dark mode if needed */
+.theme-dark .service-icon-circle img {
+  filter: invert(1);
+}
+
+.services-grid-section h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.1rem;
+}
+
+.service-tagline {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.service-list {
+  margin: 0.9rem 0 0.75rem;
+  padding-left: 1.1rem;
+  font-size: 0.9rem;
+}
+
+.service-list li + li {
+  margin-top: 0.25rem;
+}
+
+.ideal-for {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+/* WORKING MODES
+   ========================================================================== */
+
+.services-modes {
+  padding-top: clamp(3rem, 6vh, 4rem);
+  padding-bottom: clamp(3.5rem, 7vh, 4.5rem);
+  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.02));
+}
+
+.theme-light .services-modes {
+  background: #f7f7fb;
+}
+
+.modes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.mode-card {
+  padding: 1.4rem 1.5rem 1.5rem;
+  border-radius: 0.9rem;
+  background: rgba(10, 12, 20, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5);
+}
+
+.theme-light .mode-card {
+  background: #ffffff;
+  border-color: rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.mode-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.mode-tagline {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-bottom: 0.75rem;
+}
+
+.mode-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.9rem;
+}
+
+.mode-card li + li {
+  margin-top: 0.25rem;
+}
+
+/* CTA
+   ========================================================================== */
+
+.services-cta {
+  padding-top: clamp(3rem, 6vh, 4rem);
+  padding-bottom: clamp(3.5rem, 7vh, 5rem);
+}
+
+.services-cta-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.8rem 1.9rem;
+  border-radius: 1rem;
+  background: radial-gradient(circle at top left, rgba(255, 215, 0, 0.12), rgba(6, 8, 14, 0.98));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+.theme-light .services-cta-inner {
+  background: linear-gradient(135deg, #ffffff, #f6efe1);
+  border-color: rgba(0, 0, 0, 0.06);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.08);
+}
+
+.services-cta-inner h2 {
+  margin-bottom: 0.4rem;
+}
+
+.services-cta-inner p {
+  max-width: 32rem;
+  font-size: 0.95rem;
+}
+
+.services-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Responsive tweaks
+   ========================================================================== */
+
+@media (max-width: 720px) {
+  .services-hero {
+    text-align: left;
+  }
+
+  .services-cta-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
