@@ -1,0 +1,111 @@
+---
+layout: default
+---
+
+<main class="blog-page-main">
+
+  <!-- BLOG HERO -->
+  <section class="blog-hero">
+    <div class="container blog-hero-inner">
+      <p class="eyebrow">Blog</p>
+      <h1>Deep dives on identity, automation, and OT security</h1>
+      <p class="blog-hero-sub">
+        Field notes from real-world IAM, Zero Trust, Linux, and SCADA work. No fluff — just patterns,
+        postmortems, and guides you can actually use.
+      </p>
+
+      <div class="blog-hero-meta">
+        <span>New posts a few times per month.</span>
+        <span>Written from a practitioner’s point of view.</span>
+      </div>
+
+      <div class="blog-hero-cta">
+        <a class="btn primary" href="{{ '/contact/' | relative_url }}">Work with me</a>
+        <a class="btn ghost" href="{{ '/feed.xml' | relative_url }}">Subscribe via RSS</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FILTER BAR (STATIC FOR NOW) -->
+  <section class="blog-filter-bar" aria-label="Blog filters">
+    <div class="container blog-filter-inner">
+      <div class="blog-filter-label">Browse posts</div>
+      <div class="blog-filter-chips">
+        <button class="blog-chip blog-chip-active" type="button">All</button>
+        <button class="blog-chip" type="button">Identity &amp; Access</button>
+        <button class="blog-chip" type="button">Zero Trust</button>
+        <button class="blog-chip" type="button">Linux &amp; Automation</button>
+        <button class="blog-chip" type="button">SCADA &amp; OT</button>
+        <button class="blog-chip" type="button">Career &amp; Ops</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG LISTING -->
+  <section class="blog-section blog-listing" aria-labelledby="blog-list-title">
+    <div class="container">
+      <h2 id="blog-list-title" class="section-title sr-only">All posts</h2>
+
+      <div class="blog-grid">
+        {%- for post in site.posts -%}
+        <article class="blog-card">
+          <a class="blog-card-link" href="{{ post.url | relative_url }}">
+            <div class="blog-card-meta">
+              <span class="blog-card-date">
+                {{ post.date | date: "%b %-d, %Y" }}
+              </span>
+              {%- if post.category or post.categories -%}
+                {%- assign cat = post.category | default: post.categories[0] -%}
+                <span class="blog-card-tag">
+                  {{ cat }}
+                </span>
+              {%- endif -%}
+            </div>
+
+            <h3 class="blog-card-title">
+              {{ post.title }}
+            </h3>
+
+            {%- if post.excerpt -%}
+            <p class="blog-card-excerpt">
+              {{ post.excerpt | strip_html | truncate: 180 }}
+            </p>
+            {%- endif -%}
+
+            <div class="blog-card-footer">
+              <span class="blog-read-more">Read article</span>
+              <span class="blog-card-arrow" aria-hidden="true">→</span>
+            </div>
+          </a>
+        </article>
+        {%- endfor -%}
+      </div>
+
+      {%- if site.posts == empty -%}
+      <p class="blog-empty">
+        No posts yet. I’m probably busy breaking and rebuilding something in a lab.
+      </p>
+      {%- endif -%}
+    </div>
+  </section>
+
+  <!-- BLOG CTA -->
+  <section class="blog-section blog-cta" aria-labelledby="blog-cta-title">
+    <div class="container blog-cta-inner">
+      <div class="blog-cta-text">
+        <h2 id="blog-cta-title">Want these patterns in your environment?</h2>
+        <p>
+          If a post resonated with you and looks suspiciously like your current environment,
+          we can turn it into an actual, scoped engagement.
+        </p>
+      </div>
+      <div class="blog-cta-actions">
+        <a class="btn primary" href="{{ '/contact/' | relative_url }}">Book a consult</a>
+        <a class="btn ghost" href="mailto:{{ site.email | default: 'joey@sentinelopusconsulting.com' }}">
+          Email me directly
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
