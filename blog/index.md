@@ -8,19 +8,32 @@ styles:
 
 <div class="blog-page-main">
   <section class="blog-hero">
+    <div class="blog-hero-media">
+      <video
+        class="blog-hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        aria-hidden="true">
+        <source src="{{ '/assets/video/blog_hero_background.mp4' | relative_url }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="blog-hero-overlay"></div>
+    </div>
+
     <div class="container">
       <div class="blog-hero-inner">
-        <div class="blog-hero-copy">
-          <p class="eyebrow">Blog</p>
-          <h1>Practical identity, Zero Trust, and OT security that actually ships</h1>
-          <p class="blog-hero-sub">
-            Field-tested patterns from real deployments: Okta, Cloudflare Zero Trust, Linux automation,
-            and industrial networks that stay safe without slowing the work down.
-          </p>
-          <div class="blog-hero-actions">
-            <a class="btn primary" href="{{ '/contact/' | relative_url }}">Book a consult</a>
-            <a class="btn ghost" href="{{ '/tags/' | relative_url }}">Browse by tag</a>
-          </div>
+        <p class="eyebrow">Blog</p>
+        <h1>Practical identity, Zero Trust, and OT security that actually ships</h1>
+        <p class="blog-hero-sub">
+          Field-tested patterns from real deployments: Okta, Cloudflare Zero Trust, Linux automation,
+          and industrial networks that stay safe without slowing the work down.
+        </p>
+        <div class="blog-hero-actions">
+          <a class="btn primary" href="{{ '/contact/' | relative_url }}">Book a consult</a>
+          <a class="btn ghost" href="{{ '/tags/' | relative_url }}">Browse by tag</a>
         </div>
         <div class="blog-hero-pills">
           <span class="chip">Identity &amp; lifecycle</span>
