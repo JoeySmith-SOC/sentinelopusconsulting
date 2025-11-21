@@ -2,113 +2,188 @@
 layout: default
 ---
 
-<article class="page services-page">
-  <header class="page-header services-header">
+<!-- SERVICES PAGE LAYOUT
+     Uses its own hero + sections and is wrapped by default.html -->
+<section class="services-hero">
+  <div class="services-hero-media">
+    <video
+      class="services-hero-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      aria-hidden="true">
+      <source src="{{ '/assets/video/services_hero_page.mp4' | relative_url }}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="services-hero-overlay"></div>
+  </div>
+
+  <div class="container services-hero-inner">
     <p class="eyebrow">Services</p>
-    <h1>Identity, Automation, and OT Security Services</h1>
-    <p class="page-subtitle">
-      I help teams design identity, automation, and security architectures that are reliable,
-      transparent, and built to scale — without slowing the business down.
+    <h1>Identity, Automation, and OT Security that actually ships</h1>
+    <p class="services-hero-sub">
+      I design and implement secure, reliable infrastructure — from Okta and Cloudflare Zero Trust to
+      Linux automation and OT networks. No black boxes, no slideware. Just systems your team can trust.
     </p>
-  </header>
 
-  <!-- Core service pillars -->
-  <section class="services-grid" aria-label="Core Service Areas">
-    <article class="service-card">
-      <h2>Identity &amp; Access Management</h2>
-      <p>
-        Okta, SAML/OIDC, and lifecycle automation — turning identity into the
-        control plane for apps, users, and infrastructure.
-      </p>
-      <ul>
-        <li>Okta org design &amp; hardening</li>
-        <li>Lifecycle &amp; group automation</li>
-        <li>SSO / federation patterns</li>
-        <li>Access reviews &amp; governance support</li>
-      </ul>
-    </article>
+    <div class="cta-row services-hero-cta">
+      <a class="btn primary" href="{{ '/contact/' | relative_url }}">Book a consult</a>
+      <a class="btn" href="mailto:{{ site.email | default: 'joey@sentinelopusconsulting.com' }}">Email me directly</a>
+    </div>
 
-    <article class="service-card">
-      <h2>Zero Trust &amp; Network Edge</h2>
-      <p>
-        Secure access without VPN headaches — Cloudflare Zero Trust and modern
-        access controls aligned to your real risk.
-      </p>
-      <ul>
-        <li>Cloudflare Access / Gateway rollout</li>
-        <li>App &amp; SSH/RDP publishing</li>
-        <li>Device posture and least-privilege policy</li>
-        <li>Migration away from flat networks</li>
-      </ul>
-    </article>
+    <ul class="services-hero-points">
+      <li>Okta &amp; identity lifecycle that matches the business</li>
+      <li>Cloudflare Zero Trust that users don’t hate</li>
+      <li>Linux / Ansible automation that removes toil</li>
+      <li>SCADA &amp; OT segmentation that respects safety</li>
+    </ul>
+  </div>
+</section>
 
-    <article class="service-card">
-      <h2>Automation &amp; Infra</h2>
-      <p>
-        Infrastructure-as-Code, repeatable builds, and lab environments that don’t drift.
-      </p>
-      <ul>
-        <li>Ansible baselines &amp; playbooks</li>
-        <li>(Future) Terraform patterns</li>
-        <li>Hardened Linux server templates</li>
-        <li>SCADA / lab environments for testing</li>
-      </ul>
-    </article>
+<!-- WHAT I HELP YOU SHIP -->
+<section class="services-section services-areas" aria-labelledby="svc-areas-title">
+  <div class="container">
+    <h2 id="svc-areas-title" class="section-title">What I help you ship</h2>
+    <p class="section-sub">
+      Every engagement is practical, hands-on, and outcome-driven: fewer surprises, fewer tickets,
+      and infrastructure that’s easier to live with.
+    </p>
 
-    <article class="service-card">
-      <h2>OT, SCADA &amp; Electrical</h2>
-      <p>
-        Bridging cyber and the physical world — from lab simulations to secure field designs.
-      </p>
-      <ul>
-        <li>SCADA / ICS lab design and segmentation</li>
-        <li>Network zoning and monitoring strategy</li>
-        <li>Documentation for operators &amp; techs</li>
-        <li>Safety-first thinking in every design</li>
-      </ul>
-    </article>
-  </section>
-
-  <!-- Working models -->
-  <section class="services-modes">
-    <h2>How I Work With Clients</h2>
-    <div class="services-modes-grid">
-      <article class="mode-card">
-        <h3>Advisory &amp; Architecture</h3>
+    <div class="svc-grid">
+      <article class="svc-card">
+        <div class="svc-card-icon">
+          <img src="{{ '/assets/icons/user-shield.svg' | relative_url }}" alt="">
+        </div>
+        <h3>Identity &amp; Access Architecture</h3>
         <p>
-          Short, focused engagements to define architecture, roadmaps, and standards
-          you can execute with your own team.
+          Okta tenant design, lifecycle automation, SSO federation, and group-driven access that matches
+          how your org really works.
         </p>
+        <ul class="svc-list">
+          <li>Okta org &amp; app inventory clean-up</li>
+          <li>Lifecycle &amp; access workflows (HR → Okta)</li>
+          <li>SAML / OIDC federation &amp; MFA strategy</li>
+        </ul>
       </article>
-      <article class="mode-card">
-        <h3>Implementation Support</h3>
+
+      <article class="svc-card">
+        <div class="svc-card-icon">
+          <img src="{{ '/assets/icons/cloud-lock.svg' | relative_url }}" alt="">
+        </div>
+        <h3>Zero Trust &amp; Edge Security</h3>
         <p>
-          Hands-on work configuring Okta, Cloudflare, automation, or lab environments,
-          with clear documentation and hand-off.
+          Cloudflare Zero Trust, device posture, and policy-based access so teams get to what they need
+          without punching holes in the network.
         </p>
+        <ul class="svc-list">
+          <li>Cloudflare Access &amp; tunnel rollout</li>
+          <li>App, SSH, and RDP access without VPN pain</li>
+          <li>Tiered access for admins, engineers, and vendors</li>
+        </ul>
       </article>
-      <article class="mode-card">
-        <h3>Labs &amp; Prototyping</h3>
+
+      <article class="svc-card">
+        <div class="svc-card-icon">
+          <img src="{{ '/assets/icons/automation.svg' | relative_url }}" alt="">
+        </div>
+        <h3>Linux &amp; Automation</h3>
         <p>
-          Build out PoCs and labs to test ideas safely before rolling them into
-          production — especially for OT and Zero Trust.
+          Ansible, Bash, and Git-driven workflows to turn fragile one-off servers into repeatable,
+          version-controlled infrastructure.
         </p>
+        <ul class="svc-list">
+          <li>Hardened Linux baselines &amp; golden images</li>
+          <li>Ansible playbooks for routine operations</li>
+          <li>Environment-as-code for labs and production</li>
+        </ul>
+      </article>
+
+      <article class="svc-card">
+        <div class="svc-card-icon">
+          <img src="{{ '/assets/icons/server-cog.svg' | relative_url }}" alt="">
+        </div>
+        <h3>SCADA &amp; OT Integration</h3>
+        <p>
+          Bridging IT and OT: segmented networks, monitored gateways, and safety-first designs that don’t
+          break production.
+        </p>
+        <ul class="svc-list">
+          <li>Network zoning and jump-host patterns</li>
+          <li>Secure remote access for engineers &amp; vendors</li>
+          <li>Monitoring and logging that respects the process</li>
+        </ul>
       </article>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CTA -->
-  <section class="cta-final services-cta" aria-labelledby="services-cta-title">
-    <div class="container">
-      <h2 id="services-cta-title">Ready to talk through a project?</h2>
-      <p class="cta-sub">
-        Whether you need identity architecture, Zero Trust rollout, or OT security design,
-        we can scope a focused engagement that actually ships.
-      </p>
-      <div class="cta-row">
-        <a class="btn primary" href="{{ '/contact/' | relative_url }}">Book a consult</a>
-        <a class="btn outline" href="mailto:joeysmith@sentinelopusconsulting.com">Email me directly</a>
-      </div>
+<!-- HOW ENGAGEMENTS WORK -->
+<section class="services-section services-process" aria-labelledby="svc-process-title">
+  <div class="container">
+    <h2 id="svc-process-title" class="section-title">How engagements work</h2>
+    <p class="section-sub">
+      Clear scope, honest communication, and systems that actually get finished.
+    </p>
+
+    <div class="svc-process-grid">
+      <article class="svc-process-step">
+        <h3>01. Discovery &amp; mapping</h3>
+        <p>
+          We map your current identity stack, infra, and OT footprint: what exists, what’s brittle, and
+          where the biggest risks live.
+        </p>
+        <ul class="svc-list small">
+          <li>Architecture &amp; asset review</li>
+          <li>Threat &amp; failure-mode walk-through</li>
+          <li>Prioritized outcome list</li>
+        </ul>
+      </article>
+
+      <article class="svc-process-step">
+        <h3>02. Design &amp; build</h3>
+        <p>
+          We design the target state and build it in small, deployable pieces — with documentation as we go,
+          not as an afterthought.
+        </p>
+        <ul class="svc-list small">
+          <li>Reference diagrams and runbooks</li>
+          <li>Hands-on configuration and automation</li>
+          <li>Working checkpoints, not slide decks</li>
+        </ul>
+      </article>
+
+      <article class="svc-process-step">
+        <h3>03. Handoff &amp; support</h3>
+        <p>
+          Your team gets the keys, the docs, and the patterns. I stay available to iterate, harden, and help
+          you extend the design.
+        </p>
+        <ul class="svc-list small">
+          <li>Knowledge transfer sessions</li>
+          <li>Version-controlled artifacts in your repos</li>
+          <li>Optional ongoing advisory retainer</li>
+        </ul>
+      </article>
     </div>
-  </section>
-</article>
+  </div>
+</section>
+
+<!-- SERVICES CTA -->
+<section class="services-section services-cta" aria-labelledby="svc-cta-title">
+  <div class="container services-cta-inner">
+    <div class="services-cta-text">
+      <h2 id="svc-cta-title">Ready to harden your stack?</h2>
+      <p>
+        Whether you need identity architecture, Zero Trust deployment, or OT security design, we can
+        start with a focused, outcome-driven engagement.
+      </p>
+    </div>
+    <div class="services-cta-actions">
+      <a class="btn primary" href="{{ '/contact/' | relative_url }}">Book a consult</a>
+      <a class="btn ghost" href="mailto:{{
+        site.email | default: 'joey@sentinelopusconsulting.com' }}">Email me directly</a>
+    </div>
+  </div>
+</section>
