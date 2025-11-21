@@ -1,451 +1,65 @@
-/* ==========================================================================
-   SERVICES PAGE STYLES
-   - Hero video section
-   - “What I help you ship” cards
-   - “How engagements work” steps
-   - Final CTA
-   - Theme-aware tweaks (light vs dark)
-   ========================================================================== */
-
-/* --------------------------------------
-   1) PAGE BACKGROUND
-   -------------------------------------- */
-
-/* Default (no data-theme = assume dark) */
-.services-page-main {
-  background: #05070d;
-  color: #e5e7eb;
-}
-
-/* Light mode background */
-[data-theme="light"] .services-page-main {
-  background: #f5f5f8;
-  color: #111827;
-}
-
-/* --------------------------------------
-   2) HERO — full-bleed video with overlay
-   -------------------------------------- */
+/* ---------------------------------------------------
+   HERO: Proper stacked layout (video → overlay → text)
+--------------------------------------------------- */
 
 .services-hero {
   position: relative;
+  width: 100vw;
+  height: clamp(420px, 70vh, 780px);
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  width: 100vw;
   overflow: hidden;
   background: #020309;
 }
 
-/* Video container */
+/* Video fills the hero fully */
 .services-hero-media {
-  position: relative;
-  width: 100%;
-  height: clamp(420px, 60vh, 740px);
-}
-
-/* Video + overlay sit on top of each other */
-.services-hero-media video,
-.services-hero-media .services-hero-overlay {
   position: absolute;
   inset: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.services-hero-media video {
+.services-hero-video {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
 
-/* Dark overlay so text is always legible */
+/* Dark overlay so text always readable */
 .services-hero-overlay {
+  position: absolute;
+  inset: 0;
   background:
-    radial-gradient(circle at 15% 0, rgba(0, 255, 120, 0.18), transparent 50%),
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.92));
+    radial-gradient(circle at 15% 0, rgba(0,255,120,0.18), transparent 50%),
+    linear-gradient(to bottom, rgba(0,0,0,0.65), rgba(0,0,0,0.92));
+  z-index: 2;
 }
 
-/* Content that sits "on top" of the video */
+/* TEXT LAYER — sits above everything */
 .services-hero-inner {
-  position: relative;
-  margin-top: -clamp(360px, 52vh, 700px);
-  padding-top: clamp(380px, 54vh, 720px);
-  padding-bottom: 3rem;
-  color: #ffffff;
-  text-align: left;
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: clamp(1.5rem, 8vw, 8rem);
+  padding-right: clamp(1.5rem, 8vw, 6rem);
+  color: #fff !important;
+  max-width: 900px;
 }
 
-/* Keep hero text white in BOTH themes */
-.services-hero-inner .eyebrow,
-.services-hero-inner h1,
-.services-hero-inner .services-hero-sub {
-  color: #ffffff;
+/* Force hero title, eyebrow, subtext to always be white */
+.services-hero-inner * {
+  color: #ffffff !important;
 }
 
-/* Eyebrow label ("Services") */
-.services-hero-inner .eyebrow {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  opacity: 0.85;
-  margin-bottom: 0.75rem;
-}
-
-/* Main hero heading */
-.services-hero-inner h1 {
-  max-width: 32rem;
-  margin-bottom: 1rem;
-}
-
-/* Supporting text */
-.services-hero-inner .services-hero-sub {
-  max-width: 40rem;
-  opacity: 0.86;
-}
-
-/* CTA buttons under the hero copy */
+/* Spacing tweaks */
 .services-hero-cta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin: 1.75rem 0 1.25rem;
-}
-
-/* Hero bullet list */
-.services-hero-points {
-  list-style: none;
-  padding: 0;
-  margin: 0.5rem 0 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem 1.75rem;
-  font-size: 0.9rem;
-}
-
-.services-hero-points li {
-  position: relative;
-  padding-left: 1rem;
-  opacity: 0.9;
-}
-
-.services-hero-points li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.55em;
-  width: 0.3rem;
-  height: 0.3rem;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #facc15, #f97316);
-}
-
-/* Tablet / mobile hero adjustments */
-@media (max-width: 920px) {
-  .services-hero-inner {
-    text-align: left;
-    margin-top: -clamp(380px, 58vh, 760px);
-    padding-top: clamp(400px, 60vh, 780px);
-  }
-
-  .services-hero-inner h1 {
-    max-width: 100%;
-  }
-
-  .services-hero-cta {
-    justify-content: flex-start;
-  }
-
-  .services-hero-points {
-    flex-direction: column;
-    gap: 0.45rem;
-  }
-}
-
-@media (max-width: 640px) {
-  .services-hero-inner {
-    padding-inline: 1.25rem;
-  }
-}
-
-/* --------------------------------------
-   3) SHARED SECTION SHELL
-   -------------------------------------- */
-
-.services-section {
-  padding: 4.5rem 0;
-}
-
-.services-section .section-title {
-  text-align: center;
-  margin-bottom: 0.75rem;
-}
-
-.services-section .section-sub {
-  max-width: 40rem;
-  margin: 0 auto 3rem;
-  text-align: center;
-}
-
-/* Section intro text – light vs dark */
-[data-theme="light"] .services-section .section-sub {
-  color: #4b5563;
-}
-
-[data-theme="dark"] .services-section .section-sub {
-  color: #9ca3af;
-}
-
-/* --------------------------------------
-   4) “WHAT I HELP YOU SHIP” CARDS
-   -------------------------------------- */
-
-.svc-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1.75rem;
-  align-items: stretch;
-}
-
-@media (max-width: 1100px) {
-  .svc-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 720px) {
-  .svc-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Base card design */
-.svc-card {
-  border-radius: 1.5rem;
-  padding: 1.75rem 1.5rem 1.6rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  transition:
-    transform 0.18s ease-out,
-    box-shadow 0.18s ease-out,
-    border-color 0.18s ease-out,
-    background 0.18s ease-out;
-}
-
-/* Light mode variant — match About-page cards */
-[data-theme="light"] .svc-card {
-  background: #ffffff;
-  border: 1px solid rgba(15, 23, 42, 0.06);
-  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.15);
-}
-
-/* Dark mode variant */
-[data-theme="dark"] .svc-card {
-  background: radial-gradient(circle at top, #111827, #020309);
-  border: 1px solid rgba(148, 163, 184, 0.35);
-  box-shadow: 0 22px 44px rgba(15, 23, 42, 0.6);
-}
-
-/* Hover lift */
-.svc-card:hover {
-  transform: translateY(-4px);
-}
-
-[data-theme="light"] .svc-card:hover {
-  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.18);
-  border-color: rgba(15, 23, 42, 0.12);
-}
-
-[data-theme="dark"] .svc-card:hover {
-  box-shadow: 0 30px 70px rgba(15, 23, 42, 0.9);
-  border-color: rgba(248, 250, 252, 0.3);
-}
-
-/* Circular icon wrapper */
-.svc-card-icon {
-  flex: 0 0 auto;
-  width: 40px;
-  height: 40px;
-  border-radius: 999px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Background & border for icon wrapper */
-[data-theme="light"] .svc-card-icon {
-  background: rgba(15, 23, 42, 0.04);
-  border: 1px solid rgba(15, 23, 42, 0.06);
-}
-
-[data-theme="dark"] .svc-card-icon {
-  background: rgba(15, 23, 42, 0.9);
-  border: 1px solid rgba(148, 163, 184, 0.7);
-}
-
-/* Icon itself – sized consistently, theme-aware color */
-.svc-card-icon img {
-  width: 22px;
-  height: 22px;
-  display: block;
-  filter: invert(1) brightness(1.8); /* default = dark mode (white icon) */
-  transition: filter 0.18s ease-out;
-}
-
-/* ICON COLOR: black on light, white on dark */
-[data-theme="light"] .svc-card-icon img {
-  filter: none; /* use original black icon in light mode */
-}
-
-[data-theme="dark"] .svc-card-icon img {
-  filter: invert(1) brightness(1.8); /* force white in dark mode */
-}
-
-/* Card body text */
-.svc-card p {
-  font-size: 0.92rem;
-  line-height: 1.6;
-}
-
-/* Bullet list inside cards */
-.svc-card .svc-list {
-  list-style: none;
-  padding: 0;
-  margin: 0.5rem 0 0;
-}
-
-.svc-card .svc-list li {
-  position: relative;
-  padding-left: 1.1rem;
-  margin-top: 0.35rem;
-  font-size: 0.9rem;
-}
-
-/* Custom small bullet */
-.svc-card .svc-list li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.55em;
-  width: 0.25rem;
-  height: 0.25rem;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #facc15, #f97316);
-}
-
-/* --------------------------------------
-   5) “HOW ENGAGEMENTS WORK” CARDS
-   -------------------------------------- */
-
-.svc-process-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.75rem;
-  align-items: stretch;
-}
-
-@media (max-width: 960px) {
-  .svc-process-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.svc-process-step {
-  border-radius: 1.6rem;
-  padding: 1.8rem 1.6rem 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.9rem;
-  border-left: 2px solid #fbbf24;
-  transition:
-    transform 0.18s ease-out,
-    box-shadow 0.18s ease-out,
-    border-color 0.18s ease-out,
-    background 0.18s ease-out;
-}
-
-/* Light vs dark backgrounds */
-[data-theme="light"] .svc-process-step {
-  background: #ffffff;
-  border-color: #facc15;
-  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
-}
-
-[data-theme="dark"] .svc-process-step {
-  background: #020309;
-  border-color: #fbbf24;
-  box-shadow: 0 22px 50px rgba(15, 23, 42, 0.7);
-}
-
-/* Hover lift */
-.svc-process-step:hover {
-  transform: translateY(-3px);
-}
-
-/* Body list in engagement card */
-.svc-process-step .svc-list {
-  list-style: none;
-  padding: 0;
-  margin: 0.4rem 0 0;
-}
-
-.svc-process-step .svc-list li {
-  position: relative;
-  padding-left: 1.1rem;
-  margin-top: 0.35rem;
-  font-size: 0.9rem;
-}
-
-.svc-process-step .svc-list li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.55em;
-  width: 0.22rem;
-  height: 0.22rem;
-  border-radius: 999px;
-  background: #f59e0b;
-}
-
-/* Smaller variant used via .svc-list.small */
-.svc-process-step .svc-list.small li {
-  font-size: 0.88rem;
-}
-
-/* --------------------------------------
-   6) FINAL CTA BLOCK
-   -------------------------------------- */
-
-.services-cta {
-  padding: 4rem 0 4.5rem;
-}
-
-.services-cta-inner {
-  max-width: 860px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-/* Buttons row centered */
-.services-cta-actions {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-/* --------------------------------------
-   7) SMALL THEME TWEAKS FOR TEXT
-   -------------------------------------- */
-
-/* Dark mode muted text */
-[data-theme="dark"] .svc-card p,
-[data-theme="dark"] .svc-process-step p {
-  color: #d1d5db;
-}
-
-/* Light mode muted text */
-[data-theme="light"] .svc-card p,
-[data-theme="light"] .svc-process-step p {
-  color: #4b5563;
+  margin-top: 1.75rem;
+  margin-bottom: 1.25rem;
 }
