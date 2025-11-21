@@ -106,6 +106,124 @@
   background: rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(3px);
 }
+/* ============================
+   SERVICES HERO – video + white text
+   ============================ */
+
+.services-hero {
+  position: relative;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  width: 100vw;
+  overflow: hidden;
+}
+
+/* Video container */
+.services-hero-media {
+  position: relative;
+  width: 100%;
+  height: clamp(420px, 60vh, 760px);
+}
+
+.services-hero-media video,
+.services-hero-media .services-hero-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.services-hero-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/*  Slight dark overlay so white text always readable */
+.services-hero-media .services-hero-overlay {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+/* Content sits on top of the video */
+.services-hero-inner {
+  position: relative;
+  margin-top: -clamp(360px, 52vh, 680px);
+  padding-top: clamp(380px, 54vh, 700px);
+  padding-bottom: 3rem;
+}
+
+/* Layout of text + CTAs */
+.services-hero-grid {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.services-hero-eyebrow {
+  font-size: 0.9rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin-bottom: 0.75rem;
+}
+
+/* Force hero text to stay white in BOTH themes */
+.services-hero,
+.services-hero h1,
+.services-hero p,
+.services-hero .services-hero-eyebrow,
+.services-hero .cta-row .btn {
+  color: #ffffff;
+}
+
+.services-hero h1 {
+  font-size: clamp(2.4rem, 3vw + 1.4rem, 3.4rem);
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+}
+
+.services-hero p {
+  max-width: 720px;
+  margin-bottom: 1.75rem;
+  opacity: 0.92;
+}
+
+.services-hero .cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Service “pills” under the buttons */
+.services-hero-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.services-hero-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(8, 10, 14, 0.5);
+  backdrop-filter: blur(6px);
+  color: #fff;
+}
+
+/* Small screens */
+@media (max-width: 720px) {
+  .services-hero-inner {
+    padding-top: clamp(360px, 56vh, 640px);
+  }
+
+  .services-hero .cta-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 
 /* ---------- GENERIC SERVICES SECTION WRAPPER ---------- */
 
@@ -337,4 +455,319 @@
 
 .theme-light .btn.ghost:hover {
   background: rgba(15, 17, 23, 0.06);
+}
+/* ============================
+   WHAT I HELP YOU SHIP – service pillars
+   ============================ */
+
+.services-pillar-section {
+  padding: 4rem 0 3.5rem;
+}
+
+.services-pillar-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.services-pillar-header h2 {
+  font-size: clamp(1.9rem, 2.3vw + 1rem, 2.4rem);
+  margin-bottom: 0.75rem;
+}
+
+.services-pillar-header p {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* Card grid */
+.services-pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.75rem;
+}
+
+@media (max-width: 1040px) {
+  .services-pillar-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .services-pillar-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Base card style – shared by light & dark */
+.services-card {
+  position: relative;
+  padding: 2.25rem 2rem 2.1rem;
+  border-radius: 1.4rem;
+  transition:
+    transform 180ms ease-out,
+    box-shadow 180ms ease-out,
+    border-color 180ms ease-out,
+    background 180ms ease-out;
+}
+
+/* Theme-aware card background/border */
+.theme-dark .services-card {
+  background: rgba(11, 13, 20, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.7);
+  color: var(--text-primary);
+}
+
+.theme-light .services-card {
+  background: #ffffff;
+  border: 1px solid rgba(15, 16, 20, 0.06);
+  box-shadow: 0 18px 40px rgba(15, 16, 20, 0.12);
+  color: #111319;
+}
+
+/* Hover lift */
+.services-card:hover {
+  transform: translateY(-6px);
+}
+
+.theme-dark .services-card:hover {
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.9);
+  border-color: rgba(247, 181, 44, 0.55);
+}
+
+.theme-light .services-card:hover {
+  box-shadow: 0 24px 56px rgba(15, 16, 20, 0.18);
+  border-color: rgba(247, 181, 44, 0.65);
+}
+
+/* Icon + label at top */
+.services-card-top {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1.4rem;
+}
+
+/* The actual icon wrapper (we’ll tint this in the next section) */
+.services-icon {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.services-icon img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Label stacking */
+.services-card-eyebrow {
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.78;
+  margin-bottom: 0.15rem;
+}
+
+.services-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+/* Body copy + bullet list */
+.services-card-body {
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.services-card-body p {
+  margin-bottom: 0.9rem;
+}
+
+.services-card-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.25rem 0 0;
+}
+
+.services-card-body li {
+  position: relative;
+  padding-left: 1.1rem;
+  margin-bottom: 0.35rem;
+  font-size: 0.9rem;
+}
+
+/* Gold bullet dot */
+.services-card-body li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.52em;
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 50%;
+  background: var(--accent, #f7b52c);
+}
+/* ============================
+   HOW ENGAGEMENTS WORK – steps
+   ============================ */
+
+.engagement-section {
+  padding: 4rem 0 3.5rem;
+}
+
+.engagement-header {
+  text-align: center;
+  margin-bottom: 2.4rem;
+}
+
+.engagement-header h2 {
+  font-size: clamp(1.9rem, 2.3vw + 1rem, 2.4rem);
+  margin-bottom: 0.75rem;
+}
+
+.engagement-header p {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* Step card grid */
+.engagement-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.75rem;
+}
+
+@media (max-width: 1024px) {
+  .engagement-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Base step card */
+.engagement-step {
+  position: relative;
+  padding: 2rem 2rem 2.2rem;
+  border-radius: 1.4rem;
+  border-left: 3px solid var(--accent, #f7b52c);
+  transition:
+    transform 180ms ease-out,
+    box-shadow 180ms ease-out,
+    border-color 180ms ease-out,
+    background 180ms ease-out;
+}
+
+/* Theme-aware backgrounds */
+.theme-dark .engagement-step {
+  background: rgba(11, 13, 20, 0.96);
+  border-color: rgba(247, 181, 44, 0.82);
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.8);
+  color: var(--text-primary);
+}
+
+.theme-light .engagement-step {
+  background: #ffffff;
+  border-color: rgba(247, 181, 44, 0.9);
+  box-shadow: 0 16px 38px rgba(15, 16, 20, 0.12);
+  color: #111319;
+}
+
+/* Hover */
+.engagement-step:hover {
+  transform: translateY(-4px);
+}
+
+.theme-dark .engagement-step:hover {
+  box-shadow: 0 26px 56px rgba(0, 0, 0, 0.95);
+}
+
+.theme-light .engagement-step:hover {
+  box-shadow: 0 22px 52px rgba(15, 16, 20, 0.18);
+}
+
+/* Step icon + label */
+.engagement-step-top {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.engagement-icon {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.engagement-icon img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.engagement-step-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+/* Title & list */
+.engagement-step-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.65rem;
+}
+
+.engagement-step-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.engagement-step-body li {
+  position: relative;
+  padding-left: 1.1rem;
+  margin-bottom: 0.35rem;
+  font-size: 0.9rem;
+}
+
+.engagement-step-body li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.52em;
+  width: 0.28rem;
+  height: 0.28rem;
+  border-radius: 50%;
+  background: var(--accent, #f7b52c);
+}
+/* ============================
+   ICON THEME TINTING
+   ============================ */
+
+/* Base sizing for all service-related icons */
+.services-icon img,
+.engagement-icon img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Light mode: keep icons black/original */
+.theme-light .services-icon img,
+.theme-light .engagement-icon img {
+  filter: none;
+}
+
+/* Dark mode: invert so they appear white */
+.theme-dark .services-icon img,
+.theme-dark .engagement-icon img {
+  filter: invert(1) brightness(1.15);
 }
