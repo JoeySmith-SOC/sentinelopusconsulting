@@ -1,6 +1,30 @@
-/* ---------------------------------------------------
-   HERO: Proper stacked layout (video → overlay → text)
---------------------------------------------------- */
+/* ==========================================================================
+   SERVICES PAGE STYLES
+   - Hero video section
+   - “What I help you ship” cards
+   - “How engagements work” steps
+   - Final CTA
+   - Theme-aware tweaks (light vs dark)
+   ========================================================================== */
+
+/* --------------------------------------
+   1) PAGE BACKGROUND
+   -------------------------------------- */
+
+.services-page-main {
+  background: #05070d;
+  color: #e5e7eb;
+}
+
+/* Light mode background */
+[data-theme="light"] .services-page-main {
+  background: #f5f5f8;
+  color: #111827;
+}
+
+/* --------------------------------------
+   2) HERO — video + overlay + text
+   -------------------------------------- */
 
 .services-hero {
   position: relative;
@@ -12,7 +36,7 @@
   background: #020309;
 }
 
-/* Video fills the hero fully */
+/* Video container */
 .services-hero-media {
   position: absolute;
   inset: 0;
@@ -29,17 +53,17 @@
   object-position: center;
 }
 
-/* Dark overlay so text always readable */
+/* Dark overlay */
 .services-hero-overlay {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 15% 0, rgba(0,255,120,0.18), transparent 50%),
-    linear-gradient(to bottom, rgba(0,0,0,0.65), rgba(0,0,0,0.92));
+    radial-gradient(circle at 15% 0, rgba(0, 255, 120, 0.18), transparent 50%),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.92));
   z-index: 2;
 }
 
-/* TEXT LAYER — sits above everything */
+/* TEXT LAYER */
 .services-hero-inner {
   position: absolute;
   inset: 0;
@@ -47,19 +71,222 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: clamp(1.5rem, 8vw, 8rem);
-  padding-right: clamp(1.5rem, 8vw, 6rem);
-  color: #fff !important;
-  max-width: 900px;
+  pointer-events: none; /* allow clicks to buttons only through children */
 }
 
-/* Force hero title, eyebrow, subtext to always be white */
-.services-hero-inner * {
+.services-hero-inner .container {
+  pointer-events: auto;
+  padding-left: clamp(1.5rem, 8vw, 8rem);
+  padding-right: clamp(1.5rem, 8vw, 6rem);
+}
+
+/* Keep hero typography white in all themes */
+.services-hero-inner .eyebrow,
+.services-hero-inner h1,
+.services-hero-inner .services-hero-sub,
+.services-hero-inner .services-hero-points li {
   color: #ffffff !important;
 }
 
-/* Spacing tweaks */
-.services-hero-cta {
-  margin-top: 1.75rem;
-  margin-bottom: 1.25rem;
+.services-hero-inner .eyebrow {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  opacity: 0.85;
+  margin-bottom: 0.75rem;
 }
+
+.services-hero-inner h1 {
+  max-width: 32rem;
+  margin-bottom: 1rem;
+}
+
+.services-hero-sub {
+  max-width: 40rem;
+  opacity: 0.86;
+}
+
+.services-hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.75rem 0 1.25rem;
+}
+
+/* Bulleted hero points */
+.services-hero-points {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.75rem;
+  font-size: 0.9rem;
+}
+
+.services-hero-points li {
+  position: relative;
+  padding-left: 1rem;
+  opacity: 0.9;
+}
+
+.services-hero-points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #facc15, #f97316);
+}
+
+/* Responsive hero tweaks */
+@media (max-width: 920px) {
+  .services-hero-inner .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .services-hero-inner h1 {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .services-hero {
+    height: 520px;
+  }
+
+  .services-hero-inner .container {
+    padding-inline: 1.25rem;
+  }
+
+  .services-hero-points {
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+}
+
+/* --------------------------------------
+   3) SHARED SECTION SHELL
+   -------------------------------------- */
+
+.services-section {
+  padding: 4.5rem 0;
+}
+
+.services-section .section-title {
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+.services-section .section-sub {
+  max-width: 40rem;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+/* Section intro text – light vs dark */
+[data-theme="light"] .services-section .section-sub {
+  color: #4b5563;
+}
+
+[data-theme="dark"] .services-section .section-sub {
+  color: #9ca3af;
+}
+
+/* --------------------------------------
+   4) “WHAT I HELP YOU SHIP” CARDS
+   -------------------------------------- */
+
+.svc-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.75rem;
+  align-items: stretch;
+}
+
+@media (max-width: 1100px) {
+  .svc-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .svc-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.svc-card {
+  border-radius: 1.5rem;
+  padding: 1.75rem 1.5rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition:
+    transform 0.18s ease-out,
+    box-shadow 0.18s ease-out,
+    border-color 0.18s ease-out,
+    background 0.18s ease-out;
+}
+
+/* Light mode card */
+[data-theme="light"] .svc-card {
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.15);
+}
+
+/* Dark mode card */
+[data-theme="dark"] .svc-card {
+  background: radial-gradient(circle at top, #111827, #020309);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  box-shadow: 0 22px 44px rgba(15, 23, 42, 0.6);
+}
+
+.svc-card:hover {
+  transform: translateY(-4px);
+}
+
+[data-theme="light"] .svc-card:hover {
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.18);
+  border-color: rgba(15, 23, 42, 0.12);
+}
+
+[data-theme="dark"] .svc-card:hover {
+  box-shadow: 0 30px 70px rgba(15, 23, 42, 0.9);
+  border-color: rgba(248, 250, 252, 0.3);
+}
+
+/* Icon wrapper */
+.svc-card-icon {
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Light vs dark icon wrapper background */
+[data-theme="light"] .svc-card-icon {
+  background: rgba(15, 23, 42, 0.04);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+[data-theme="dark"] .svc-card-icon {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.7);
+}
+
+/* ICON COLOR SWITCH
+   - Assume source SVGs are dark/black by default
+   - Light mode: use original
+   - Dark mode: invert to white
+*/
+.svc-card-icon img {
+  width: 22px;
+  height: 2

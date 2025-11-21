@@ -21,27 +21,30 @@ layout: default
       <div class="services-hero-overlay"></div>
     </div>
 
-    <div class="container services-hero-inner">
-      <p class="eyebrow">Services</p>
-      <h1>Identity, Automation, and OT Security that actually ships</h1>
-      <p class="services-hero-sub">
-        I design and implement secure, reliable infrastructure — from Okta and Cloudflare Zero Trust to
-        Linux automation and OT networks. No black boxes, no slideware. Just systems your team can trust.
-      </p>
+    <!-- Text layer sits ABOVE the video -->
+    <div class="services-hero-inner">
+      <div class="container">
+        <p class="eyebrow">Services</p>
+        <h1>Identity, Automation, and OT Security that actually ships</h1>
+        <p class="services-hero-sub">
+          I design and implement secure, reliable infrastructure — from Okta and Cloudflare Zero Trust to
+          Linux automation and OT networks. No black boxes, no slideware. Just systems your team can trust.
+        </p>
 
-      <div class="cta-row services-hero-cta">
-        <a class="btn primary" href="{{ '/contact/' | relative_url }}">Book a consult</a>
-        <a class="btn" href="mailto:{{ site.email | default: 'joey@sentinelopusconsulting.com' }}">
-          Email me directly
-        </a>
+        <div class="cta-row services-hero-cta">
+          <a class="btn primary" href="{{ '/contact/' | relative_url }}">Book a consult</a>
+          <a class="btn" href="mailto:{{ site.email | default: 'joey@sentinelopusconsulting.com' }}">
+            Email me directly
+          </a>
+        </div>
+
+        <ul class="services-hero-points">
+          <li>Okta &amp; identity lifecycle that matches the business</li>
+          <li>Cloudflare Zero Trust that users don’t hate</li>
+          <li>Linux / Ansible automation that removes toil</li>
+          <li>SCADA &amp; OT segmentation that respects safety</li>
+        </ul>
       </div>
-
-      <ul class="services-hero-points">
-        <li>Okta &amp; identity lifecycle that matches the business</li>
-        <li>Cloudflare Zero Trust that users don’t hate</li>
-        <li>Linux / Ansible automation that removes toil</li>
-        <li>SCADA &amp; OT segmentation that respects safety</li>
-      </ul>
     </div>
   </section>
 
