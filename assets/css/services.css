@@ -272,6 +272,15 @@
 }
 
 /* Light vs dark icon wrapper background */
+
+/* Force all icons to be fully controllable */
+.svc-card-icon img {
+  filter: brightness(0) invert(1);
+}
+[data-theme="light"] .svc-card-icon img {
+  filter: brightness(1) invert(0);
+}
+
 [data-theme="light"] .svc-card-icon {
   background: rgba(15, 23, 42, 0.04);
   border: 1px solid rgba(15, 23, 42, 0.06);
@@ -290,3 +299,17 @@
 .svc-card-icon img {
   width: 22px;
   height: 2
+}
+/* BASE — prepare icons for filtering */
+.svc-card-icon img {
+  width: 22px;
+  height: 22px;
+  display: block;
+  transition: filter 0.18s ease-out;
+  filter: brightness(0) invert(1); /* default: DARK MODE = white */
+}
+
+/* LIGHT MODE = black */
+[data-theme="light"] .svc-card-icon img {
+  filter: brightness(1) invert(0);
+}
