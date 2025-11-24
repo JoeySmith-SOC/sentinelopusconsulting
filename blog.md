@@ -22,15 +22,33 @@ styles:
   </section>
 
   <!-- BLOG LIST -->
-  <section class="blog-listing">
+  <section class="blog-listing newsprint">
     <div class="container">
-      <div class="blog-grid">
+      <div class="news-masthead">
+        <div class="news-flag">
+          <span class="news-flag-name">Sentinel Opus Ledger</span>
+          <span class="news-flag-tagline">Identity • Zero Trust • OT Security</span>
+        </div>
+        <div class="news-edition">
+          <span class="news-edition-label">Field Notes Edition</span>
+          <span class="news-edition-date">{{ "now" | date: "%A, %B %-d, %Y" }}</span>
+        </div>
+      </div>
+
+      <p class="news-strapline">
+        Print-inspired briefs from the trenches of identity and industrial security. Headlines read
+        like a broadsheet; the columns click through to the full deep dives.
+      </p>
+
+      <div class="news-rules" aria-hidden="true"></div>
+
+      <div class="blog-grid news-grid">
         {% for post in site.posts %}
-        <article class="blog-card">
+        <article class="blog-card news-card{% if forloop.first %} news-card--lead{% endif %}">
           <a class="blog-card-link" href="{{ post.url | relative_url }}">
-            <div class="blog-card-meta">
+            <div class="blog-card-meta news-card-meta">
               <span class="blog-card-date">
-                {{ post.date | date: "%b %-d, %Y" }}
+                {{ post.date | date: "%A, %B %-d, %Y" }}
               </span>
 
               {% if post.tags %}
@@ -40,18 +58,18 @@ styles:
               {% endif %}
             </div>
 
-            <h3 class="blog-card-title">
+            <h3 class="blog-card-title news-card-title">
               {{ post.title }}
             </h3>
 
             {% if post.excerpt %}
-            <p class="blog-card-excerpt">
+            <p class="blog-card-excerpt news-card-excerpt">
               {{ post.excerpt | strip_html | truncate: 180 }}
             </p>
             {% endif %}
 
-            <div class="blog-card-footer">
-              <span class="blog-read-more">Read article</span>
+            <div class="blog-card-footer news-card-footer">
+              <span class="news-read-more">Continue reading</span>
               <span class="blog-card-arrow" aria-hidden="true">→</span>
             </div>
           </a>

@@ -1,13 +1,27 @@
 ---
 layout: default
 ---
-<article class="post">
-  <header class="container">
-    <h1>{{ page.title }}</h1>
-    <p class="muted">{{ page.date | date: "%B %d, %Y" }}{% if page.tags %} • {{ page.tags | join: ", " }}{% endif %}</p>
-    {% if page.image %}<img class="cover" src="{{ page.image | relative_url }}" alt="">{% endif %}
-  </header>
+<article class="post news-article">
   <div class="container">
-    {{ content }}
+    <div class="news-banner">
+      <span class="news-banner-name">Sentinel Opus Ledger</span>
+      <span class="news-banner-edition">Identity &amp; OT Security Desk</span>
+      <span class="news-banner-date">{{ page.date | date: "%A, %B %-d, %Y" }}</span>
+    </div>
+
+    <header class="news-article-header">
+      <p class="news-kicker">Analysis &amp; Field Notes</p>
+      <h1>{{ page.title }}</h1>
+      {% if page.tldr %}
+      <p class="news-deck">{{ page.tldr }}</p>
+      {% endif %}
+      <p class="news-meta">
+        Published {{ page.date | date: "%B %-d, %Y" }}{% if page.tags %} · Filed under {{ page.tags | join: ", " }}{% endif %}
+      </p>
+    </header>
+
+    <div class="news-body">
+      {{ content }}
+    </div>
   </div>
 </article>
