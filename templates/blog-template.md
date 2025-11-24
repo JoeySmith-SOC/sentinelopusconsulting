@@ -1,29 +1,38 @@
 ---
 title: <Compelling H1 Title Goes Here>
 date: <YYYY-MM-DD>
-tags: [iam, okta, federation]
-tldr: <1–2 sentence takeaway>
+tags: [iam, zero-trust, ot]
+tldr: <1–2 sentence deck that appears under the headline>
 canonical_url: https://sentinelopusconsulting.com/blog/<slug>/
 ---
 
-## Summary
-One paragraph executive summary for busy readers.
+## Lede
+Open with a 2–3 sentence scene-setter. Call the antagonist (risk, outage, misconfig) and the stakes.
 
-## Context
-Why this matters; problem framing; who needs this.
+## Why It Matters
+Explain the business/operational consequence. Who feels the pain? Where does it usually hide?
 
-## Steps / How-To
-1. Step-by-step with code blocks.
-2. Reference screenshots or diagrams.
-3. Link to repo.
+## Field Notes
+- Observation 1 with concise evidence (metric, log snippet, diagram ref).
+- Observation 2 with cause/effect linkage.
 
-## Results / Key Takeaways
-- Bullet takeaways
-- Links to further reading
+## Implementation (Step-by-Step)
+1. **Step title** — what we do and why it fixes the thing.
+2. Code/config snippet.
+3. Validation step (command, query, or dashboard signal).
+
+## Controls & Guardrails
+- Checklist-style bullets for reviews/approvals.
+- Alerts/monitors to set alongside the change.
+
+## Results / Takeaways
+- Outcome metric or qualitative win.
+- One-liner “do this, avoid that.”
+- Link to docs or repo.
 
 ---
 
-**Cross-posting to LinkedIn**  
-Copy everything below this line into a LinkedIn Article or Post. Add a canonical link back to your site.
-
-<write a shorter version or keep headline + Summary + Steps + CTA to your site>
+### How to use this template
+1. Copy this file to `_posts/YYYY-MM-DD-your-slug.md`.
+2. Fill `title`, `date`, `tags`, `tldr`, and `canonical_url`.
+3. Keep sections above; add or remove subsections as needed, but keep the lede and takeaways for consistency.
