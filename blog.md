@@ -18,6 +18,14 @@ styles:
         Field notes from real-world IAM, Zero Trust, Linux, and SCADA work. No fluff — just patterns,
         postmortems, and guides you can actually use.
       </p>
+      <div class="blog-hero-pills">
+        <span class="chip">Identity</span>
+        <span class="chip">Zero Trust</span>
+        <span class="chip">OT/ICS</span>
+        <span class="chip">Digital Twin</span>
+        <span class="chip">Cloud</span>
+        <span class="chip">Linux &amp; Automation</span>
+      </div>
     </div>
   </section>
 
@@ -35,14 +43,52 @@ styles:
         </div>
       </div>
 
+      
       <p class="news-strapline">
-        Print-inspired briefs from the trenches of identity and industrial security. Headlines read
-        like a broadsheet; the columns click through to the full deep dives.
+        I write about identity done right (Okta, lifecycle, federation), Zero Trust,
+        and OT security — plus a flagship 15-part refinery digital twin build.
       </p>
-      <p class="news-strapline">
-        I write about identity done right (Okta, lifecycle, federation), Zero Trust without the buzzwords,
-        and OT security patterns that respect safety and reality.
-      </p>
+
+      <section id="refinery-series" class="refinery-series">
+        <div class="refinery-header">
+          <h2>The Refinery Rebuild Series — A 15-Part Deep Dive Into the Future of OT Security</h2>
+          <p class="refinery-sub">Upcoming articles detailing the Zero Trust OT/ICS digital twin refinery build.</p>
+        </div>
+        <div class="refinery-grid">
+          {% assign refinery_titles = "
+          Rebuilding the Refinery: How I Designed a Zero Trust OT/ICS Digital Twin from Scratch |
+          Why Modern Refineries Need Identity-First OT Security — And How I Designed It |
+          Inside the OT Lab: Simulating a Real Refinery Without the Danger |
+          Cloud + OT: The Future of Remote Operations Centers (And How I Built Mine on AWS) |
+          No More VPNs: Using Cloudflare Zero Trust to Secure OT Like It’s 2025 |
+          The Problem with Industrial Security Today — And the Architecture That Fixes It |
+          Attack the Twin: How Cyber Threats Behave Inside a Digital Refinery |
+          Failure Is Data: Simulating Pressure Spikes, Vibration Failures, and Alarm Cascades |
+          The Death of Perimeter-Based OT Security: A Zero Trust Blueprint for Critical Infrastructure |
+          From Local Lab to Cloud ROC: Designing Secure Telemetry Flows for Industrial Systems |
+          How to Bridge IT, OT, and Cloud Without Breaking the Plant |
+          Identity Beats Firewalls: Why Okta Belongs in Industrial Control Systems |
+          Digital Twins Are Not Enough: Why Industrial Twins Must Include Security |
+          Engineering a Modern Refinery: What My Digital Twin Proves About the Future of OT |
+          Building the Operator Console of the Future: Dashboards That Actually Matter
+          " | split: "|" %}
+          {% for t in refinery_titles %}
+          {% assign title = t | strip %}
+          <article class="refinery-card">
+            <h3>{{ title }}</h3>
+            <p class="refinery-teaser">Practical notes from my refinery digital twin: Zero Trust design, identity-first OT, Cloudflare ZT, attack simulations, and ROC pipelines.</p>
+            <div class="refinery-tags">
+              <span class="chip">Identity</span>
+              <span class="chip">Zero Trust</span>
+              <span class="chip">OT/ICS</span>
+              <span class="chip">Digital Twin</span>
+              <span class="chip">Cloud</span>
+              <span class="chip">Automation</span>
+            </div>
+          </article>
+          {% endfor %}
+        </div>
+      </section>
 
       <div class="news-rules" aria-hidden="true"></div>
 

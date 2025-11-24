@@ -109,6 +109,12 @@
   color: #e5e7eb;
 }
 
+.blog-hero-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
 /* Actions + chips */
 
 .blog-hero-actions {
@@ -262,6 +268,52 @@
   background-size: 100% 2px, 100% 2px, 100% 2px;
   background-position: 0 0, 0 5px, 0 10px;
   opacity: 0.9;
+}
+
+.refinery-series {
+  margin: 1.2rem 0 1.8rem;
+  padding: 1.4rem 1rem 0;
+}
+
+.refinery-header h2 {
+  margin: 0 0 0.35rem;
+  font-family: "Oswald", "Open Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.refinery-sub {
+  margin: 0 0 1rem;
+  color: #d3daeb;
+}
+
+.refinery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.refinery-card {
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.6rem;
+  background: rgba(15, 20, 30, 0.6);
+  backdrop-filter: blur(4px);
+}
+
+.refinery-card h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+}
+
+.refinery-teaser {
+  margin: 0 0 0.6rem;
+  line-height: 1.5;
+  color: #dbe2f4;
+}
+
+.refinery-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
 }
 
 .blog-grid {

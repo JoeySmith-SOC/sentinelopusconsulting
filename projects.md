@@ -7,6 +7,13 @@ description: Selected builds and lab work showing identity, automation, and OT s
 <section class="container">
   <h1>Projects</h1>
   <p class="lead">Built for engineering managers and security leads who want to see the patterns before we deploy them in your environment.</p>
+  <p class="lead">These are real labs and reference architectures I use before client rollouts.</p>
+  <div class="project-filters">
+    <span class="chip">Identity</span>
+    <span class="chip">Zero Trust</span>
+    <span class="chip">Automation</span>
+    <span class="chip">OT/SCADA</span>
+  </div>
   <div class="project-grid">
     {%- assign picks = site.projects | sort: 'date' | reverse -%}
     {%- for p in picks -%}

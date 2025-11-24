@@ -34,6 +34,9 @@ layout: default
           I design and implement secure, reliable infrastructure — from Okta and Cloudflare Zero Trust to
           Linux automation and OT networks. No black boxes, no slideware. Just systems your team can trust.
         </p>
+        <p class="services-hero-sub">
+          Best fit for: security, infrastructure, and OT teams who want real engineering, not slideware.
+        </p>
 
         <div class="cta-row services-hero-cta">
           <a class="btn primary" href="{{ '/contact/' | relative_url }}">Book a consult</a>
@@ -63,6 +66,7 @@ layout: default
 
       <div class="svc-grid">
         <article class="svc-card">
+          <span id="identity-access-architecture"></span>
           <div class="svc-card-icon">
             <img src="{{ '/assets/icons/user-shield.svg' | relative_url }}" alt="Identity architecture icon">
           </div>
@@ -77,10 +81,12 @@ layout: default
             <li>SAML / OIDC federation &amp; MFA strategy</li>
             <li><strong>Typical deliverables:</strong> diagrams, policy baselines, SCIM/IaC snippets, runbooks</li>
             <li><strong>Engagement:</strong> Focused 4–8 weeks with weekly reviews</li>
+            <li><strong>Example engagements:</strong> Okta tenant rollout, lifecycle cleanup, SSO migration</li>
           </ul>
         </article>
 
         <article class="svc-card">
+          <span id="zero-trust-edge-security"></span>
           <div class="svc-card-icon">
             <img src="{{ '/assets/icons/cloud-lock.svg' | relative_url }}" alt="Zero Trust shield icon">
           </div>
@@ -95,10 +101,12 @@ layout: default
             <li>Tiered access for admins, engineers, and vendors</li>
             <li><strong>Typical deliverables:</strong> access maps, policy sets, tunnel configs, rollout plan</li>
             <li><strong>Engagement:</strong> Usually 4–6 weeks, staged per app tier</li>
+            <li><strong>Example engagements:</strong> Cloudflare Access MVP, admin access redesign</li>
           </ul>
         </article>
 
         <article class="svc-card">
+          <span id="linux-automation"></span>
           <div class="svc-card-icon">
             <img src="{{ '/assets/icons/automation.svg' | relative_url }}" alt="Automation gear icon">
           </div>
@@ -113,10 +121,12 @@ layout: default
             <li>Environment-as-code for labs and production</li>
             <li><strong>Typical deliverables:</strong> hardened images, playbooks, CI hooks, ops runbooks</li>
             <li><strong>Engagement:</strong> 4–8 weeks to build and hand off</li>
+            <li><strong>Example engagements:</strong> Hardening baselines, Ansible patching automation</li>
           </ul>
         </article>
 
         <article class="svc-card">
+          <span id="scada-ot-integration"></span>
           <div class="svc-card-icon">
             <img src="{{ '/assets/icons/server-cog.svg' | relative_url }}" alt="OT integration icon">
           </div>
@@ -131,6 +141,8 @@ layout: default
             <li>Monitoring and logging that respects the process</li>
             <li><strong>Typical deliverables:</strong> zone diagrams, gateway configs, alarm/log baselines</li>
             <li><strong>Engagement:</strong> 6–10 weeks with safety review and tabletop</li>
+            <li><strong>Example engagements:</strong> Segmentation design, secure remote vendor access, OT monitoring</li>
+            <li>Curious how I approach OT/ICS systems? See the Refinery Rebuild Series → <a href="{{ '/blog/#refinery-series' | relative_url }}">/blog/#refinery-series</a></li>
           </ul>
         </article>
       </div>
@@ -192,7 +204,7 @@ layout: default
   <section class="services-section services-pricing">
     <div class="container">
       <h2 class="section-title">Pricing expectations</h2>
-      <p class="section-sub">Projects are fixed-scope with clear outcomes, weekly checkpoints, and documented deliverables. No open-ended retainers; you see progress every week.</p>
+      <p class="section-sub">Most initial projects start in the low five figures with a focused 4–8 week engagement. Work is fixed-scope and outcome-based with weekly checkpoints and documented deliverables.</p>
     </div>
   </section>
   <!-- SERVICES CTA -->

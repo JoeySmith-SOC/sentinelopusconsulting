@@ -336,6 +336,27 @@
 .projects-footer-link .card-link {
   display: inline-block;
 }
+
+.good-fit {
+  background: radial-gradient(circle at top, rgba(255, 255, 255, 0.04), transparent);
+  padding: 3rem 0;
+}
+
+.fit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.fit-grid h3 {
+  margin-top: 0;
+}
+
+.fit-grid ul {
+  padding-left: 1rem;
+  margin: 0.5rem 0 0;
+  line-height: 1.6;
+}
 /* ============================================
    CTA Section — Center Buttons
    ============================================ */

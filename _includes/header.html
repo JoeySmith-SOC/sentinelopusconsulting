@@ -69,10 +69,21 @@
       </ul>
     </nav>
 
-    <!-- Theme toggle -->
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-      <span class="sun" aria-hidden="true">☀</span>
-      <span class="moon" aria-hidden="true">🌙</span>
-    </button>
+    <div class="header-controls">
+      <!-- Language toggle -->
+      <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+        <img class="lang-flag lang-flag-en" src="{{ '/assets/icons/united-states-of-america-icon.png' | relative_url }}" alt="English">
+        <img class="lang-flag lang-flag-sv" src="{{ '/assets/icons/sweden-flag-icon.png' | relative_url }}" alt="Svenska">
+        <span class="lang-label">EN</span>
+      </button>
+
+      <!-- Theme toggle -->
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <span class="sun" aria-hidden="true">☀</span>
+        <span class="moon" aria-hidden="true">🌙</span>
+      </button>
+    </div>
   </div>
 </header>
+
+<div id="google_translate_element" aria-hidden="true"></div>

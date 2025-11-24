@@ -11,6 +11,7 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
 
     <div class="about-hero-text">
       <h1>About</h1>
+      <h2>Identity Engineer. Automator. Problem Solver.</h2>
       <p class="lead">Identity &amp; Automation Engineer bridging IAM, Zero Trust, and OT security.</p>
 
       <p>
@@ -165,51 +166,29 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
     <!-- TIMELINE -->
   <section class="about-section">
     <h2 class="section-title">My Path</h2>
-    <p>
-      I didn’t start in a polished cybersecurity pipeline. I built my career through self-study,
-      hands-on labs, and relentless determination. Every step sharpened the way I solve problems today.
-    </p>
-
-    <div class="about-timeline">
-
-      <div class="timeline-item">
+    <ol class="about-timeline ordered">
+      <li>
         <h3>Technical Foundation</h3>
-        <p>
-          Linux, networking, and security fundamentals — learning how systems behave below the surface.
-        </p>
-      </div>
-
-      <div class="timeline-item">
+        <p>Linux, networking, and security fundamentals — learning how systems behave below the surface.</p>
+      </li>
+      <li>
         <h3>Identity Engineering</h3>
-        <p>
-          Specializing in IAM and recognizing identity as the control plane for everything —
-          cloud, applications, users, and security.
-        </p>
-      </div>
-
-      <div class="timeline-item">
+        <p>Specializing in IAM and recognizing identity as the control plane for everything — cloud, applications, users, and security.</p>
+      </li>
+      <li>
         <h3>Automation &amp; Architecture</h3>
-        <p>
-          Building automation pipelines that remove friction, enforce consistency, and scale environments securely.
-        </p>
-      </div>
-
-      <div class="timeline-item">
+        <p>Building automation pipelines that remove friction, enforce consistency, and scale environments securely.</p>
+      </li>
+      <li>
         <h3>Cyber → OT Expansion</h3>
-        <p>
-          Integrating cybersecurity into SCADA, ICS, and electrical systems to unify cyber and operational technology.
-        </p>
-      </div>
-
-      <div class="timeline-item">
+        <p>Integrating cybersecurity into SCADA, ICS, and electrical systems to unify cyber and operational technology.</p>
+      </li>
+      <li>
         <h3>Independent Operator</h3>
-        <p>
-          When opportunities slowed down, I created my own. Now I engineer systems, build labs,
-          publish my work, and help clients achieve secure outcomes with extreme accountability.
-        </p>
-      </div>
-
-    </div>
+        <p>When opportunities slowed down, I created my own. Now I engineer systems, build labs, publish my work, and help clients achieve secure outcomes with extreme accountability.</p>
+        <p>I’m currently publishing a 15-part flagship series breaking down my Zero Trust OT refinery digital twin, Cloudflare Zero Trust, identity-first OT design, ICS attack simulations, and AWS Remote Operations pipelines.</p>
+      </li>
+    </ol>
   </section>
 
 
@@ -334,6 +313,11 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
       Clear scope, honest communication, and systems that ship. I treat every engagement like an engineering mission.
     </p>
     <p class="section-sub">Not a fit for checkbox-only compliance with no intent to implement or operate the controls.</p>
+    <ul>
+      <li>Scope fast in plain language</li>
+      <li>Deliver diagrams, IaC, and runbooks</li>
+      <li>Blunt &amp; transparent communication</li>
+    </ul>
 
     <div class="work-style-grid">
 
