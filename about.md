@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: Joey Smith – Identity & OT Security Engineer | Sentinel Opus
 permalink: /about/
 description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT security.
 ---
@@ -10,17 +10,15 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
   <div class="about-hero-grid">
 
     <div class="about-hero-text">
-      <p class="eyebrow">About Me</p>
-      <h1>Identity Engineer. Automator. Problem Solver.</h1>
+      <h1>About</h1>
+      <p class="lead">Identity &amp; Automation Engineer bridging IAM, Zero Trust, and OT security.</p>
 
-      <p class="lead">
-        I build secure, resilient, and automated systems that help organizations move faster without sacrificing security.
+      <p>
+        I build secure, resilient, and automated systems that help organizations move faster without sacrificing security. I’m <strong>Joseph “Joey” Smith</strong> — a freelance Identity &amp; Access Management Engineer, Zero Trust architect, and infrastructure builder.
       </p>
 
       <p>
-        I’m <strong>Joseph “Joey” Smith</strong> — a freelance Identity &amp; Access Management Engineer,
-        Zero Trust architect, and infrastructure builder. My path hasn’t been traditional, and that’s exactly
-        why my work is sharp, practical, and grounded in the real world.
+        My path hasn’t been traditional, and that’s exactly why my work is sharp, practical, and grounded in the real world. CompTIA Security+, industrial safety background, and hands-on OT work keep my designs practical for both cyber and field teams.
       </p>
 
       <p>
@@ -71,7 +69,7 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
         <div class="mission-pillars-header">
           <img
             src="{{ '/assets/icons/shield-lock.svg' | relative_url }}"
-            alt=""
+            alt="Shield lock icon"
             class="mission-icon"
             loading="lazy"
             decoding="async"
@@ -88,7 +86,7 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
         <div class="mission-pillars-header">
           <img
             src="{{ '/assets/icons/server-cog.svg' | relative_url }}"
-            alt=""
+            alt="Server cog icon"
             class="mission-icon"
             loading="lazy"
             decoding="async"
@@ -104,7 +102,7 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
         <div class="mission-pillars-header">
           <img
             src="{{ '/assets/icons/lock-bolt.svg' | relative_url }}"
-            alt=""
+            alt="Bolt lock icon"
             class="mission-icon"
             loading="lazy"
             decoding="async"
@@ -133,28 +131,28 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
 
     <div class="expertise-grid two-col">
       <article class="card expertise-card">
-        <div class="icon-top"><img src="{{ '/assets/icons/user-shield.svg' | relative_url }}" alt=""></div>
+        <div class="icon-top"><img src="{{ '/assets/icons/user-shield.svg' | relative_url }}" alt="Identity icon"></div>
         <h3>Identity &amp; Access Management</h3>
         <p>Okta/AD federation, lifecycle automation, access governance, and auth workflows that integrate cleanly with infrastructure.</p>
         <a href="{{ '/projects/' | relative_url }}" class="card-link">Learn more →</a>
       </article>
 
       <article class="card expertise-card">
-        <div class="icon-top"><img src="{{ '/assets/icons/cloud-lock.svg' | relative_url }}" alt=""></div>
+        <div class="icon-top"><img src="{{ '/assets/icons/cloud-lock.svg' | relative_url }}" alt="Zero Trust icon"></div>
         <h3>Zero Trust Architecture</h3>
         <p>Cloudflare Access, device posture, certificate-based auth, and least-privilege policy — without user friction.</p>
         <a href="{{ '/projects/' | relative_url }}" class="card-link">Learn more →</a>
       </article>
 
       <article class="card expertise-card">
-        <div class="icon-top"><img src="{{ '/assets/icons/automation.svg' | relative_url }}" alt=""></div>
+        <div class="icon-top"><img src="{{ '/assets/icons/automation.svg' | relative_url }}" alt="Automation icon"></div>
         <h3>Infrastructure &amp; Automation</h3>
         <p>Ansible/Terraform pipelines, hardened baselines, and versioned environments aligned to DevSecOps.</p>
         <a href="{{ '/projects/' | relative_url }}" class="card-link">Learn more →</a>
       </article>
 
       <article class="card expertise-card">
-        <div class="icon-top"><img src="{{ '/assets/icons/lock-bolt.svg' | relative_url }}" alt=""></div>
+        <div class="icon-top"><img src="{{ '/assets/icons/lock-bolt.svg' | relative_url }}" alt="OT security icon"></div>
         <h3>Operational Technology &amp; Electrical</h3>
         <p>ICS segmentation, PLC/HMI security, monitoring, and safety-first designs bridging code and current.</p>
         <a href="{{ '/projects/' | relative_url }}" class="card-link">Learn more →</a>
@@ -259,13 +257,11 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
       <div class="building-toward">
         <p><strong>Actively building toward:</strong></p>
         <ul>
-          <li>Linux certifications (LFCS / LPIC / RHCSA path)</li>
-          <li>Advanced IAM and Zero Trust specialization</li>
-          <li>Formal alignment between cyber and electrical / OT domains</li>
-          <li>AWS Certification Track</li>
-          <li>Docker & Kubernetes</li>
-          <li>Okta Certified Professional</li>
-          <li>Zero Trust & Cloud Security</li>
+          <li><strong>Linux:</strong> LFCS / LPIC / RHCSA path</li>
+          <li><strong>IAM / Zero Trust:</strong> Okta Certified Professional; advanced Zero Trust specialization</li>
+          <li><strong>Cloud:</strong> AWS certification track</li>
+          <li><strong>Containers:</strong> Docker &amp; Kubernetes</li>
+          <li><strong>OT:</strong> Formal alignment between cyber and electrical / OT domains</li>
         </ul>
       </div>
 
@@ -337,15 +333,16 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
     <p class="section-sub">
       Clear scope, honest communication, and systems that ship. I treat every engagement like an engineering mission.
     </p>
+    <p class="section-sub">Not a fit for checkbox-only compliance with no intent to implement or operate the controls.</p>
 
     <div class="work-style-grid">
 
       <!-- Extreme Accountability -->
       <article class="work-style-item">
         <div class="work-style-icon">
-          <img class="themed-icon" src="/assets/icons/improvement.png" alt="">
+          <img class="themed-icon" src="/assets/icons/improvement.png" alt="Accountability icon">
         </div>
-        <h3>Result Orienated</h3>
+        <h3>Result Oriented</h3>
         <p>
           If I commit to a result, I own it. You get clear expectations, written plans, and honest updates — even when something gets hard.
         </p>
@@ -354,7 +351,7 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
       <!-- Security Without Friction -->
       <article class="work-style-item">
         <div class="work-style-icon">
-          <img class="themed-icon" src="/assets/icons/master-key.png" alt="">
+          <img class="themed-icon" src="/assets/icons/master-key.png" alt="Security icon">
         </div>
         <h3>Security without friction</h3>
         <p>
@@ -365,7 +362,7 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
       <!-- Transparency -->
       <article class="work-style-item">
         <div class="work-style-icon">
-          <img class="themed-icon" src="/assets/icons/communication.png" alt="">
+          <img class="themed-icon" src="/assets/icons/communication.png" alt="Communication icon">
         </div>
         <h3>Transparent communication</h3>
         <p>
@@ -376,7 +373,7 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
       <!-- Documentation -->
       <article class="work-style-item">
         <div class="work-style-icon">
-          <img class="themed-icon" src="/assets/icons/documents.png" alt="">
+          <img class="themed-icon" src="/assets/icons/documents.png" alt="Documentation icon">
         </div>
         <h3>Documentation that outlives engineers</h3>
         <p>
@@ -399,7 +396,7 @@ description: Identity & Automation Engineer bridging IAM, Zero Trust, and OT sec
     </p>
     <div class="about-cta-row">
       <a class="btn primary" href="{{ '/contact/' | relative_url }}">Book a Consult</a>
-      <a class="btn" href="{{ '/assets/docs/Resume_Joseph_Smith_IAM.pdf' | relative_url }}">Download My Resume</a>
+      <a class="btn" href="{{ '/assets/docs/Resume_Joseph_Smith_IAM.pdf' | relative_url }}" target="_blank" rel="noreferrer">Download My Resume</a>
     </div>
   </section>
 

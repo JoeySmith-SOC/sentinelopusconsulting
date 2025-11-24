@@ -104,6 +104,7 @@
 .services-hero-sub {
   max-width: 40rem;
   opacity: 0.86;
+  text-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
 }
 
 .services-hero-cta {
@@ -312,6 +313,36 @@
 /* LIGHT MODE = black */
 [data-theme="light"] .svc-card-icon img {
   filter: brightness(1) invert(0);
+}
+
+.svc-card p {
+  margin: 0 0 1rem;
+}
+
+.svc-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.svc-card .svc-list li {
+  padding: 0.45rem 0.75rem;
+  border-radius: 0.7rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: inherit;
+}
+
+[data-theme="light"] .svc-card .svc-list li {
+  background: rgba(15, 23, 42, 0.04);
+  border-color: rgba(15, 23, 42, 0.08);
+}
+
+.svc-list.tight {
+  gap: 0.2rem;
+  margin-top: 0.4rem;
 }
 /* --------------------------------------
    “HOW ENGAGEMENTS WORK” – PATH STYLE

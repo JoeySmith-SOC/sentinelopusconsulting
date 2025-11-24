@@ -34,16 +34,17 @@
       Build the nav from a list to keep things DRY.
       We mark the active link with aria-current="page" when URLs match.
     {%- endcomment -%}
-    {%- assign nav_items = 
-      site.data.nav | default: 
-      site.nav | default: 
+    {%- assign nav_items =
+      site.data.nav | default:
+      site.nav | default:
       '
       Home:/,
       Projects:/projects/,
-      Blog:/blog/,
       Services:/services/,
-      About:/about/
-      ' 
+      Blog:/blog/,
+      About:/about/,
+      Contact / Hire Me:/contact/
+      '
     -%}
     {%- assign items = nav_items | split: ',' -%}
 
@@ -59,14 +60,12 @@
           {%- assign active = (here == url_rel) -%}
           <li>
             <a href="{{ url_rel }}"
+               class="{% if forloop.last %}cta{% endif %}"
                {%- if active -%} aria-current="page"{%- endif -%}>
               {{ label }}
             </a>
           </li>
         {%- endfor -%}
-        <li>
-          <a class="cta" href="{{ '/contact/' | relative_url }}">Hire Me</a>
-        </li>
       </ul>
     </nav>
 

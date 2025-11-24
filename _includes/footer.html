@@ -18,10 +18,12 @@
       <ul>
         <li><a href="{{ '/' | relative_url }}">Home</a></li>
         <li><a href="{{ '/projects/' | relative_url }}">Projects</a></li>
-        <li><a href="{{ '/services/' | relative_url }}">Services</a></li>
         <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+        <li><a href="{{ '/services/' | relative_url }}">Services</a></li>
         <li><a href="{{ '/about/' | relative_url }}">About</a></li>
-        <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
+        <li><a href="{{ '/contact/' | relative_url }}">Contact / Hire Me</a></li>
+        <li><a href="{{ '/terms/' | relative_url }}">Terms</a></li>
+        <li><a href="{{ '/privacy/' | relative_url }}">Privacy</a></li>
       </ul>
     </nav>
 
@@ -43,7 +45,7 @@
            href="https://github.com/JoeySmith-SOC"
            target="_blank"
            rel="noreferrer">
-          <img src="{{ '/assets/icons/github.png' | relative_url }}" alt="GitHub">
+          <img src="{{ '/assets/icons/github.png' | relative_url }}" alt="GitHub profile">
           <span>GitHub</span>
         </a>
 
@@ -51,7 +53,7 @@
            href="https://www.linkedin.com/in/joeysmith-cybertocircuit"
            target="_blank"
            rel="noreferrer">
-          <img src="{{ '/assets/icons/linkedin-big-logo.png' | relative_url }}" alt="LinkedIn">
+          <img src="{{ '/assets/icons/linkedin-big-logo.png' | relative_url }}" alt="LinkedIn profile">
           <span>LinkedIn</span>
         </a>
       </div>
@@ -68,6 +70,10 @@
       <span>© {{ site.time | date: '%Y' }} Sentinel Opus Consulting</span>
       <span class="footer-separator">•</span>
       <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+      <span class="footer-separator">•</span>
+      <a href="{{ '/terms/' | relative_url }}">Terms</a>
+      <span class="footer-separator">•</span>
+      <a href="{{ '/privacy/' | relative_url }}">Privacy</a>
     </div>
   </div>
 </footer>

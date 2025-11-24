@@ -1,20 +1,47 @@
 ---
 layout: default
 ---
-<article class="project">
-  <header class="container">
+<article class="project-detail">
+  <header class="container project-detail-header">
     <h1>{{ page.title }}</h1>
-    {% if page.image %}<img class="project-cover" src="{{ page.image | relative_url }}" alt="">{% endif %}
-    {% if page.short %}<p class="muted">{{ page.short }}</p>{% endif %}
-  </header>
-  <div class="container">
-    {{ content }}
-    {% if page.stack %}
-      <h3>Tech Stack</h3>
-      <p>{{ page.stack }}</p>
+    {% if page.short %}<p class="project-subtitle">{{ page.short }}</p>{% endif %}
+    {% if page.engagement %}<p class="project-engagement">{{ page.engagement }}</p>{% endif %}
+    {% if page.tags %}
+    <ul class="project-tag-chips">
+      {% for tag in page.tags %}<li>{{ tag }}</li>{% endfor %}
+    </ul>
     {% endif %}
+    {% if page.image %}<img class="project-cover" src="{{ page.image | relative_url }}" alt="{{ page.title }} cover">{% endif %}
+  </header>
+
+  <div class="container project-detail-body">
+    {{ content }}
+
+    {% if page.stack %}
+      {% assign stack_items = page.stack %}
+      <section class="project-section">
+        <h3>Tech Stack</h3>
+        <ul class="project-stack">
+          {% for tech in stack_items %}<li>{{ tech | strip }}</li>{% endfor %}
+        </ul>
+      </section>
+    {% endif %}
+
+    {% if page.takeaways %}
+      <section class="project-section project-takeaways">
+        <h3>What this means for you</h3>
+        <ul>
+          {% for item in page.takeaways %}<li>{{ item }}</li>{% endfor %}
+        </ul>
+        <a class="btn primary" href="{{ '/contact/' | relative_url }}">Book a consult about this pattern →</a>
+      </section>
+    {% endif %}
+
     {% if page.links and page.links.repo %}
-      <p><a class="btn" href="{{ page.links.repo }}">View repository →</a></p>
+      <section class="project-section project-repo">
+        <p class="muted">GitHub: full lab code, diagrams, and documentation.</p>
+        <a class="btn" href="{{ page.links.repo }}">View repository →</a>
+      </section>
     {% endif %}
   </div>
 </article>

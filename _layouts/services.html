@@ -14,9 +14,9 @@ layout: default
         loop
         playsinline
         preload="metadata"
+        poster="{{ '/assets/img/og-default.jpg' | relative_url }}"
         aria-hidden="true">
         <source src="{{ '/assets/video/services_hero_page.mp4' | relative_url }}" type="video/mp4">
-        Your browser does not support the video tag.
       </video>
       <div class="services-hero-overlay"></div>
     </div>
@@ -26,6 +26,10 @@ layout: default
       <div class="container">
         <p class="eyebrow">Services</p>
         <h1>Identity, Automation, and OT Security that actually ships</h1>
+        <p class="services-hero-sub">
+          I work with security leads and engineering managers in manufacturing, utilities, and SaaS
+          teams that need results—not slide decks.
+        </p>
         <p class="services-hero-sub">
           I design and implement secure, reliable infrastructure — from Okta and Cloudflare Zero Trust to
           Linux automation and OT networks. No black boxes, no slideware. Just systems your team can trust.
@@ -60,7 +64,7 @@ layout: default
       <div class="svc-grid">
         <article class="svc-card">
           <div class="svc-card-icon">
-            <img src="{{ '/assets/icons/user-shield.svg' | relative_url }}" alt="">
+            <img src="{{ '/assets/icons/user-shield.svg' | relative_url }}" alt="Identity architecture icon">
           </div>
           <h3>Identity &amp; Access Architecture</h3>
           <p>
@@ -71,12 +75,14 @@ layout: default
             <li>Okta org &amp; app inventory clean-up</li>
             <li>Lifecycle &amp; access workflows (HR → Okta)</li>
             <li>SAML / OIDC federation &amp; MFA strategy</li>
+            <li><strong>Typical deliverables:</strong> diagrams, policy baselines, SCIM/IaC snippets, runbooks</li>
+            <li><strong>Engagement:</strong> Focused 4–8 weeks with weekly reviews</li>
           </ul>
         </article>
 
         <article class="svc-card">
           <div class="svc-card-icon">
-            <img src="{{ '/assets/icons/cloud-lock.svg' | relative_url }}" alt="">
+            <img src="{{ '/assets/icons/cloud-lock.svg' | relative_url }}" alt="Zero Trust shield icon">
           </div>
           <h3>Zero Trust &amp; Edge Security</h3>
           <p>
@@ -87,12 +93,14 @@ layout: default
             <li>Cloudflare Access &amp; tunnel rollout</li>
             <li>App, SSH, and RDP access without VPN pain</li>
             <li>Tiered access for admins, engineers, and vendors</li>
+            <li><strong>Typical deliverables:</strong> access maps, policy sets, tunnel configs, rollout plan</li>
+            <li><strong>Engagement:</strong> Usually 4–6 weeks, staged per app tier</li>
           </ul>
         </article>
 
         <article class="svc-card">
           <div class="svc-card-icon">
-            <img src="{{ '/assets/icons/automation.svg' | relative_url }}" alt="">
+            <img src="{{ '/assets/icons/automation.svg' | relative_url }}" alt="Automation gear icon">
           </div>
           <h3>Linux &amp; Automation</h3>
           <p>
@@ -103,12 +111,14 @@ layout: default
             <li>Hardened Linux baselines &amp; golden images</li>
             <li>Ansible playbooks for routine operations</li>
             <li>Environment-as-code for labs and production</li>
+            <li><strong>Typical deliverables:</strong> hardened images, playbooks, CI hooks, ops runbooks</li>
+            <li><strong>Engagement:</strong> 4–8 weeks to build and hand off</li>
           </ul>
         </article>
 
         <article class="svc-card">
           <div class="svc-card-icon">
-            <img src="{{ '/assets/icons/server-cog.svg' | relative_url }}" alt="">
+            <img src="{{ '/assets/icons/server-cog.svg' | relative_url }}" alt="OT integration icon">
           </div>
           <h3>SCADA &amp; OT Integration</h3>
           <p>
@@ -119,6 +129,8 @@ layout: default
             <li>Network zoning and jump-host patterns</li>
             <li>Secure remote access for engineers &amp; vendors</li>
             <li>Monitoring and logging that respects the process</li>
+            <li><strong>Typical deliverables:</strong> zone diagrams, gateway configs, alarm/log baselines</li>
+            <li><strong>Engagement:</strong> 6–10 weeks with safety review and tabletop</li>
           </ul>
         </article>
       </div>
@@ -142,6 +154,10 @@ layout: default
             and where the biggest risks live. This is where we separate “nice to have” from
             “fix this now”.
           </p>
+          <ul class="svc-list tight">
+            <li>Document current state (apps, access paths, OT assets)</li>
+            <li>Agree on success criteria and owners</li>
+          </ul>
         </article>
 
         <article class="svc-path-step">
@@ -152,6 +168,10 @@ layout: default
             runbooks, and automation baked in. No slideware. Everything lives in your repos,
             not in my notebook.
           </p>
+          <ul class="svc-list tight">
+            <li>IaC/automation first; no manual snowflakes</li>
+            <li>Docs and diagrams updated as we ship</li>
+          </ul>
         </article>
 
         <article class="svc-path-step">
@@ -161,8 +181,18 @@ layout: default
             Your team gets the keys, the docs, and the patterns. I stay available to help you
             harden, extend, and adapt the design as your environment changes.
           </p>
+          <ul class="svc-list tight">
+            <li>Runbooks and ownership clearly assigned</li>
+            <li>Lightweight support window to solidify the handoff</li>
+          </ul>
         </article>
       </div>
+    </div>
+  </section>
+  <section class="services-section services-pricing">
+    <div class="container">
+      <h2 class="section-title">Pricing expectations</h2>
+      <p class="section-sub">Projects are fixed-scope with clear outcomes, weekly checkpoints, and documented deliverables. No open-ended retainers; you see progress every week.</p>
     </div>
   </section>
   <!-- SERVICES CTA -->

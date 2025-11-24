@@ -20,10 +20,10 @@ layout: default
     <div class="hero-grid">
       <div class="hero-left">
         <h1>Identity, Automation, and IT/OT <span class="accent-highlight">Security</span></h1>
-        <p class="sub">I help teams secure what matters—Reliably, Transparently, and without slowing you down.</p>
+        <p class="sub">Typical engagement: 6–8 weeks to untangle Okta, deploy Zero Trust, and leave you with docs your team can actually use.</p>
         <div class="cta-row">
           <a class="btn primary" href="{{ '/contact/' | relative_url }}">Book a consult</a>
-          <a class="btn" href="{{ '/projects/' | relative_url }}">See projects</a>
+          <a class="btn ghost" href="{{ '/projects/' | relative_url }}">See projects</a>
         </div>
         <ul class="cred cred-bar feature-list" aria-label="Key capabilities">
           <li><strong>Okta</strong> | SAML/OIDC | Lifecycle</li>
@@ -47,38 +47,54 @@ layout: default
     <div class="expertise-grid two-col">
       <article class="card">
         <div class="icon-top">
-          <img src="{{ '/assets/icons/user-shield.svg' | relative_url }}" alt="">
+          <img src="{{ '/assets/icons/user-shield.svg' | relative_url }}" alt="Identity and access icon">
         </div>
         <h3>Identity &amp; Access Management</h3>
-        <p>Okta/AD federation, lifecycle automation, access governance, and auth workflows that integrate cleanly with infrastructure.</p>
-        <a href="{{ '/projects/' | relative_url }}" class="card-link">Learn more →</a>
+        <ul class="card-bullets">
+          <li>Access drift after re-orgs — fix with group-driven policies.</li>
+          <li>On/offboarding taking days — automate HR → Okta.</li>
+          <li>Vendors sprawl — segmented, audited access by design.</li>
+        </ul>
+        <a href="{{ '/projects/okta-federation-blueprint/' | relative_url }}" class="card-link">See related project →</a>
       </article>
 
       <article class="card">
         <div class="icon-top">
-          <img src="{{ '/assets/icons/cloud-lock.svg' | relative_url }}" alt="">
+          <img src="{{ '/assets/icons/cloud-lock.svg' | relative_url }}" alt="Zero Trust cloud lock icon">
         </div>
         <h3>Zero Trust Architecture</h3>
-        <p>Cloudflare Access, device posture, certificate-based auth, and least-privilege policy — without user friction.</p>
-        <a href="{{ '/projects/' | relative_url }}" class="card-link">Learn more →</a>
+        <ul class="card-bullets">
+          <li>VPN fatigue — replace with posture-aware Access.</li>
+          <li>Admins over-provisioned — tiered policies and audit trails.</li>
+          <li>Vendors punching holes — brokered, time-bound access.</li>
+        </ul>
+        <a href="{{ '/projects/cloudflare-zero-trust-rollout/' | relative_url }}" class="card-link">See related project →</a>
       </article>
 
       <article class="card">
         <div class="icon-top">
-          <img src="{{ '/assets/icons/automation.svg' | relative_url }}" alt="">
+          <img src="{{ '/assets/icons/automation.svg' | relative_url }}" alt="Automation gear icon">
         </div>
         <h3>Infrastructure &amp; Automation</h3>
-        <p>Ansible/Terraform pipelines, hardened baselines, and versioned environments aligned to DevSecOps.</p>
-        <a href="{{ '/projects/' | relative_url }}" class="card-link">Learn more →</a>
+        <ul class="card-bullets">
+          <li>Snowflake servers — golden images and Ansible baselines.</li>
+          <li>Manual ops — Git-backed playbooks for routine work.</li>
+          <li>No drift detection — desired state you can actually enforce.</li>
+        </ul>
+        <a href="{{ '/projects/operator-linux-automation/' | relative_url }}" class="card-link">See related project →</a>
       </article>
 
       <article class="card">
         <div class="icon-top">
-          <img src="{{ '/assets/icons/lock-bolt.svg' | relative_url }}" alt="">
+          <img src="{{ '/assets/icons/lock-bolt.svg' | relative_url }}" alt="OT security bolt icon">
         </div>
         <h3>Operational Technology &amp; Electrical</h3>
-        <p>ICS segmentation, PLC/HMI security, monitoring, and safety-first designs bridging code and current.</p>
-        <a href="{{ '/projects/' | relative_url }}" class="card-link">Learn more →</a>
+        <ul class="card-bullets">
+          <li>Flat OT networks — zoning and gateway patterns.</li>
+          <li>Unsafe remote access — jump hosts with safety checks.</li>
+          <li>Unmonitored PLCs — logging that respects the process.</li>
+        </ul>
+        <a href="{{ '/projects/smart-electric-ot-foundation/' | relative_url }}" class="card-link">See related project →</a>
       </article>
     </div>
   </div>
@@ -89,7 +105,7 @@ layout: default
   <div class="container">
     <h2 id="projects-title" class="section-title">Current Engineering Projects</h2>
     <p class="section-sub">
-      From identity architecture to OT security — combining automation, Zero Trust, and hands-on infrastructure design.
+      Real labs and reference architectures I build and test before client rollouts — the same patterns I harden, document, and hand off.
     </p>
 
     <div class="project-grid">
@@ -118,6 +134,10 @@ layout: default
       </article>
       {%- endfor -%}
     </div>
+
+    <div class="projects-footer-link">
+      <a class="card-link" href="{{ '/projects/' | relative_url }}">See all projects →</a>
+    </div>
   </div>
 </section>
 <!-- ABOUT PREVIEW -->
@@ -131,7 +151,11 @@ layout: default
         reliable, and built to scale — from Okta implementations and cloud infrastructure to Cloudflare Zero Trust
         deployments and secure OT networks.
       </p>
-      <a class="btn" href="{{ '/about/' | relative_url }}">Learn more about me →</a>
+      <p class="section-sub">CompTIA Security+, industrial safety background, and a habit of translating OT constraints into clean identity and network designs.</p>
+      <div class="cta-row">
+        <a class="btn" href="{{ '/about/' | relative_url }}">Learn more about me →</a>
+        <a class="btn ghost" href="{{ '/about/' | relative_url }}">Read my story →</a>
+      </div>
     </div>
 
     <div class="about-photo">

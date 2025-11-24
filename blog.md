@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Blog
+title: Identity, Zero Trust & OT Security Blog | Sentinel Opus
 permalink: /blog/
 description: Notes on identity, Zero Trust, automation, and OT security.
 styles:
@@ -38,6 +38,10 @@ styles:
       <p class="news-strapline">
         Print-inspired briefs from the trenches of identity and industrial security. Headlines read
         like a broadsheet; the columns click through to the full deep dives.
+      </p>
+      <p class="news-strapline">
+        I write about identity done right (Okta, lifecycle, federation), Zero Trust without the buzzwords,
+        and OT security patterns that respect safety and reality.
       </p>
 
       <div class="news-rules" aria-hidden="true"></div>

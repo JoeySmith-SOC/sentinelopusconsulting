@@ -19,3 +19,100 @@
   font-size: 0.86rem;
   opacity: 0.8;
 }
+
+.project-detail {
+  padding-block: clamp(2rem, 5vw, 3rem);
+}
+
+.project-detail-header {
+  max-width: 860px;
+  margin: 0 auto 1.5rem;
+  text-align: center;
+}
+
+.project-detail-header h1 {
+  margin-bottom: 0.35rem;
+}
+
+.project-subtitle {
+  font-size: 1.05rem;
+  margin: 0 0 0.4rem;
+  opacity: 0.9;
+}
+
+.project-engagement {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.82rem;
+  margin: 0 0 0.8rem;
+  opacity: 0.8;
+}
+
+.project-tag-chips {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0.6rem 0 1.2rem;
+  flex-wrap: wrap;
+}
+
+.project-tag-chips li {
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-subtle);
+  font-size: 0.8rem;
+}
+
+.project-cover {
+  width: 100%;
+  max-width: 960px;
+  margin: 1rem auto 0;
+  border-radius: 0.9rem;
+  display: block;
+}
+
+.project-detail-body {
+  max-width: 860px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.project-section {
+  margin-top: 1.6rem;
+}
+
+.project-stack {
+  list-style: disc;
+  padding-left: 1.2rem;
+  margin: 0.4rem 0 0;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.project-takeaways ul {
+  list-style: disc;
+  padding-left: 1.2rem;
+  margin: 0.6rem 0 1rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.project-repo .btn {
+  margin-top: 0.4rem;
+}
+
+.project-meta-label {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  opacity: 0.8;
+  margin: 0 0 0.4rem;
+}
+
+.project-helper {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}

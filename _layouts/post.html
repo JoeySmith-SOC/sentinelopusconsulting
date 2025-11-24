@@ -10,18 +10,32 @@ layout: default
     </div>
 
     <header class="news-article-header">
+      {%- assign word_count = content | number_of_words -%}
+      {%- assign reading_time = word_count | divided_by: 200 | plus: 1 -%}
       <p class="news-kicker">Analysis &amp; Field Notes</p>
       <h1>{{ page.title }}</h1>
       {% if page.tldr %}
       <p class="news-deck">{{ page.tldr }}</p>
       {% endif %}
       <p class="news-meta">
-        Published {{ page.date | date: "%B %-d, %Y" }}{% if page.tags %} · Filed under {{ page.tags | join: ", " }}{% endif %}
+        Published {{ page.date | date: "%B %-d, %Y" }} · {{ reading_time }} min read
+        {% if page.tags %}
+        <span aria-hidden="true">•</span>
+        <span class="news-tags" aria-label="Tags">
+          {% for tag in page.tags %}
+            <span class="news-tag">{{ tag }}</span>{% unless forloop.last %}{% endunless %}
+          {% endfor %}
+        </span>
+        {% endif %}
       </p>
     </header>
 
     <div class="news-body">
       {{ content }}
+    </div>
+
+    <div class="news-footnote">
+      <p>More articles are being written now. If there’s a topic you want covered, <a href="{{ '/contact/' | relative_url }}">contact me</a>.</p>
     </div>
   </div>
 </article>
