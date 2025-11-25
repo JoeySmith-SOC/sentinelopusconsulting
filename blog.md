@@ -52,7 +52,7 @@ styles:
       {% assign welcome_post = site.posts | where: "title", "Welcome" | first %}
       <section class="refinery-series welcome-feature">
         <div class="refinery-header">
-          <h2>Start here: Welcome</h2>
+          <h2>Welcome</h2>
           <p class="refinery-sub">What this blog is about — why identity, Zero Trust, and OT security matter, and how I approach them.</p>
         </div>
         {% if welcome_post %}
@@ -114,8 +114,9 @@ styles:
 
       <div class="news-rules" aria-hidden="true"></div>
 
+      {% assign posts_list = site.posts | where_exp: "p", "p.title != 'Welcome'" %}
       <div class="blog-grid news-grid">
-        {% for post in site.posts %}
+        {% for post in posts_list %}
         <article class="blog-card news-card{% if forloop.first %} news-card--lead{% endif %}">
           <a class="blog-card-link" href="{{ post.url | relative_url }}">
             <div class="blog-card-meta news-card-meta">
