@@ -49,6 +49,28 @@ styles:
         and OT security — plus a flagship 15-part refinery digital twin build.
       </p>
 
+      {% assign welcome_post = site.posts | where: "title", "Welcome" | first %}
+      <section class="refinery-series welcome-feature">
+        <div class="refinery-header">
+          <h2>Start here: Welcome</h2>
+          <p class="refinery-sub">What this blog is about — why identity, Zero Trust, and OT security matter, and how I approach them.</p>
+        </div>
+        {% if welcome_post %}
+        <article class="refinery-card refinery-card--welcome">
+          <h3>{{ welcome_post.title }}</h3>
+          <p class="refinery-teaser">
+            {{ welcome_post.excerpt | strip_html | truncate: 200 }}
+          </p>
+          <div class="refinery-tags">
+            <span class="chip">Identity</span>
+            <span class="chip">Zero Trust</span>
+            <span class="chip">OT/ICS</span>
+          </div>
+          <a class="card-link" href="{{ welcome_post.url | relative_url }}">Read the welcome post →</a>
+        </article>
+        {% endif %}
+      </section>
+
       <section id="refinery-series" class="refinery-series">
         <div class="refinery-header">
           <h2>The Refinery Rebuild Series — A 15-Part Deep Dive Into the Future of OT Security</h2>

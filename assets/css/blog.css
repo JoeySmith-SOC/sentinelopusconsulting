@@ -275,6 +275,10 @@
   padding: 1.4rem 1rem 0;
 }
 
+.welcome-feature {
+  margin-top: 0.2rem;
+}
+
 .refinery-header h2 {
   margin: 0 0 0.35rem;
   font-family: "Oswald", "Open Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -297,6 +301,10 @@
   border-radius: 0.6rem;
   background: rgba(15, 20, 30, 0.6);
   backdrop-filter: blur(4px);
+}
+
+.refinery-card--welcome {
+  grid-column: span 2;
 }
 
 .refinery-card h3 {
